@@ -124,6 +124,7 @@ public class Tela_Atv_1_fase3 extends AppCompatActivity {
             }
         });
     }
+    //deu certo???
 
     @Override
     protected void onDestroy() {
