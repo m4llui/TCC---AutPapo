@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AUTPAPO_TESTE</string>
+    <string name="carregando">ESTAMOS QUASE LÁ...</string>
+
+    <string name="description_exp1">Description for exp1 image</string>
+    <string name="description_ex2">Description for ex2 image</string>
+    <string name="description_ex3">Description for ex3 image</string>
+    <string name="description_animacaoex4">Animated description for ex4 image</string>
+
+
+</resources>

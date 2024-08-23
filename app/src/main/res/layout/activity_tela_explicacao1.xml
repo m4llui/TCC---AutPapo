@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context=".Tela_Explicacao1">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="390dp"
+                    android:layout_height="680dp"
+                    android:background="@drawable/exp1"
+                    android:contentDescription="@string/description_exp1" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="390dp"
+                    android:layout_height="680dp"
+                    android:background="@drawable/ex2"
+                    android:contentDescription="@string/description_ex2" />
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="390dp"
+                    android:layout_height="680dp"
+                    android:background="@drawable/ex3"
+                    android:contentDescription="@string/description_ex3" />
+
+                <FrameLayout
+                    android:id="@+id/view4"
+                    android:layout_width="390dp"
+                    android:layout_height="680dp"
+                    android:background="@drawable/ex4"
+                    android:gravity="center">
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_width="300dp"
+                        android:layout_height="310dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/animacaoex4"
+                        android:contentDescription="@string/description_animacaoex4" />
+                </FrameLayout>
+
+                <!-- Use LinearLayout or other appropriate container -->
+                <LinearLayout
+                    android:id="@+id/view5"
+                    android:layout_width="390dp"
+                    android:layout_height="680dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="420dp"
+                        android:layout_height="377dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="56dp"
+                        android:layout_marginEnd="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/logo2" />
+
+                    <Button
+                        android:id="@+id/btnCriarConta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="89dp"
+                        android:layout_marginTop="24dp"
+
+                        android:layout_marginEnd="89dp"
+                        android:backgroundTint="@color/azul"
+                        android:fontFamily="@font/ftitilos"
+                        android:text="CRIAR CONTA"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+                    <TextView
+                        android:id="@+id/txtLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="50dp"
+                        android:text="Já tem uma conta? Faça login"
+                        android:textColor="@color/azul"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btnCriarConta" />
+
+                    <TextView
+                        android:id="@+id/txtPular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="142dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="142dp"
+                        android:text="PULAR"
+                        android:textColor="@color/azul"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtLogin" />
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+</ScrollView>
