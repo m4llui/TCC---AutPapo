@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Tela_Atv3_fase3">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:padding="8dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@drawable/logo_colorida"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ImageView
+        android:id="@+id/btnVoltar"
+        android:layout_width="40dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@drawable/seta_voltar" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="133dp"
+        android:layout_height="192dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/balao_enun_tchau"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVoltar"
+        app:srcCompat="@drawable/avatar_enun" />
+
+    <ImageView
+        android:id="@+id/balao_enun_tchau"
+        android:layout_width="223dp"
+        android:layout_height="199dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="33dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView13"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@drawable/balao_enun_tchau" />
+
+    <ImageView
+        android:id="@+id/btn_nao"
+        android:layout_width="128dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_sim"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balao_enun_tchau"
+        app:srcCompat="@drawable/btn_naotxt" />
+
+    <ImageView
+        android:id="@+id/btn_sim"
+        android:layout_width="128dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="61dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_nao"
+        app:layout_constraintTop_toBottomOf="@+id/balao_enun_tchau"
+        app:srcCompat="@drawable/btn_simtxt" />
+
+    <ImageView
+        android:id="@+id/btn_tchau"
+        android:layout_width="128dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_casa3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_nao"
+        app:srcCompat="@drawable/btn_tchau" />
+
+    <ImageView
+        android:id="@+id/btn_casa3"
+        android:layout_width="128dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="61dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_tchau"
+        app:layout_constraintTop_toBottomOf="@+id/btn_sim"
+        app:srcCompat="@drawable/btn_casa" />
+
+    <ImageView
+        android:id="@+id/btn_nao_errada"
+        android:layout_width="128dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="44dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_sim"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balao_enun_tchau"
+        app:srcCompat="@drawable/btn_naotxt_erro" />
+
+    <ImageView
+        android:id="@+id/btn_sim_errada"
+        android:layout_width="128dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="57dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_nao"
+        app:layout_constraintTop_toBottomOf="@+id/balao_enun_tchau"
+        app:srcCompat="@drawable/btn_simtxt_err0" />
+
+    <ImageView
+        android:id="@+id/btn_tchau_certa"
+        android:layout_width="128dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="44dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_casa3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_nao"
+        app:srcCompat="@drawable/btn_tchau_certo" />
+
+    <ImageView
+        android:id="@+id/btn_casa_errada"
+        android:layout_width="128dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="57dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_tchau"
+        app:layout_constraintTop_toBottomOf="@+id/btn_sim"
+        app:srcCompat="@drawable/btn_casa_erro" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
