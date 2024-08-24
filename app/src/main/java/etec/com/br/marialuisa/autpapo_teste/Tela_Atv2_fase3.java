@@ -10,5 +10,6 @@ public class Tela_Atv2_fase3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_atv2_fase3);
+        //foi omggg
     }
 }
