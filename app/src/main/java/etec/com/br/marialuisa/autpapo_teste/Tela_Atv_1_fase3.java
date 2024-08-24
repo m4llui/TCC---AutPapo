@@ -124,8 +124,9 @@ public class Tela_Atv_1_fase3 extends AppCompatActivity {
             }
         });
     }
-    //graças a deus!!! acho q deu bommm aeeeee
 
+
+    //Destroi o audio dps da atividade
     @Override
     protected void onDestroy() {
         super.onDestroy();
