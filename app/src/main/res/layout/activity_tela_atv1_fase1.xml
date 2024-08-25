@@ -6,17 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".Tela_Atv1_fase1">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="173dp"
-        android:layout_marginTop="314dp"
-        android:layout_marginEnd="169dp"
-        android:layout_marginBottom="398dp"
-        android:text="atividade 1"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar4"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:padding="8dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@drawable/logo_colorida"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="158dp"
+        android:layout_height="128dp"
+        app:srcCompat="@drawable/bal_ocomletra"
+        tools:layout_editor_absoluteX="222dp"
+        tools:layout_editor_absoluteY="141dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
