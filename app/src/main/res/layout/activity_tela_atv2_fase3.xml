@@ -47,7 +47,7 @@
         app:srcCompat="@drawable/balao_enum_monteplvra" />
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/imgOi"
         android:layout_width="406dp"
         android:layout_height="156dp"
         android:layout_marginStart="8dp"
@@ -67,7 +67,7 @@
         android:layout_marginEnd="57dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_letraI"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10"
+        app:layout_constraintTop_toBottomOf="@+id/imgOi"
         app:srcCompat="@drawable/bt_img_o" />
 
     <ImageView
@@ -79,7 +79,7 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toStartOf="@+id/btn_letraO"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10"
+        app:layout_constraintTop_toBottomOf="@+id/imgOi"
         app:srcCompat="@drawable/bt_img_i" />
 
     <ImageView
@@ -91,7 +91,7 @@
         android:layout_marginEnd="17dp"
         app:layout_constraintEnd_toStartOf="@+id/btn_letraO"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10"
+        app:layout_constraintTop_toBottomOf="@+id/imgOi"
         app:srcCompat="@drawable/bt_letra_i_certa" />
 
     <ImageView
@@ -112,7 +112,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/btn_letraI_certa"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10"
+        app:layout_constraintTop_toBottomOf="@+id/imgOi"
         app:srcCompat="@drawable/bt_letra_o_certo" />
 
     <ImageView
@@ -125,7 +125,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/btn_letraI_certa"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10"
+        app:layout_constraintTop_toBottomOf="@+id/imgOi"
         app:srcCompat="@drawable/bt_letra_o_errada" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

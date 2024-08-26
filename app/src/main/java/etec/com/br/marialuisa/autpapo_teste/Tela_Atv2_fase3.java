@@ -6,12 +6,13 @@ import android.annotation.SuppressLint;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.widget.ImageView;
 
 public class Tela_Atv2_fase3 extends AppCompatActivity {
 
     MediaPlayer audio;
-    private ImageView btI, btO, btIErrado, btOErrado, btICerto, btOCerto, btVolta, btBalao;
+    private ImageView btI, btO,btOi, btIErrado, btOErrado, btICerto, btOCerto, btVolta, btBalao;
 
     private Handler handler = new Handler();
 
@@ -29,6 +30,7 @@ public class Tela_Atv2_fase3 extends AppCompatActivity {
         btOCerto = findViewById(R.id.btn_letraO_certa);
         btOErrado = findViewById(R.id.btn_letraO_errada);
         btVolta = findViewById(R.id.btnVoltar);
+        btOi = findViewById(R.id.imgOi);
 
         //Leitura do Enunciado automatico
         handler.postDelayed(new Runnable() {
@@ -37,6 +39,22 @@ public class Tela_Atv2_fase3 extends AppCompatActivity {
                 playAudio(R.raw.monte_palavra);
             }
         }, 1000); // Atraso de 1 milissegundo
+
+        btBalao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                playAudio(R.raw.monte_palavra);
+            }
+        });
+
+        btOi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                playAudio(R.raw.oi);
+            }
+        });
+
+        //PARTE DOS BOTÕES
 
     }
 
