@@ -2,6 +2,7 @@ package etec.com.br.marialuisa.autpapo_teste;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -54,43 +55,59 @@ public class Tela_Atv2_fase1 extends AppCompatActivity {
         getBtn_Let_Y_Inc.setEnabled(false);
     }
 
-    private void setOnClickListeners() {
-        btn_Let_A.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                btn_Let_E_Certo.setVisibility(View.VISIBLE);
-                btn_Let_E_Certo.setEnabled(true);
+        private void setOnClickListeners() {
+            View.OnClickListener listener = new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    boolean isCorrect = false;
 
-            }
-        });
+                    int id = view.getId();
 
-        btn_Let_A.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                btn_Let_A_Inc.setVisibility(View.VISIBLE);
-                btn_Let_A_Inc.setEnabled(true);
+                    if (id == R.id.btn_Let_A) {
+                        btn_Let_A_Inc.setVisibility(View.VISIBLE);
+                        btn_Let_A_Inc.setEnabled(true);
 
-            }
-        });
+                    } else if (id == R.id.btn_Let_B) {
+                        btn_Let_B_Inc.setVisibility(View.VISIBLE);
+                        btn_Let_B_Inc.setEnabled(true);
 
-        btn_Let_B.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                btn_Let_B_Inc.setVisibility(View.VISIBLE);
-                btn_Let_B_Inc.setEnabled(true);
+                    } else if (id == R.id.btn_Let_E_Certo) {
+                        btn_Let_E_Certo.setVisibility(View.VISIBLE);
+                        btn_Let_E_Certo.setEnabled(true);
 
-            }
-        });
+                    } else if (id == R.id.btn_Let_Y) {
+                        getBtn_Let_Y_Inc.setVisibility(View.VISIBLE);
+                       getBtn_Let_Y_Inc.setEnabled(true);
 
-        btn_Let_Y.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getBtn_Let_Y_Inc.setVisibility(View.VISIBLE);
-                getBtn_Let_Y_Inc.setEnabled(true);
 
-            }
-        });
+                    }
+
+                    // Salva o resultado no banco de dados
+                    //salvarResultadoNoBanco(isCorrect);
+
+
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            startActivity(new Intent(Tela_Atv2_fase1.this, Tela_Atv3_fase1.class));
+                            finish();//
+                        }
+                    }, 2000);
+                }
+            };
+
+
+            btn_Let_A.setOnClickListener(listener);
+            btn_Let_B.setOnClickListener(listener);
+            btn_Let_E.setOnClickListener(listener);
+            btn_Let_Y.setOnClickListener(listener);
+        }
+
+        private void salvarResultadoNoBanco(boolean isCorrect) {
+            // Código para salvar no banco de dados se a resposta foi correta ou não
+            // Exemplo:
+            // DatabaseHelper db = new DatabaseHelper(this);
+            // db.inserirResultado(isCorrect ? "Correto" : "Incorreto");
+        }
     }
-}
-
 
