@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
-//teste atualizaçao
 public class Tela_Atv1_fase1 extends AppCompatActivity {
 
     private ImageView btn_Let_A, btn_Let_A_Certo, btn_Let_B, btn_Let_B_Inc, btn_Let_C, btn_Let_C_Inc,
@@ -46,45 +45,60 @@ public class Tela_Atv1_fase1 extends AppCompatActivity {
         btn_Let_D_Inc.setEnabled(false);
     }
 
+
     private void setOnClickListeners() {
-        btn_Let_A.setOnClickListener(new View.OnClickListener() {
+        View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                btn_Let_A_Certo.setVisibility(View.VISIBLE);
-                btn_Let_A_Certo.setEnabled(true);
-            }
-        });
+                boolean isCorrect = false;
 
-        btn_Let_B.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                btn_Let_B_Inc.setVisibility(View.VISIBLE);
-                btn_Let_B_Inc.setEnabled(true);
-            }
-        });
+                int id = view.getId();
 
-        btn_Let_C.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                btn_Let_C_Inc.setVisibility(View.VISIBLE);
-                btn_Let_C_Inc.setEnabled(true);
-            }
-        });
+                if (id == R.id.btn_Let_A) {
+                    btn_Let_A_Certo.setVisibility(View.VISIBLE);
+                    btn_Let_A_Certo.setEnabled(true);
 
-        btn_Let_D.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                btn_Let_D_Inc.setVisibility(View.VISIBLE);
-                btn_Let_D_Inc.setEnabled(true);
-            }
-        });
+                } else if (id == R.id.btn_Let_B) {
+                    btn_Let_B_Inc.setVisibility(View.VISIBLE);
+                    btn_Let_B_Inc.setEnabled(true);
 
-        btn_Let_A_Certo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Tela_Atv1_fase1.this, Tela_Atv2_fase1.class);
-                startActivity(intent);
+                } else if (id == R.id.btn_Let_C) {
+                    btn_Let_C_Inc.setVisibility(View.VISIBLE);
+                    btn_Let_C_Inc.setEnabled(true);
+
+                } else if (id == R.id.btn_Let_D) {
+                    btn_Let_D_Inc.setVisibility(View.VISIBLE);
+                    btn_Let_D_Inc.setEnabled(true);
+
+
+                }
+
+                // Salva o resultado no banco de dados
+                //salvarResultadoNoBanco(isCorrect);
+
+
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        startActivity(new Intent(Tela_Atv1_fase1.this, Tela_Atv2_fase1.class));
+                        finish();//
+                    }
+                }, 2000);
             }
-        });
+        };
+
+
+        btn_Let_A.setOnClickListener(listener);
+        btn_Let_B.setOnClickListener(listener);
+        btn_Let_C.setOnClickListener(listener);
+        btn_Let_D.setOnClickListener(listener);
     }
-}
+
+    private void salvarResultadoNoBanco(boolean isCorrect) {
+        // Código para salvar no banco de dados se a resposta foi correta ou não
+        // Exemplo:
+        // DatabaseHelper db = new DatabaseHelper(this);
+        // db.inserirResultado(isCorrect ? "Correto" : "Incorreto");
+    }
+            }
+
