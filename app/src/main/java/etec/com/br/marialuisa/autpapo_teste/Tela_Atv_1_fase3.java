@@ -1,6 +1,9 @@
 package etec.com.br.marialuisa.autpapo_teste;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -88,43 +91,63 @@ public class Tela_Atv_1_fase3 extends AppCompatActivity {
     }
 
     private void setOnClickListeners() {
-        btPfv.setOnClickListener(new View.OnClickListener() {
+        View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                btPfvCerto.setVisibility(View.VISIBLE);
-                btPfvCerto.setEnabled(true);
-                playAudio(R.raw.audio_pfv);
-            }
-        });
+                boolean isCorrect = false;
 
-        btCarro.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                btCarroErrado.setVisibility(View.VISIBLE);
-                btCarroErrado.setEnabled(true);
-                playAudio(R.raw.carro);
-            }
-        });
+                int id = view.getId();
 
-        btMorango.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                btMorangoErrado.setVisibility(View.VISIBLE);
-                btMorangoErrado.setEnabled(true);
-                playAudio(R.raw.morango);
-            }
-        });
+                if (id == R.id.btn_pfv) {
+                    btPfvCerto.setVisibility(View.VISIBLE);
+                    btPfvCerto.setEnabled(true);
+                    playAudio(R.raw.audio_pfv);
+                    //isCorrect = true;  // Marca como correto
+                } else if (id == R.id.btn_carro) {
+                    btCarroErrado.setVisibility(View.VISIBLE);
+                    btCarroErrado.setEnabled(true);
+                    playAudio(R.raw.carro);
+                    //isCorrect = false;  // Marca como incorreto
+                } else if (id == R.id.btn_morango) {
+                    btMorangoErrado.setVisibility(View.VISIBLE);
+                    btMorangoErrado.setEnabled(true);
+                    playAudio(R.raw.morango);
+                    //isCorrect = false;  // Marca como incorreto
+                } else if (id == R.id.btn_casa) {
+                    btCasaErrado.setVisibility(View.VISIBLE);
+                    btCasaErrado.setEnabled(true);
+                    playAudio(R.raw.casa);
+                    //isCorrect = false;  // Marca como incorreto
+                }
 
-        btCasa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                btCasaErrado.setVisibility(View.VISIBLE);
-                btCasaErrado.setEnabled(true);
-                playAudio(R.raw.casa);
+                // Salva o resultado no banco de dados
+                //salvarResultadoNoBanco(isCorrect);
+
+
+                //HANDLER É QUEM FAZ O ATRASO ANTES DE IR PARA APROXÍMA TELA
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        startActivity(new Intent(Tela_Atv_1_fase3.this, Tela_Atv2_fase3.class));
+                        finish(); // Fecha a tela atual
+                    }
+                }, 2000); // Atraso de 2 segundo em// milissegundos)
             }
-        });
+        };
+
+        // Configura o mesmo listener para todos os botões
+        btPfv.setOnClickListener(listener);
+        btCarro.setOnClickListener(listener);
+        btMorango.setOnClickListener(listener);
+        btCasa.setOnClickListener(listener);
     }
 
+    private void salvarResultadoNoBanco(boolean isCorrect) {
+        // Código para salvar no banco de dados se a resposta foi correta ou não
+        // Exemplo:
+        // DatabaseHelper db = new DatabaseHelper(this);
+        // db.inserirResultado(isCorrect ? "Correto" : "Incorreto");
+    }
 
     //Destroi o audio dps da atividade
     @Override
