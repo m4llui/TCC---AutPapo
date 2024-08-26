@@ -2,21 +2,150 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/back"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".Tela_Atv1_fase1">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="173dp"
-        android:layout_marginTop="314dp"
-        android:layout_marginEnd="169dp"
-        android:layout_marginBottom="398dp"
-        android:text="atividade 1"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/btnVoltar2"
+        android:layout_width="40dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar4"
+        app:srcCompat="@drawable/seta_voltar" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar4"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:padding="8dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@drawable/logo_colorida"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ImageView
+        android:id="@+id/btn_Let_B"
+        android:layout_width="118dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageEnunciado1"
+        app:srcCompat="@drawable/letrab" />
+
+    <ImageView
+        android:id="@+id/btn_Let_C"
+        android:layout_width="118dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Let_A"
+        app:srcCompat="@drawable/letrac" />
+
+    <ImageView
+        android:id="@+id/btn_Let_D"
+        android:layout_width="120dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintStart_toEndOf="@+id/btn_Let_C"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Let_B"
+        app:srcCompat="@drawable/letrad" />
+
+    <ImageView
+        android:id="@+id/btn_Let_A"
+        android:layout_width="115dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Let_B"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageEnunciado1"
+        app:srcCompat="@drawable/letraa" />
+
+    <ImageView
+        android:id="@+id/imageEnunciado1"
+        android:layout_width="343dp"
+        android:layout_height="253dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar4"
+        app:srcCompat="@drawable/boneco_enunciado" />
+
+    <ImageView
+        android:id="@+id/imageBalao"
+        android:layout_width="158dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="88dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.832"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar4"
+        app:srcCompat="@drawable/bal_ocomletra" />
+
+    <ImageView
+        android:id="@+id/btn_Let_A_Certo"
+        android:layout_width="115dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Let_B"
+        app:layout_constraintHorizontal_bias="0.848"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageEnunciado1"
+        app:srcCompat="@drawable/corretoletraa" />
+
+    <ImageView
+        android:id="@+id/btn_Let_B_Inc"
+        android:layout_width="116dp"
+        android:layout_height="129dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toEndOf="@+id/btn_Let_A"
+        app:layout_constraintTop_toBottomOf="@+id/imageEnunciado1"
+        app:srcCompat="@drawable/incorretaletrab" />
+
+    <ImageView
+        android:id="@+id/btn_Let_C_Inc"
+        android:layout_width="118dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Let_D"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Let_A"
+        app:srcCompat="@drawable/incorretaletrac" />
+
+    <ImageView
+        android:id="@+id/btn_Let_D_Inc"
+        android:layout_width="120dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toEndOf="@+id/btn_Let_C"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Let_B"
+        app:srcCompat="@drawable/incorretaletrad" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
