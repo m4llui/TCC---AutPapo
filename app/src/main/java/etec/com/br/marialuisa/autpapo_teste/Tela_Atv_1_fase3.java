@@ -122,7 +122,8 @@ public class Tela_Atv_1_fase3 extends AppCompatActivity {
 
                 // Salva o resultado no banco de dados
                 //salvarResultadoNoBanco(isCorrect);
-// teste
+                //teste
+
 
                 //HANDLER É QUEM FAZ O ATRASO ANTES DE IR PARA APROXÍMA TELA
                 handler.postDelayed(new Runnable() {
