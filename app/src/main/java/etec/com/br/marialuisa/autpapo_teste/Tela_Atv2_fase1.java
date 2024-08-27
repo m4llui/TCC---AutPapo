@@ -27,7 +27,7 @@ public class Tela_Atv2_fase1 extends AppCompatActivity {
         btn_Let_E_Certo = findViewById(R.id.btn_Let_E_Certo);
         btn_Let_Y = findViewById(R.id.btn_Let_Y);
         btn_Let_Y_Inc = findViewById(R.id.btn_Let_Y_Inc);
-        btVoltar3 = findViewById(R.id.btnVoltar3);
+        btVoltar3 = findViewById(R.id.btnVoltar);
         btEnunciado = findViewById(R.id.ImageEnunciado2);
         btBalao = findViewById(R.id.ImageBalao2);
 
