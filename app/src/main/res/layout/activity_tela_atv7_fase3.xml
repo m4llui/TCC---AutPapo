@@ -21,40 +21,19 @@
         app:logo="@drawable/logo_colorida"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
+
     <ImageView
         android:id="@+id/btnVoltar"
         android:layout_width="40dp"
         android:layout_height="33dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="350dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintHorizontal_bias="0.102"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:srcCompat="@drawable/seta_voltar" />
-
-    <ImageView
-        android:id="@+id/img_enun_6"
-        android:layout_width="343dp"
-        android:layout_height="253dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="34dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:srcCompat="@drawable/enun_emocao" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="223dp"
-        android:layout_height="199dp"
-        android:layout_marginTop="72dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.819"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:srcCompat="@drawable/balao_enun_triste" />
 
     <ImageView
         android:id="@+id/btn_triste7"
@@ -64,7 +43,7 @@
         android:layout_marginEnd="36dp"
         app:layout_constraintEnd_toStartOf="@+id/btn_feliz7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_enun_6"
+        app:layout_constraintTop_toBottomOf="@+id/btn_enunciado"
         app:srcCompat="@drawable/btn_triste" />
 
     <ImageView
@@ -75,7 +54,7 @@
         android:layout_marginEnd="61dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_triste7"
-        app:layout_constraintTop_toBottomOf="@+id/img_enun_6"
+        app:layout_constraintTop_toBottomOf="@+id/btn_enunciado"
         app:srcCompat="@drawable/btn_feliz" />
 
     <ImageView
@@ -110,7 +89,7 @@
         android:layout_marginEnd="44dp"
         app:layout_constraintEnd_toStartOf="@+id/btn_feliz7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_enun_6"
+        app:layout_constraintTop_toBottomOf="@+id/btn_enunciado"
         app:srcCompat="@drawable/btn_triste_certo" />
 
     <ImageView
@@ -121,7 +100,7 @@
         android:layout_marginEnd="57dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_triste7"
-        app:layout_constraintTop_toBottomOf="@+id/img_enun_6"
+        app:layout_constraintTop_toBottomOf="@+id/btn_enunciado"
         app:srcCompat="@drawable/btn_feliz_erro" />
 
     <ImageView
@@ -147,5 +126,31 @@
         app:layout_constraintStart_toEndOf="@+id/btn_raiva7"
         app:layout_constraintTop_toBottomOf="@+id/btn_feliz7"
         app:srcCompat="@drawable/btn_cansado_erro" />
+
+    <ImageView
+        android:id="@+id/btn_enunciado"
+        android:layout_width="343dp"
+        android:layout_height="253dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@drawable/enun_emocao" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="223dp"
+        android:layout_height="199dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.914"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@drawable/balao_enun_triste" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

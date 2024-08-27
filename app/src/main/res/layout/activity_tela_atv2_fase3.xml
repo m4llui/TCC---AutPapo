@@ -26,9 +26,11 @@
         android:id="@+id/btnVoltar"
         android:layout_width="40dp"
         android:layout_height="33dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="350dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintHorizontal_bias="0.102"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:srcCompat="@drawable/seta_voltar" />
@@ -98,9 +100,13 @@
         android:id="@+id/btn_letraI_errada"
         android:layout_width="145dp"
         android:layout_height="123dp"
-        app:srcCompat="@drawable/bt_letra_i_errada"
-        tools:layout_editor_absoluteX="49dp"
-        tools:layout_editor_absoluteY="458dp" />
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_letraO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgOi"
+        app:srcCompat="@drawable/bt_letra_i_errada" />
 
     <ImageView
         android:id="@+id/btn_letraO_certa"
@@ -113,17 +119,17 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/btn_letraI_certa"
         app:layout_constraintTop_toBottomOf="@+id/imgOi"
-        app:srcCompat="@drawable/bt_letra_o_certo" />
+        app:srcCompat="@drawable/bt_letra_o_errada" />
 
     <ImageView
         android:id="@+id/btn_letraO_errada"
-        android:layout_width="140dp"
-        android:layout_height="125dp"
-        android:layout_marginStart="17dp"
+        android:layout_width="144dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="55dp"
+        android:layout_marginEnd="58dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/btn_letraI_certa"
         app:layout_constraintTop_toBottomOf="@+id/imgOi"
         app:srcCompat="@drawable/bt_letra_o_errada" />

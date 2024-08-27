@@ -47,6 +47,7 @@ public class Tela_Atv_1_fase3 extends AppCompatActivity {
         btEnunciado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 playAudio(R.raw.enun_pedir);
             }
         });
@@ -94,8 +95,7 @@ public class Tela_Atv_1_fase3 extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean isCorrect = false;
-
+                //boolean isCorrect = false;
                 int id = view.getId();
 
                 if (id == R.id.btn_pfv) {

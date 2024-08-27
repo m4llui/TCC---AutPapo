@@ -90,11 +90,11 @@
 
     <ImageView
         android:id="@+id/imageBalao"
-        android:layout_width="158dp"
-        android:layout_height="190dp"
-        android:layout_marginTop="88dp"
+        android:layout_width="253dp"
+        android:layout_height="199dp"
+        android:layout_marginTop="64dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.832"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar4"
         app:srcCompat="@drawable/bal_ocomletra" />
