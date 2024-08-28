@@ -9,12 +9,14 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class Tela_Atv_1_fase3 extends AppCompatActivity {
 
+    TextView btEnunciado;
     MediaPlayer audio;
     private ImageView btPfv, btPfvCerto, btCarro, btCarroErrado, btMorango, btMorangoErrado,
-            btCasa, btCasaErrado, btVolta, btEnunciado, btBalao;
+            btCasa, btCasaErrado, btVolta, btBalao;
     private Handler handler = new Handler();
 
     @SuppressLint({"MissingInflatedId", "WrongViewCast"})

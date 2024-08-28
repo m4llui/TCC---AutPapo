@@ -37,26 +37,27 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="23dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/inicio_fase1" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="318dp"
-        android:layout_height="88dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="20dp"
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="347dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/fonttitulopreto"
+        android:text="VAMOS APRENDER AS VOGAIS?"
+        android:textAlignment="center"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:srcCompat="@drawable/t_fase1" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
