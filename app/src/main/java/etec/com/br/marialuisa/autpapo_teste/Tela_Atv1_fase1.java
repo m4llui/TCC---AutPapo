@@ -25,8 +25,7 @@ public class Tela_Atv1_fase1 extends AppCompatActivity {
         btn_Let_C_Inc = findViewById(R.id.btn_Let_C_Inc);
         btn_Let_D = findViewById(R.id.btn_Let_D);
         btn_Let_D_Inc = findViewById(R.id.btn_Let_D_Inc);
-        btVoltar2 = findViewById(R.id.btnVoltar2);
-        btEnunciado = findViewById(R.id.imageEnunciado1);
+        btVoltar2 = findViewById(R.id.btnVoltarAtv1Fase1);
         btBalao = findViewById(R.id.imageBalao);
 
         botoesInativados();
