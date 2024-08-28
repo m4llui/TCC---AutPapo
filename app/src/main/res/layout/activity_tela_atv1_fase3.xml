@@ -33,38 +33,15 @@
         app:srcCompat="@drawable/seta_voltar" />
 
     <ImageView
-        android:id="@+id/imgEnunciado"
-        android:layout_width="343dp"
-        android:layout_height="253dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.526"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:srcCompat="@drawable/enun_pedir" />
-
-    <ImageView
-        android:id="@+id/imgBalao"
-        android:layout_width="223dp"
-        android:layout_height="199dp"
-        android:layout_marginTop="72dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.846"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:srcCompat="@drawable/balao_enun_pfv" />
-
-    <ImageView
         android:id="@+id/btn_pfv"
         android:layout_width="128dp"
         android:layout_height="116dp"
         android:layout_marginStart="58dp"
+        android:layout_marginTop="14dp"
         android:layout_marginEnd="36dp"
         app:layout_constraintEnd_toStartOf="@+id/btn_carro"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgEnunciado"
+        app:layout_constraintTop_toBottomOf="@+id/imgBalao"
         app:srcCompat="@drawable/btn_pfv" />
 
     <ImageView
@@ -97,10 +74,11 @@
         android:layout_width="128dp"
         android:layout_height="116dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="14dp"
         android:layout_marginEnd="61dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_pfv"
-        app:layout_constraintTop_toBottomOf="@+id/imgEnunciado"
+        app:layout_constraintTop_toBottomOf="@+id/imgBalao"
         app:srcCompat="@drawable/btn_carro" />
 
     <ImageView
@@ -108,22 +86,24 @@
         android:layout_width="128dp"
         android:layout_height="116dp"
         android:layout_marginStart="29dp"
+        android:layout_marginTop="14dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toStartOf="@+id/btn_carro"
         app:layout_constraintHorizontal_bias="0.409"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgEnunciado"
+        app:layout_constraintTop_toBottomOf="@+id/imgBalao"
         app:srcCompat="@drawable/btn_pfv_certo" />
 
     <ImageView
         android:id="@+id/btn_carro_errado"
         android:layout_width="128dp"
         android:layout_height="116dp"
+        android:layout_marginTop="14dp"
         android:layout_marginEnd="29dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.611"
         app:layout_constraintStart_toEndOf="@+id/btn_pfv"
-        app:layout_constraintTop_toBottomOf="@+id/imgEnunciado"
+        app:layout_constraintTop_toBottomOf="@+id/imgBalao"
         app:srcCompat="@drawable/btn_carro_erro" />
 
     <ImageView
@@ -149,5 +129,41 @@
         app:layout_constraintStart_toEndOf="@+id/btn_morango"
         app:layout_constraintTop_toBottomOf="@+id/btn_carro"
         app:srcCompat="@drawable/btn_casatxt_erro" />
+
+    <TextView
+        android:id="@+id/txtEnunPfv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/fonttitulopreto"
+        android:text="@string/enun_pfv"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <ImageView
+        android:id="@+id/avatarAtv1_fase3"
+        android:layout_width="130dp"
+        android:layout_height="174dp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEnunPfv"
+        app:srcCompat="@drawable/avatar_enun" />
+
+    <ImageView
+        android:id="@+id/imgBalao"
+        android:layout_width="223dp"
+        android:layout_height="199dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@drawable/balao_enun_pfv" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

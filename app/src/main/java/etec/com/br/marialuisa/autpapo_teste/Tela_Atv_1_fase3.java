@@ -17,6 +17,7 @@ public class Tela_Atv_1_fase3 extends AppCompatActivity {
             btCasa, btCasaErrado, btVolta, btEnunciado, btBalao;
     private Handler handler = new Handler();
 
+    @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +33,7 @@ public class Tela_Atv_1_fase3 extends AppCompatActivity {
         btCasa = findViewById(R.id.btn_casa);
         btCasaErrado = findViewById(R.id.btn_casa_errado);
         btVolta = findViewById(R.id.btnVoltar);
-        btEnunciado = findViewById(R.id.imgEnunciado);
+        btEnunciado = findViewById(R.id.txtEnunPfv);
         btBalao = findViewById(R.id.imgBalao);
 
         // Toca o áudio assim que a Activity é carregada com atraso (O HANDLER É PARA "ATRASO")
@@ -56,6 +57,7 @@ public class Tela_Atv_1_fase3 extends AppCompatActivity {
         btBalao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 playAudio(R.raw.audio_pfv);
             }
         });

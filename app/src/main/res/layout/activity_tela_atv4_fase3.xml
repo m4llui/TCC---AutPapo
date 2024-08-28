@@ -33,19 +33,6 @@
         app:srcCompat="@drawable/seta_voltar" />
 
     <ImageView
-        android:id="@+id/img_enun_4"
-        android:layout_width="343dp"
-        android:layout_height="253dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:srcCompat="@drawable/enun_img" />
-
-    <ImageView
         android:id="@+id/balao_sim"
         android:layout_width="223dp"
         android:layout_height="199dp"
@@ -61,10 +48,11 @@
         android:layout_width="128dp"
         android:layout_height="116dp"
         android:layout_marginStart="58dp"
+        android:layout_marginTop="14dp"
         android:layout_marginEnd="36dp"
         app:layout_constraintEnd_toStartOf="@+id/btn_coracao"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_enun_4"
+        app:layout_constraintTop_toBottomOf="@+id/balao_sim"
         app:srcCompat="@drawable/btn_simimg" />
 
     <ImageView
@@ -72,10 +60,11 @@
         android:layout_width="128dp"
         android:layout_height="116dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="14dp"
         android:layout_marginEnd="61dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_sim_joia"
-        app:layout_constraintTop_toBottomOf="@+id/img_enun_4"
+        app:layout_constraintTop_toBottomOf="@+id/balao_sim"
         app:srcCompat="@drawable/btn_coracao" />
 
     <ImageView
@@ -107,22 +96,24 @@
         android:layout_width="148dp"
         android:layout_height="117dp"
         android:layout_marginStart="29dp"
+        android:layout_marginTop="14dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toStartOf="@+id/btn_coracao"
         app:layout_constraintHorizontal_bias="0.357"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_enun_4"
+        app:layout_constraintTop_toBottomOf="@+id/balao_sim"
         app:srcCompat="@drawable/btn_sim_certo" />
 
     <ImageView
         android:id="@+id/btn_coracao_errada"
         android:layout_width="128dp"
         android:layout_height="116dp"
+        android:layout_marginTop="14dp"
         android:layout_marginEnd="29dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.611"
         app:layout_constraintStart_toEndOf="@+id/btn_sim_joia"
-        app:layout_constraintTop_toBottomOf="@+id/img_enun_4"
+        app:layout_constraintTop_toBottomOf="@+id/balao_sim"
         app:srcCompat="@drawable/btn_coracao_erro" />
 
     <ImageView
@@ -149,5 +140,31 @@
         app:layout_constraintStart_toEndOf="@+id/btn_morango4"
         app:layout_constraintTop_toBottomOf="@+id/btn_coracao"
         app:srcCompat="@drawable/btn_maos_erro" />
+
+    <TextView
+        android:id="@+id/txtEnunImg"
+        android:layout_width="345dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="33dp"
+        android:fontFamily="@font/fonttitulopreto"
+        android:text="@string/enun_figura_imagem"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <ImageView
+        android:id="@+id/avatarAtv4fase3"
+        android:layout_width="130dp"
+        android:layout_height="174dp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEnunImg"
+        app:srcCompat="@drawable/avatar_enun" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
