@@ -8,7 +8,7 @@
     tools:context=".Tela_Atv1_fase1">
 
     <ImageView
-        android:id="@+id/btnVoltar2"
+        android:id="@+id/btnVoltarAtv1Fase1"
         android:layout_width="40dp"
         android:layout_height="33dp"
         android:layout_marginTop="8dp"

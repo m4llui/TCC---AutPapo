@@ -2,6 +2,7 @@ package etec.com.br.marialuisa.autpapo_teste;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -15,12 +16,13 @@ public class Tela_fase2 extends AppCompatActivity {
     ImageView btVoltar;
     private static final int DELAY_MILLIS = 4000; // 4 segundos em milissegundos
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_fase2);
 
-        btVoltar = findViewById(R.id.btnVoltar);
+        btVoltar = findViewById(R.id.btnVoltarFase2);
         // Inicializa o MediaPlayer com o áudio do recurso raw
         mediaPlayer = MediaPlayer.create(this, R.raw.intro_fase2);
 

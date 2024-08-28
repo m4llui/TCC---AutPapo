@@ -22,7 +22,7 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <ImageView
-        android:id="@+id/btnVoltar"
+        android:id="@+id/btnVoltarAtv4Fase3"
         android:layout_width="40dp"
         android:layout_height="33dp"
         android:layout_marginTop="8dp"

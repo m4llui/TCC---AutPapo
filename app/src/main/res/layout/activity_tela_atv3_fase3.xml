@@ -22,7 +22,7 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <ImageView
-        android:id="@+id/btnVoltar"
+        android:id="@+id/btnVoltarAtv6Fase3"
         android:layout_width="40dp"
         android:layout_height="33dp"
         android:layout_marginStart="16dp"
@@ -44,7 +44,7 @@
         app:layout_constraintEnd_toStartOf="@+id/balao_enun_tchau"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnVoltar"
+        app:layout_constraintTop_toBottomOf="@+id/btnVoltarAtv6Fase3"
         app:srcCompat="@drawable/avatar_enun" />
 
     <ImageView

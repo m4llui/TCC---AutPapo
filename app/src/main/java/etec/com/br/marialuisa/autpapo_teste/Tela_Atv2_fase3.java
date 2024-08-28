@@ -31,7 +31,7 @@ public class Tela_Atv2_fase3 extends AppCompatActivity {
         btIErrado = findViewById(R.id.btn_letraI_errada);
         btOCerto = findViewById(R.id.btn_letraO_certa);
         btOErrado = findViewById(R.id.btn_letraO_errada);
-        btVolta = findViewById(R.id.btnVoltar);
+        btVolta = findViewById(R.id.btnVoltarAtv6Fase3);
         btOi = findViewById(R.id.imgOi);
 
         // Leitura do Enunciado automático

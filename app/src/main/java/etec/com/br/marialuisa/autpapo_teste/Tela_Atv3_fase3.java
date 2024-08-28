@@ -28,7 +28,7 @@ public class Tela_Atv3_fase3 extends AppCompatActivity {
         btTchauCerto = findViewById(R.id.btn_tchau_certa);
         btCasa = findViewById(R.id.btn_casa3);
         btCasaErrado = findViewById(R.id.btn_casa_errada);
-        btVolta = findViewById(R.id.btnVoltar);
+        btVolta = findViewById(R.id.btnVoltarAtv6Fase3);
         btBalao = findViewById(R.id.balao_enun_tchau);
 
         // Toca o áudio uma vez quando a Activity é carregada ESTÁ DUPLICANDO ESTE AUDIO

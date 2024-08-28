@@ -34,7 +34,7 @@ public class Tela_Atv_1_fase3 extends AppCompatActivity {
         btMorangoErrado = findViewById(R.id.btn_morango_errado);
         btCasa = findViewById(R.id.btn_casa);
         btCasaErrado = findViewById(R.id.btn_casa_errado);
-        btVolta = findViewById(R.id.btnVoltar);
+        btVolta = findViewById(R.id.btnVoltarAtv1Fase3);
         btEnunciado = findViewById(R.id.txtEnunPfv);
         btBalao = findViewById(R.id.imgBalao);
 

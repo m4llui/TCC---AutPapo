@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -21,7 +20,7 @@ public class Tela_Fase1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_fase1);
 
-        btVoltar = findViewById(R.id.btnVoltar);
+        btVoltar = findViewById(R.id.btnVoltarFase1);
 
         // Inicializa o MediaPlayer com o áudio do recurso raw
         mediaPlayer = MediaPlayer.create(this, R.raw.intro_fase1);
