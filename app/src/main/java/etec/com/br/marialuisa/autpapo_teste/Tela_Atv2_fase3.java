@@ -1,7 +1,6 @@
 package etec.com.br.marialuisa.autpapo_teste;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -12,10 +11,11 @@ import android.widget.ImageView;
 
 public class Tela_Atv2_fase3 extends AppCompatActivity {
 
-    MediaPlayer audio;
-    boolean selecionouO, selecionouI;
-    private ImageView btI, btO, btOi, btIErrado, btOErrado, btICerto, btOCerto, btVolta, btBalao;
 
+    //AINDA TÁ DANDO ERRADO ESSA CARALHA -- ARRUMAR
+    MediaPlayer audio;
+    boolean selecionouO, selecionouI, erroO, erroI;
+    private ImageView btI, btO, btOi, btIErrado, btOErrado, btICerto, btOCerto, btVolta, btBalao;
     private Handler handler = new Handler();
 
     @SuppressLint("MissingInflatedId")
@@ -77,57 +77,66 @@ public class Tela_Atv2_fase3 extends AppCompatActivity {
         btOCerto.setEnabled(false);
     }
 
-
-    //VERIFICAR ESSE IF ELSE QUE ESTÁ DANDO ERRADO
     private void setOnClickListeners() {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int id = view.getId();
 
-                if (id == R.id.btn_letraO && !selecionouO && !selecionouI) {
-                    // Primeiro botão correto foi clicado
-                    selecionouO = true;
-                    btOCerto.setVisibility(View.VISIBLE);
-                    btOCerto.setEnabled(true);
-                    playAudio(R.raw.letra_o);
+                if (id == R.id.btn_letraO) {
+                    if (!selecionouO) {
+                        // Botão 'O' clicado
+                        selecionouO = true;
+                        btOCerto.setVisibility(View.VISIBLE);
+                        btOCerto.setEnabled(true);
+                        playAudio(R.raw.letra_o);
 
-                } else if (id == R.id.btn_letraI && selecionouO && !selecionouI) {
-                    // Segundo botão correto foi clicado após o primeiro
-                    selecionouI = true;
-                    btICerto.setVisibility(View.VISIBLE);
-                    btICerto.setEnabled(true);
-                    playAudio(R.raw.letra_i);
+                        if (erroI) {
+                            // Caso o 'I' tenha sido clicado primeiro e gerado erro
+                            btIErrado.setVisibility(View.INVISIBLE);
+                            erroI = false;
+                        }
+                    }
 
-                } else if (id == R.id.btn_letraI && !selecionouO) {
-                    // Ordem incorreta: I foi clicado antes de O
-                    btIErrado.setVisibility(View.VISIBLE);
-                    btIErrado.setEnabled(true);
-                    playAudio(R.raw.letra_i);
+                } else if (id == R.id.btn_letraI) {
+                    if (!selecionouI) {
+                        // Botão 'I' clicado
+                        selecionouI = true;
+                        btICerto.setVisibility(View.VISIBLE);
+                        btICerto.setEnabled(true);
+                        playAudio(R.raw.letra_i);
 
-                } else if (id == R.id.btn_letraO && selecionouI) {
-                    // Ordem incorreta: O foi clicado após I
-                    btOErrado.setVisibility(View.VISIBLE);
-                    btOErrado.setEnabled(true);
-                    playAudio(R.raw.letra_o);
-
-                } else if (id == R.id.btn_letraO && selecionouO && !selecionouI) {
-                    // O foi clicado novamente sem clicar em I ainda (caso repetitivo)
-                    btOCerto.setVisibility(View.INVISIBLE);  // Remove a cor verde
-                    btOErrado.setVisibility(View.VISIBLE);    // Mostra a cor vermelha
-                    btOErrado.setEnabled(true);
-                    playAudio(R.raw.letra_o);
+                        if (erroO) {
+                            // Caso o 'O' tenha sido clicado primeiro e gerado erro
+                            btOErrado.setVisibility(View.INVISIBLE);
+                            erroO = false;
+                        }
+                    }
                 }
 
-                // Atraso antes de ir para a próxima tela
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        startActivity(new Intent(Tela_Atv2_fase3.this,
-                                Tela_Atv3_fase3.class));
-                        finish(); // Fecha a tela atual
-                    }
-                }, 2000); // Atraso de 2 segundos
+                // Verifica se ambos os botões foram selecionados e realiza a transição
+                if (selecionouO && selecionouI) {
+                    // Transição para a próxima tela
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            startActivity(new Intent(Tela_Atv2_fase3.this, Tela_Atv3_fase3.class));
+                            finish(); // Fecha a tela atual
+                        }
+                    }, 2000); // Atraso de 2 segundos
+
+                } else if (selecionouO && !selecionouI) {
+                    // Ordem incorreta: O clicado sem I
+                    erroI = true;
+                    btIErrado.setVisibility(View.VISIBLE);
+                    btIErrado.setEnabled(true);
+
+                } else if (selecionouI && !selecionouO) {
+                    // Ordem incorreta: I clicado sem O
+                    erroO = true;
+                    btOErrado.setVisibility(View.VISIBLE);
+                    btOErrado.setEnabled(true);
+                }
             }
         };
 
