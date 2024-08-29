@@ -6,4 +6,51 @@
     android:layout_height="match_parent"
     tools:context=".Tela_Atv4_fase1">
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="133dp"
+        android:layout_height="192dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView7"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVoltarAtv1Fase"
+        app:srcCompat="@drawable/avatar_enun" />
+
+    <ImageView
+        android:id="@+id/btnVoltarAtv1Fase"
+        android:layout_width="40dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar5"
+        app:srcCompat="@drawable/seta_voltar" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar5"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:padding="8dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@drawable/logo_colorida"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="195dp"
+        android:layout_height="225dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.819"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar5"
+        app:srcCompat="@drawable/bal_letrao_fase1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

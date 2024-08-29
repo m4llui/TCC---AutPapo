@@ -51,7 +51,7 @@
         android:id="@+id/balao_enun_tchau"
         android:layout_width="223dp"
         android:layout_height="199dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="33dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView13"
