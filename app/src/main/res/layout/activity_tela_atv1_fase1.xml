@@ -7,6 +7,18 @@
     android:background="#FFFFFF"
     tools:context=".Tela_Atv1_fase1">
 
+    <TextView
+        android:id="@+id/txtEnunPfv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/fonttitulopreto"
+        android:text="@string/enun_qual_letra"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar4" />
+
     <ImageView
         android:id="@+id/btnVoltarAtv1Fase1"
         android:layout_width="40dp"
@@ -34,9 +46,9 @@
 
     <ImageView
         android:id="@+id/imageBalao"
-        android:layout_width="207dp"
-        android:layout_height="188dp"
-        android:layout_marginTop="72dp"
+        android:layout_width="204dp"
+        android:layout_height="224dp"
+        android:layout_marginTop="96dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.888"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,28 +57,14 @@
 
     <ImageView
         android:id="@+id/imageBoneco_fase1"
-        android:layout_width="130dp"
-        android:layout_height="174dp"
-        android:layout_marginTop="11dp"
+        android:layout_width="155dp"
+        android:layout_height="224dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toStartOf="@+id/imageBalao"
-        app:layout_constraintHorizontal_bias="0.557"
+        app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/txtEnunPfv2"
         app:srcCompat="@drawable/avatar_enun" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="270dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/fonttitulopreto"
-        android:text="QUAL LETRA É ESSA?"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar4" />
 
     <ImageView
         android:id="@+id/btn_Let_A"
@@ -141,7 +139,7 @@
         android:id="@+id/btn_Let_D_Inc"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="56dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -154,9 +152,9 @@
         android:layout_width="128dp"
         android:layout_height="116dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toStartOf="@+id/btn_Let_B"
-        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintHorizontal_bias="0.16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageBoneco_fase1"
         app:srcCompat="@drawable/corretoletraa_fase1" />

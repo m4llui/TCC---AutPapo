@@ -28,7 +28,7 @@ public class Tela_Atv2_fase1 extends AppCompatActivity {
         btn_Let_Y = findViewById(R.id.btn_Let_Y);
         btn_Let_Y_Inc = findViewById(R.id.btn_Let_Y_Inc);
         btVoltar3 = findViewById(R.id.btnVoltarAtv6Fase3);
-        btEnunciado = findViewById(R.id.ImageEnunciado2);
+        btEnunciado = findViewById(R.id.ImageBoneco_fase);
         btBalao = findViewById(R.id.ImageBalao2);
 
         // Desativando e ocultando os botões de erro e acerto inicialmente
