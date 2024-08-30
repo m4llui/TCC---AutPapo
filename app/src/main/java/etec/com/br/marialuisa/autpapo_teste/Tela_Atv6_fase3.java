@@ -3,6 +3,7 @@ package etec.com.br.marialuisa.autpapo_teste;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -48,9 +49,90 @@ public class Tela_Atv6_fase3 extends AppCompatActivity {
         btBalao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 playAudio(R.raw.feliz);
             }
         });
+
+        btEnunciado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                playAudio(R.raw.enun_emocao);
+            }
+        });
+
+        btVolta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //intent
+            }
+        });
+
+        // Inicializa os botões desativados e invisíveis
+        botoesInativados();
+
+        // Configura os OnClickListeners
+        setOnClickListeners();
+    }
+
+    private void botoesInativados() {
+        // Inicializa os botões "certo" e "errado" como invisíveis
+        btFelizCerto.setVisibility(View.INVISIBLE);
+        btTristeErrado.setVisibility(View.INVISIBLE);
+        btCansadoErrado.setVisibility(View.INVISIBLE);
+        btRaivaErrado.setVisibility(View.INVISIBLE);
+
+        // Inicializa os botões "certo" e "errado" como desativados
+        btFelizCerto.setEnabled(false);
+        btTristeErrado.setEnabled(false);
+        btCansadoErrado.setEnabled(false);
+        btRaivaErrado.setEnabled(false);
+    }
+
+    private void setOnClickListeners() {
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int id = view.getId();
+
+                if (id == R.id.btn_feliz) {
+                    btFelizCerto.setVisibility(View.VISIBLE);
+                    btFelizCerto.setEnabled(true);
+                    playAudio(R.raw.feliz);
+
+                } else if (id == R.id.btn_triste) {
+                    btTristeErrado.setVisibility(View.VISIBLE);
+                    btTristeErrado.setEnabled(true);
+                    playAudio(R.raw.triste);
+
+                } else if (id == R.id.btn_cansado) {
+                    btCansadoErrado.setVisibility(View.VISIBLE);
+                    btCansadoErrado.setEnabled(true);
+                    playAudio(R.raw.cansado);
+
+                } else if (id == R.id.btn_raiva) {
+                    btRaivaErrado.setVisibility(View.VISIBLE);
+                    btRaivaErrado.setEnabled(true);
+                    playAudio(R.raw.raiva);
+
+                }
+
+                // HANDLER É QUEM FAZ O ATRASO ANTES DE IR PARA A PRÓXIMA TELA
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        startActivity(new Intent(Tela_Atv6_fase3.this, Tela_Atv7_fase3.class));
+                        finish(); // Fecha a tela atual
+                    }
+                }, 2000); // Atraso de 2 segundos em milissegundos
+            }
+        };
+
+        // Configura o mesmo listener para todos os botões
+        btFeliz.setOnClickListener(listener);
+        btTriste.setOnClickListener(listener);
+        btCansado.setOnClickListener(listener);
+        btRaiva.setOnClickListener(listener);
     }
     private void playAudio(int audioResId) {
         // Libere o MediaPlayer anterior, se houver

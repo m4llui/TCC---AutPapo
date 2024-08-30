@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AUTPAPO_TESTE"
         tools:targetApi="31">
+        <activity android:name=".Tela_Finalizacao_fase3"
+            android:exported="false" />
         <activity
             android:name=".Tela_Atv5_fase1"
             android:exported="false" />

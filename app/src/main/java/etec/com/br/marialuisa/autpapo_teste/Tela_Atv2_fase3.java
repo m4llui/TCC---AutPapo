@@ -84,66 +84,47 @@ public class Tela_Atv2_fase3 extends AppCompatActivity {
                 int id = view.getId();
 
                 if (id == R.id.btn_letraO) {
-                    if (!selecionouO) {
-                        // Botão 'O' clicado
+                    if (!selecionouI) {
                         selecionouO = true;
                         btOCerto.setVisibility(View.VISIBLE);
                         btOCerto.setEnabled(true);
                         playAudio(R.raw.letra_o);
-
-                        if (erroI) {
-                            // Caso o 'I' tenha sido clicado primeiro e gerado erro
-                            btIErrado.setVisibility(View.INVISIBLE);
-                            erroI = false;
-                        }
+                    } else {
+                        btOErrado.setVisibility(View.VISIBLE);
+                        btOErrado.setEnabled(true);
+                        playAudio(R.raw.letra_o);
                     }
-
                 } else if (id == R.id.btn_letraI) {
-                    if (!selecionouI) {
-                        // Botão 'I' clicado
+                    if (selecionouO) {
                         selecionouI = true;
                         btICerto.setVisibility(View.VISIBLE);
                         btICerto.setEnabled(true);
                         playAudio(R.raw.letra_i);
-
-                        if (erroO) {
-                            // Caso o 'O' tenha sido clicado primeiro e gerado erro
-                            btOErrado.setVisibility(View.INVISIBLE);
-                            erroO = false;
-                        }
+                    } else {
+                        selecionouI = true;
+                        btIErrado.setVisibility(View.VISIBLE);
+                        btIErrado.setEnabled(true);
+                        playAudio(R.raw.letra_i);
                     }
                 }
 
-                // Verifica se ambos os botões foram selecionados e realiza a transição
-                if (selecionouO && selecionouI) {
-                    // Transição para a próxima tela
+                // Sempre vai para a próxima tela, independentemente das seleções
+                if ((selecionouO && selecionouI) || (btIErrado.getVisibility() == View.VISIBLE && btOErrado.getVisibility() == View.VISIBLE)) {
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
                             startActivity(new Intent(Tela_Atv2_fase3.this, Tela_Atv3_fase3.class));
-                            finish(); // Fecha a tela atual
+                            finish();
                         }
                     }, 2000); // Atraso de 2 segundos
-
-                } else if (selecionouO && !selecionouI) {
-                    // Ordem incorreta: O clicado sem I
-                    erroI = true;
-                    btIErrado.setVisibility(View.VISIBLE);
-                    btIErrado.setEnabled(true);
-
-                } else if (selecionouI && !selecionouO) {
-                    // Ordem incorreta: I clicado sem O
-                    erroO = true;
-                    btOErrado.setVisibility(View.VISIBLE);
-                    btOErrado.setEnabled(true);
                 }
             }
         };
 
-        // Configura o mesmo listener para todos os botões
         btI.setOnClickListener(listener);
         btO.setOnClickListener(listener);
     }
+
 
     private void playAudio(int audioResId) {
         // Libere o MediaPlayer anterior, se houver
