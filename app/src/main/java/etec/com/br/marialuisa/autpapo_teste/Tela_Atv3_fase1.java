@@ -1,6 +1,8 @@
 package etec.com.br.marialuisa.autpapo_teste;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,6 +15,7 @@ public class Tela_Atv3_fase1 extends AppCompatActivity {
             btn_Let_G, btn_Let_G_Inc, btVoltar4, btEnunciado, btBalao;
     private Handler handler = new Handler();
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +31,7 @@ public class Tela_Atv3_fase1 extends AppCompatActivity {
         btn_Let_G_Inc = findViewById(R.id.btn_G_errado);
         btVoltar4 = findViewById(R.id.btnVoltarAtv3Fase1);
         btEnunciado = findViewById(R.id.imageEnunciado3);
-        btBalao = findViewById(R.id.imgBalao3);
+        btBalao = findViewById(R.id.imageBalaoB);
 
         botoesInativados();
         setOnClickListeners();

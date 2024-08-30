@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".Tela_Atv1_fase2">
 
     <ImageView
@@ -26,6 +27,7 @@
         android:layout_marginStart="84dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="84dp"
+        android:background="#FFFFFF"
         android:fontFamily="@font/fonttitulopreto"
         android:text="@string/enum_fase2"
         android:textSize="24sp"
@@ -35,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar8" />
 
     <ImageView
-        android:id="@+id/btnVoltarAtv3Fase2"
+        android:id="@+id/btnVoltarAtv1Fase2"
         android:layout_width="40dp"
         android:layout_height="33dp"
         android:layout_marginTop="8dp"
@@ -61,7 +63,7 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/imageBalaoB"
         android:layout_width="223dp"
         android:layout_height="199dp"
         android:layout_marginStart="150dp"
@@ -74,81 +76,93 @@
         app:srcCompat="@drawable/balao_enun_letra_b" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/btn_bola"
         android:layout_width="128dp"
         android:layout_height="116dp"
         android:layout_marginStart="58dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="36dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView11"
+        app:layout_constraintEnd_toStartOf="@+id/btn_arvore"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/imageBalaoB"
         app:srcCompat="@drawable/btn_bola" />
 
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/btn_arvore"
         android:layout_width="128dp"
         android:layout_height="116dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="14dp"
         android:layout_marginEnd="61dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintStart_toEndOf="@+id/btn_bola"
+        app:layout_constraintTop_toBottomOf="@+id/imageBalaoB"
         app:srcCompat="@drawable/btn_arvore" />
 
     <ImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/btn_limao"
         android:layout_width="128dp"
         android:layout_height="116dp"
         android:layout_marginStart="58dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="36dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView14"
+        app:layout_constraintEnd_toStartOf="@+id/btn_mao"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/btn_bola"
         app:srcCompat="@drawable/btn_limao" />
 
     <ImageView
-        android:id="@+id/imageView14"
+        android:id="@+id/btn_mao"
         android:layout_width="128dp"
         android:layout_height="116dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="61dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView12"
-        app:layout_constraintTop_toBottomOf="@+id/imageView11"
+        app:layout_constraintStart_toEndOf="@+id/btn_limao"
+        app:layout_constraintTop_toBottomOf="@+id/btn_arvore"
         app:srcCompat="@drawable/btn_mao" />
 
     <ImageView
-        android:id="@+id/imageView16"
+        android:id="@+id/btn_arvore_errado"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView11"
-        app:layout_constraintStart_toStartOf="@+id/imageView11"
-        app:layout_constraintTop_toTopOf="@+id/imageView11"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_arvore"
+        app:layout_constraintEnd_toEndOf="@+id/btn_arvore"
+        app:layout_constraintStart_toStartOf="@+id/btn_arvore"
+        app:layout_constraintTop_toTopOf="@+id/btn_arvore"
         app:srcCompat="@drawable/btn_arvore_errada" />
 
     <ImageView
-        android:id="@+id/imageView18"
+        android:id="@+id/btn_limao_errado"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView12"
-        app:layout_constraintStart_toStartOf="@+id/imageView12"
-        app:layout_constraintTop_toTopOf="@+id/imageView12"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView12"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_limao"
+        app:layout_constraintEnd_toEndOf="@+id/btn_limao"
+        app:layout_constraintStart_toStartOf="@+id/btn_limao"
+        app:layout_constraintTop_toTopOf="@+id/btn_limao"
         app:srcCompat="@drawable/btn_limao_errada" />
 
     <ImageView
-        android:id="@+id/imageView20"
+        android:id="@+id/btn_mao_errada"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView14"
-        app:layout_constraintStart_toStartOf="@+id/imageView14"
-        app:layout_constraintTop_toTopOf="@+id/imageView14"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView14"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_mao"
+        app:layout_constraintEnd_toEndOf="@+id/btn_mao"
+        app:layout_constraintStart_toStartOf="@+id/btn_mao"
+        app:layout_constraintTop_toTopOf="@+id/btn_mao"
         app:srcCompat="@drawable/btn_mao_errada" />
+
+    <ImageView
+        android:id="@+id/btn_bola_certo"
+        android:layout_width="128dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_bola"
+        app:layout_constraintEnd_toEndOf="@+id/btn_bola"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_bola"
+        app:srcCompat="@drawable/btn_bola_certa" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

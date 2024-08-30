@@ -42,7 +42,7 @@ public class Tela_fase2 extends AppCompatActivity {
             @Override
             public void run() {
                 // Inicia a nova Activity após o delay
-                Intent intent = new Intent(Tela_fase2.this, Tela_Atv1_fase1.class);
+                Intent intent = new Intent(Tela_fase2.this, Tela_Atv1_fase2.class);
                 startActivity(intent);
                 finish(); // Finaliza a Activity atual
             }
