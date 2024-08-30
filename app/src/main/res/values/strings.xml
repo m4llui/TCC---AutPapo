@@ -2,7 +2,7 @@
     <string name="app_name">AUTPAPO_TESTE</string>
     <string name="carregando">ESTAMOS QUASE LÁ...</string>
     <string name="enun_emocao">QUAL EMOÇÃO É ESSA?</string>
-    <string name="enun_figura_imagem">ESCOLHA A FIGURA QUE COMBINE COM A IMAGEM</string>
+    <string name="enun_figura_imagem">ESCOLHA A FIGURA QUE COMBINE COM A PALAVRA</string>
     <string name="enun_pfv">PALAVRA MÁGICA PARA PEDIR</string>
     <string name="enun_fase1">QUAL IMAGEM É ESSA?</string>
     <string name="enum_fase2">QUAL OBJETO COMEÇA COM ESSA LETRA?</string>
