@@ -26,7 +26,7 @@ public class Tela_Atv4_fase1 extends AppCompatActivity {
         btn_Let_E = findViewById(R.id.btn_E2);
         btn_Let_E_Inc = findViewById(R.id.btn_E_Inc);
         btn_Let_O = findViewById(R.id.btn_O2);
-        btn_Let_O_Certo= findViewById(R.id.btn_O_Correta);
+        btn_Let_O_Certo = findViewById(R.id.btn_O_Correta);
         btn_Let_G = findViewById(R.id.btn_G2);
         btn_Let_G_Inc = findViewById(R.id.btn_G_Inc);
         btVoltar4 = findViewById(R.id.btnVoltarAtv4Fase1);
@@ -65,14 +65,14 @@ public class Tela_Atv4_fase1 extends AppCompatActivity {
                 } else if (id == R.id.btn_E2) {
                     btn_Let_E_Inc.setVisibility(View.VISIBLE);
                     btn_Let_E_Inc.setEnabled(true);
-                    isCorrect = true; // Correto
-
-                } else if (id == R.id.btn_O) {
-                    btn_Let_O_Certo.setVisibility(View.VISIBLE);
-                    btn_Let_O_Certo.setEnabled(true);
                     isCorrect = false; // Incorreto
 
-                } else if (id == R.id.btn_G) {
+                } else if (id == R.id.btn_O2) {
+                    btn_Let_O_Certo.setVisibility(View.VISIBLE);
+                    btn_Let_O_Certo.setEnabled(true);
+                    isCorrect = true; // Correto
+
+                } else if (id == R.id.btn_G2) {
                     btn_Let_G_Inc.setVisibility(View.VISIBLE);
                     btn_Let_G_Inc.setEnabled(true);
                     isCorrect = false; // Incorreto

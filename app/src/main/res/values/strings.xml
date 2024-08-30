@@ -5,6 +5,8 @@
     <string name="enun_figura_imagem">ESCOLHA A FIGURA QUE COMBINE COM A IMAGEM</string>
     <string name="enun_pfv">PALAVRA MÁGICA PARA PEDIR</string>
     <string name="enun_fase1">QUAL IMAGEM É ESSA?</string>
+    <string name="enum_fase2">ESSE ANIMAL COMEÇA COM QUAL
+                           LETRA?</string>
     <string name="enun_qual_letra">QUAL LETRA É ESSA?</string>
     <string name="description_exp1">Description for exp1 image</string>
     <string name="description_ex2">Description for ex2 image</string>
