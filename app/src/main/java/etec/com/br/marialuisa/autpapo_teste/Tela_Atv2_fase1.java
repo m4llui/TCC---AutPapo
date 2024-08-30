@@ -1,6 +1,8 @@
 package etec.com.br.marialuisa.autpapo_teste;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,6 +15,7 @@ public class Tela_Atv2_fase1 extends AppCompatActivity {
             btn_Let_Y, btn_Let_Y_Inc, btVoltar3, btEnunciado, btBalao;
     private Handler handler = new Handler();
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +31,7 @@ public class Tela_Atv2_fase1 extends AppCompatActivity {
         btn_Let_Y = findViewById(R.id.btn_Let_Y);
         btn_Let_Y_Inc = findViewById(R.id.btn_Let_Y_Inc);
         btVoltar3 = findViewById(R.id.btnVoltarAtv6Fase3);
-        btEnunciado = findViewById(R.id.ImageBoneco_fase);
+        btEnunciado = findViewById(R.id.ImageBoneco_fase1_atv2);
         btBalao = findViewById(R.id.ImageBalao2);
 
         // Desativando e ocultando os botões de erro e acerto inicialmente

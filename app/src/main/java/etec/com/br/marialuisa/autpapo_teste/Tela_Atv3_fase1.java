@@ -30,7 +30,7 @@ public class Tela_Atv3_fase1 extends AppCompatActivity {
         btn_Let_G = findViewById(R.id.btn_G);
         btn_Let_G_Inc = findViewById(R.id.btn_G_errado);
         btVoltar4 = findViewById(R.id.btnVoltarAtv3Fase1);
-        btEnunciado = findViewById(R.id.imageEnunciado3);
+        btEnunciado = findViewById(R.id.imageEnunciado3fase1);
         btBalao = findViewById(R.id.imageBalaoB);
 
         botoesInativados();

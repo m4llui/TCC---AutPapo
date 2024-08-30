@@ -11,7 +11,7 @@
         android:id="@+id/img_f_"
         android:layout_width="321dp"
         android:layout_height="329dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
