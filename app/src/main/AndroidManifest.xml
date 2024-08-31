@@ -13,13 +13,13 @@
         android:theme="@style/Theme.AUTPAPO_TESTE"
         tools:targetApi="31">
         <activity
+            android:name=".Tela_Atv2_fase2"
+            android:exported="false" />
+        <activity
             android:name=".Tela_Atv8_fase2"
             android:exported="false" />
         <activity
             android:name=".Tela_Atv7_fase2"
-            android:exported="false" />
-        <activity
-            android:name=".Tela_Atv5_fase2"
             android:exported="false" />
         <activity
             android:name=".Tela_Atv4_fase2"
@@ -29,9 +29,6 @@
             android:exported="false" />
         <activity
             android:name=".Tela_Finalizacao_fase3"
-            android:exported="false" />
-        <activity
-            android:name=".Tela_Atv2_fase2"
             android:exported="false" />
         <activity
             android:name=".Tela_Atv5_fase1"
