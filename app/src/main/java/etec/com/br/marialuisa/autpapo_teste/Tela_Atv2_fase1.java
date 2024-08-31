@@ -22,17 +22,17 @@ public class Tela_Atv2_fase1 extends AppCompatActivity {
         setContentView(R.layout.activity_tela_atv2_fase1);
 
         // Inicializando os botões com seus respectivos IDs
-        btn_Let_A = findViewById(R.id.btn_Let_A_2);
-        btn_Let_A_Inc = findViewById(R.id.btn_Let_A_Inc);
-        btn_Let_B = findViewById(R.id.btn_Let_B2);
-        btn_Let_B_Inc = findViewById(R.id.btn_Let_B_Inc2);
-        btn_Let_E = findViewById(R.id.btn_Let_E_2);
-        btn_Let_E_Certo = findViewById(R.id.btn_Let_E_Certo);
-        btn_Let_Y = findViewById(R.id.btn_Let_Y);
-        btn_Let_Y_Inc = findViewById(R.id.btn_Let_Y_Inc);
+        btn_Let_A = findViewById(R.id.btn_Let_L);
+        btn_Let_A_Inc = findViewById(R.id.btn_Let_L_errado);
+        btn_Let_B = findViewById(R.id.btn_Let_I);
+        btn_Let_B_Inc = findViewById(R.id.btn_Let_I_errado);
+        btn_Let_E = findViewById(R.id.btn_Let_M);
+        btn_Let_E_Certo = findViewById(R.id.btn_Let_M_errado);
+        btn_Let_Y = findViewById(R.id.btn_Let_G);
+        btn_Let_Y_Inc = findViewById(R.id.btn_Let_G_certo);
         btVoltar3 = findViewById(R.id.btnVoltarAtv6Fase3);
         btEnunciado = findViewById(R.id.ImageBoneco_fase1_atv2);
-        btBalao = findViewById(R.id.ImageBalao2);
+        btBalao = findViewById(R.id.ImageBalao_Atv2_fase2);
 
         // Desativando e ocultando os botões de erro e acerto inicialmente
         botoesInativados();
@@ -61,19 +61,19 @@ public class Tela_Atv2_fase1 extends AppCompatActivity {
             public void onClick(View view) {
                 int id = view.getId();
 
-                if (id == R.id.btn_Let_A_2) {
+                if (id == R.id.btn_Let_L) {
                     btn_Let_A_Inc.setVisibility(View.VISIBLE);
                     btn_Let_A_Inc.setEnabled(true);
 
-                } else if (id == R.id.btn_Let_B2) {
+                } else if (id == R.id.btn_Let_I) {
                     btn_Let_B_Inc.setVisibility(View.VISIBLE);
                     btn_Let_B_Inc.setEnabled(true);
 
-                } else if (id == R.id.btn_Let_E_2) {
+                } else if (id == R.id.btn_Let_M) {
                     btn_Let_E_Certo.setVisibility(View.VISIBLE);
                     btn_Let_E_Certo.setEnabled(true);
 
-                } else if (id == R.id.btn_Let_Y) {
+                } else if (id == R.id.btn_Let_G) {
                     btn_Let_Y_Inc.setVisibility(View.VISIBLE);
                     btn_Let_Y_Inc.setEnabled(true);
                 }
