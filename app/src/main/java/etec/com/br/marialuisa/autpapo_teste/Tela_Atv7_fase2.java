@@ -1,5 +1,6 @@
 package etec.com.br.marialuisa.autpapo_teste;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -51,7 +52,7 @@ public class Tela_Atv7_fase2 extends AppCompatActivity {
     private void setOnClickListeners() {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(@NonNull View view) {
                 boolean isCorrect = false;
 
                 int id = view.getId();
