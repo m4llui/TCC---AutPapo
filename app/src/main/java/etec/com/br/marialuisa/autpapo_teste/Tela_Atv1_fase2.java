@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
+
 public class Tela_Atv1_fase2 extends AppCompatActivity {
 
     private ImageView btn_Bola, btn_Let_Bola_Certo, btn_Arvore, btn_Arvore_errado, btn_limao, btn_limao_errado,
@@ -47,7 +48,6 @@ public class Tela_Atv1_fase2 extends AppCompatActivity {
         btn_mao_errado.setEnabled(false);
     }
 
-
     private void setOnClickListeners() {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
@@ -72,23 +72,17 @@ public class Tela_Atv1_fase2 extends AppCompatActivity {
                     btn_mao_errado.setVisibility(View.VISIBLE);
                     btn_mao_errado.setEnabled(true);
 
-
                 }
-
-                // Salva o resultado no banco de dados
-                //salvarResultadoNoBanco(isCorrect);
-
 
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         startActivity(new Intent(Tela_Atv1_fase2.this, Tela_Atv2_fase2.class));
-                        finish();//
+                        finish(); // Navega para a próxima tela
                     }
                 }, 2000);
             }
         };
-
 
         btn_Bola.setOnClickListener(listener);
         btn_Arvore.setOnClickListener(listener);
@@ -103,4 +97,3 @@ public class Tela_Atv1_fase2 extends AppCompatActivity {
         // db.inserirResultado(isCorrect ? "Correto" : "Incorreto");
     }
 }
-

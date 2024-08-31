@@ -29,7 +29,6 @@ public class Tela_Atv8_fase2 extends AppCompatActivity {
         btn_Planeta = findViewById(R.id.btn_Planeta);
         btn_Planeta_errado = findViewById(R.id.btn_Planeta_errado);
         btVoltar = findViewById(R.id.btnVoltarAtv8Fase2);
-        btEnunciado = findViewById(R.id.txtEnunATv7fase2);
         btBalao = findViewById(R.id.imageBalaoLetraZ);
 
         botoesInativados();
