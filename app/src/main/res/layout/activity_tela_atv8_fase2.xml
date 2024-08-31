@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".Tela_Atv1_fase1">
+    tools:context=".Tela_Atv8_fase2">
 
+    <!-- Toolbar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar4"
         android:layout_width="0dp"
@@ -21,8 +23,9 @@
         app:logo="@drawable/logo_colorida"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
+    <!-- Botão Voltar -->
     <ImageView
-        android:id="@+id/btnVoltarAtv7Fase2"
+        android:id="@+id/btnVoltarAtv8Fase2"
         android:layout_width="40dp"
         android:layout_height="33dp"
         android:layout_marginTop="8dp"
@@ -32,6 +35,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar4"
         app:srcCompat="@drawable/seta_voltar" />
 
+    <!-- Texto Enunciado -->
     <TextView
         android:id="@+id/txtEnunATv7fase2"
         android:layout_width="wrap_content"
@@ -40,21 +44,25 @@
         android:layout_marginTop="48dp"
         android:layout_marginEnd="84dp"
         android:fontFamily="@font/fonttitulopreto"
-        android:text="@string/enun_qual_letra"
+        android:text="@string/enun_fase2_atv7"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.416"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar4" />
 
+    <!-- Imagem do Boneco -->
+
+    <!-- Imagem do Balão -->
+
     <ImageView
         android:id="@+id/imageBoneco_fase2"
         android:layout_width="130dp"
         android:layout_height="174dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toStartOf="@+id/imageBalaoLetraZ"
-        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtEnunATv7fase2"
         app:srcCompat="@drawable/avatar_enun" />
@@ -70,7 +78,7 @@
         app:layout_constraintHorizontal_bias="0.867"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar4"
-        app:srcCompat="@drawable/bal_ocomletra" />
+        app:srcCompat="@drawable/balao_letra_z" />
 
     <!-- Botões de letras -->
     <ImageView
@@ -83,7 +91,7 @@
         app:layout_constraintEnd_toStartOf="@+id/btn_Nariz"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageBalaoLetraZ"
-        app:srcCompat="@drawable/letraa_fase1" />
+        app:srcCompat="@drawable/btn_flor" />
 
     <ImageView
         android:id="@+id/btn_Nariz"
@@ -95,7 +103,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_Flor"
         app:layout_constraintTop_toBottomOf="@+id/imageBalaoLetraZ"
-        app:srcCompat="@drawable/letrab_fase1" />
+        app:srcCompat="@drawable/btn_nariz" />
 
     <ImageView
         android:id="@+id/btn_Zebra"
@@ -107,7 +115,7 @@
         app:layout_constraintEnd_toStartOf="@+id/btn_Planeta"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_Flor"
-        app:srcCompat="@drawable/letrac_fase1" />
+        app:srcCompat="@drawable/btn_zebra" />
 
     <ImageView
         android:id="@+id/btn_Planeta"
@@ -119,47 +127,49 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_Zebra"
         app:layout_constraintTop_toBottomOf="@+id/btn_Nariz"
-        app:srcCompat="@drawable/letrad_fase1" />
+        app:srcCompat="@drawable/btn_planeta" />
 
-    <!-- Botões com respostas corretas ou incorretas -->
+    <!-- Botões de resposta -->
     <ImageView
-        android:id="@+id/btn_Let_YCerto"
+        android:id="@+id/btn_Flor_errado"
         android:layout_width="128dp"
         android:layout_height="116dp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_Flor"
         app:layout_constraintEnd_toEndOf="@+id/btn_Flor"
         app:layout_constraintStart_toStartOf="@+id/btn_Flor"
         app:layout_constraintTop_toTopOf="@+id/btn_Flor"
-        app:srcCompat="@drawable/corretoletraa_fase1" />
+        app:srcCompat="@drawable/btn_flor_errada" />
 
     <ImageView
-        android:id="@+id/btn_Let_A_errado"
+        android:id="@+id/btn_Nariz_errado"
         android:layout_width="128dp"
         android:layout_height="116dp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_Nariz"
         app:layout_constraintEnd_toEndOf="@+id/btn_Nariz"
         app:layout_constraintStart_toStartOf="@+id/btn_Nariz"
         app:layout_constraintTop_toTopOf="@+id/btn_Nariz"
-        app:srcCompat="@drawable/incorretaletrab_fase1" />
+        app:srcCompat="@drawable/btn_nariz_errada" />
 
     <ImageView
-        android:id="@+id/btn_Let_K_errado"
+        android:id="@+id/btn_Zebra_certa"
         android:layout_width="128dp"
         android:layout_height="116dp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_Zebra"
         app:layout_constraintEnd_toEndOf="@+id/btn_Zebra"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/btn_Zebra"
         app:layout_constraintTop_toTopOf="@+id/btn_Zebra"
-        app:srcCompat="@drawable/incorretaletrac_fase1" />
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/btn_zebra_certa" />
 
     <ImageView
-        android:id="@+id/btn_Let_Q_errado"
+        android:id="@+id/btn_Planeta_errado"
         android:layout_width="128dp"
         android:layout_height="116dp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_Planeta"
         app:layout_constraintEnd_toEndOf="@+id/btn_Planeta"
         app:layout_constraintStart_toStartOf="@+id/btn_Planeta"
         app:layout_constraintTop_toTopOf="@+id/btn_Planeta"
-        app:srcCompat="@drawable/incorretaletrad_fase1" />
+        app:srcCompat="@drawable/btn_planeta_errada" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

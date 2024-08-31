@@ -17,16 +17,16 @@ public class Tela_Atv1_fase1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_atv1_fase1);
 
-        btn_Let_A = findViewById(R.id.btn_Let_A);
-        btn_Let_A_Certo = findViewById(R.id.btn_Let_A_Certo);
-        btn_Let_B = findViewById(R.id.btn_Let_B);
-        btn_Let_B_Inc = findViewById(R.id.btn_Let_B_Inc);
-        btn_Let_C = findViewById(R.id.btn_Let_C);
-        btn_Let_C_Inc = findViewById(R.id.btn_Let_C_Inc);
-        btn_Let_D = findViewById(R.id.btn_Let_D);
-        btn_Let_D_Inc = findViewById(R.id.btn_Let_D_Inc);
-        btVoltar2 = findViewById(R.id.btnVoltarAtv1Fase1);
-        btBalao = findViewById(R.id.imageBalao);
+        btn_Let_A = findViewById(R.id.btn_Flor);
+        btn_Let_A_Certo = findViewById(R.id.btn_Let_YCerto);
+        btn_Let_B = findViewById(R.id.btn_Nariz);
+        btn_Let_B_Inc = findViewById(R.id.btn_Let_A_errado);
+        btn_Let_C = findViewById(R.id.btn_Zebra);
+        btn_Let_C_Inc = findViewById(R.id.btn_Let_K_errado);
+        btn_Let_D = findViewById(R.id.btn_Planeta);
+        btn_Let_D_Inc = findViewById(R.id.btn_Let_Q_errado);
+        btVoltar2 = findViewById(R.id.btnVoltarAtv7Fase2);
+        btBalao = findViewById(R.id.imageBalaoLetraZ);
 
         botoesInativados();
         setOnClickListeners();
@@ -53,19 +53,19 @@ public class Tela_Atv1_fase1 extends AppCompatActivity {
 
                 int id = view.getId();
 
-                if (id == R.id.btn_Let_A) {
+                if (id == R.id.btn_Flor) {
                     btn_Let_A_Certo.setVisibility(View.VISIBLE);
                     btn_Let_A_Certo.setEnabled(true);
 
-                } else if (id == R.id.btn_Let_B) {
+                } else if (id == R.id.btn_Nariz) {
                     btn_Let_B_Inc.setVisibility(View.VISIBLE);
                     btn_Let_B_Inc.setEnabled(true);
 
-                } else if (id == R.id.btn_Let_C) {
+                } else if (id == R.id.btn_Zebra) {
                     btn_Let_C_Inc.setVisibility(View.VISIBLE);
                     btn_Let_C_Inc.setEnabled(true);
 
-                } else if (id == R.id.btn_Let_D) {
+                } else if (id == R.id.btn_Planeta) {
                     btn_Let_D_Inc.setVisibility(View.VISIBLE);
                     btn_Let_D_Inc.setEnabled(true);
 

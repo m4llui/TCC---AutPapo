@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".Tela_Atv1_fase1">
+    tools:context=".Tela_Atv7_fase2">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar4"
@@ -40,39 +40,40 @@
         android:layout_marginTop="48dp"
         android:layout_marginEnd="84dp"
         android:fontFamily="@font/fonttitulopreto"
-        android:text="@string/enun_qual_letra"
+        android:text="@string/enun_fase2_atv7"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.416"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar4" />
 
-    <ImageView
-        android:id="@+id/imageBoneco_fase2"
-        android:layout_width="130dp"
-        android:layout_height="174dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageBalaoLetraZ"
-        app:layout_constraintHorizontal_bias="0.518"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEnunATv7fase2"
-        app:srcCompat="@drawable/avatar_enun" />
+    <!-- Botões de letras -->
 
     <ImageView
         android:id="@+id/imageBalaoLetraZ"
         android:layout_width="223dp"
         android:layout_height="199dp"
         android:layout_marginStart="150dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="108dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.867"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar4"
-        app:srcCompat="@drawable/bal_ocomletra" />
+        app:srcCompat="@drawable/balao_enun_yakult" />
 
-    <!-- Botões de letras -->
+    <ImageView
+        android:id="@+id/imageBoneco_fase2"
+        android:layout_width="130dp"
+        android:layout_height="174dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageBalaoLetraZ"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEnunATv7fase2"
+        app:srcCompat="@drawable/avatar_enun" />
+
     <ImageView
         android:id="@+id/btn_Flor"
         android:layout_width="128dp"
@@ -83,7 +84,7 @@
         app:layout_constraintEnd_toStartOf="@+id/btn_Nariz"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageBalaoLetraZ"
-        app:srcCompat="@drawable/letraa_fase1" />
+        app:srcCompat="@drawable/btn_letra_y" />
 
     <ImageView
         android:id="@+id/btn_Nariz"
@@ -95,7 +96,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_Flor"
         app:layout_constraintTop_toBottomOf="@+id/imageBalaoLetraZ"
-        app:srcCompat="@drawable/letrab_fase1" />
+        app:srcCompat="@drawable/btn_letra_a" />
 
     <ImageView
         android:id="@+id/btn_Zebra"
@@ -107,7 +108,7 @@
         app:layout_constraintEnd_toStartOf="@+id/btn_Planeta"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_Flor"
-        app:srcCompat="@drawable/letrac_fase1" />
+        app:srcCompat="@drawable/btn_letra_k" />
 
     <ImageView
         android:id="@+id/btn_Planeta"
@@ -119,7 +120,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_Zebra"
         app:layout_constraintTop_toBottomOf="@+id/btn_Nariz"
-        app:srcCompat="@drawable/letrad_fase1" />
+        app:srcCompat="@drawable/btn_letra_q" />
 
     <!-- Botões com respostas corretas ou incorretas -->
     <ImageView
@@ -130,7 +131,8 @@
         app:layout_constraintEnd_toEndOf="@+id/btn_Flor"
         app:layout_constraintStart_toStartOf="@+id/btn_Flor"
         app:layout_constraintTop_toTopOf="@+id/btn_Flor"
-        app:srcCompat="@drawable/corretoletraa_fase1" />
+        app:srcCompat="@drawable/btn_letra_y_certa" />
+
 
     <ImageView
         android:id="@+id/btn_Let_A_errado"
@@ -140,7 +142,7 @@
         app:layout_constraintEnd_toEndOf="@+id/btn_Nariz"
         app:layout_constraintStart_toStartOf="@+id/btn_Nariz"
         app:layout_constraintTop_toTopOf="@+id/btn_Nariz"
-        app:srcCompat="@drawable/incorretaletrab_fase1" />
+        app:srcCompat="@drawable/btn_letra_a_errada" />
 
     <ImageView
         android:id="@+id/btn_Let_K_errado"
@@ -148,9 +150,11 @@
         android:layout_height="116dp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_Zebra"
         app:layout_constraintEnd_toEndOf="@+id/btn_Zebra"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/btn_Zebra"
         app:layout_constraintTop_toTopOf="@+id/btn_Zebra"
-        app:srcCompat="@drawable/incorretaletrac_fase1" />
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/btn_letra_k_errada" />
 
     <ImageView
         android:id="@+id/btn_Let_Q_errado"
@@ -160,6 +164,6 @@
         app:layout_constraintEnd_toEndOf="@+id/btn_Planeta"
         app:layout_constraintStart_toStartOf="@+id/btn_Planeta"
         app:layout_constraintTop_toTopOf="@+id/btn_Planeta"
-        app:srcCompat="@drawable/incorretaletrad_fase1" />
+        app:srcCompat="@drawable/btn_letra_q_errada" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

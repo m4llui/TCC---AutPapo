@@ -7,6 +7,7 @@
     android:background="#FFFFFF"
     tools:context=".Tela_Atv4_fase1">
 
+    <!-- Toolbar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar5"
         android:layout_width="0dp"
@@ -21,13 +22,17 @@
         app:logo="@drawable/logo_colorida"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
+    <!-- Botão de Voltar -->
+
+    <!-- Enunciado -->
+
     <ImageView
         android:id="@+id/btnVoltarAtv4Fase1"
         android:layout_width="40dp"
         android:layout_height="33dp"
         android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar5"
         app:srcCompat="@drawable/seta_voltar" />
@@ -44,6 +49,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar5" />
 
+    <!-- Balão -->
+
+    <!-- Enunciado do Avatar -->
+    <ImageView
+        android:id="@+id/ImageBalao3"
+        android:layout_width="222dp"
+        android:layout_height="182dp"
+        android:layout_marginTop="88dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar5"
+        app:srcCompat="@drawable/bal_letrao_fase1" />
+
     <ImageView
         android:id="@+id/ImageEnunciado_fase1_atv4"
         android:layout_width="130dp"
@@ -51,22 +70,11 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toStartOf="@+id/ImageBalao3"
-        app:layout_constraintHorizontal_bias="0.785"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtEnunPfv5"
         app:srcCompat="@drawable/avatar_enun" />
 
-    <ImageView
-        android:id="@+id/ImageBalao3"
-        android:layout_width="222dp"
-        android:layout_height="182dp"
-        android:layout_marginTop="88dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.814"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar5"
-        app:srcCompat="@drawable/bal_letrao_fase1" />
-
+    <!-- Botões de Letras -->
     <ImageView
         android:id="@+id/btn_P2"
         android:layout_width="128dp"
@@ -114,14 +122,18 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_E2"
         app:srcCompat="@drawable/letrag_fase1" />
 
+    <!-- Feedback de Respostas -->
+
     <ImageView
         android:id="@+id/btn_P_Inc"
         android:layout_width="129dp"
         android:layout_height="123dp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_P2"
         app:layout_constraintEnd_toEndOf="@+id/btn_P2"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btn_P2"
         app:layout_constraintTop_toTopOf="@+id/btn_P2"
+        app:layout_constraintVertical_bias="0.285"
         app:srcCompat="@drawable/incorretaletrap_fase1" />
 
     <ImageView
@@ -136,11 +148,10 @@
 
     <ImageView
         android:id="@+id/btn_O_Correta"
-        android:layout_width="130dp"
-        android:layout_height="116dp"
+        android:layout_width="134dp"
+        android:layout_height="122dp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_O2"
         app:layout_constraintEnd_toEndOf="@+id/btn_O2"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/btn_O2"
         app:layout_constraintTop_toTopOf="@+id/btn_O2"
         app:srcCompat="@drawable/corretaletrao_fase1" />

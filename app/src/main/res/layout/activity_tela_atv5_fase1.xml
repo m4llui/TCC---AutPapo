@@ -102,12 +102,14 @@
 
     <ImageView
         android:id="@+id/btn_U_Correta"
-        android:layout_width="128dp"
-        android:layout_height="116dp"
+        android:layout_width="134dp"
+        android:layout_height="121dp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_LetU"
         app:layout_constraintEnd_toEndOf="@+id/btn_LetU"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="@+id/btn_LetU"
         app:layout_constraintTop_toTopOf="@+id/btn_LetU"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/corretaletrau_fase1" />
 
     <ImageView

@@ -47,13 +47,24 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
 
     <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="215dp"
+        android:layout_height="174dp"
+        android:layout_marginTop="96dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.836"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3"
+        app:srcCompat="@drawable/bal_ocomletrai" />
+
+    <ImageView
         android:id="@+id/imageEnunciado3fase1"
         android:layout_width="130dp"
         android:layout_height="174dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toStartOf="@+id/imageView5"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.565"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtEnunPfv4"
         app:srcCompat="@drawable/avatar_enun" />
@@ -151,16 +162,5 @@
         app:layout_constraintTop_toTopOf="@+id/btn_G"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/incorretaletrag" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="215dp"
-        android:layout_height="174dp"
-        android:layout_marginTop="96dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.836"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar3"
-        app:srcCompat="@drawable/bal_ocomletrai" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

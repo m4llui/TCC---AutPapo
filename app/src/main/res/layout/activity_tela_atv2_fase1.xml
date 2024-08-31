@@ -8,14 +8,14 @@
     tools:context=".Tela_Atv2_fase1">
 
     <ImageView
-        android:id="@+id/avatarAtv1_fase"
+        android:id="@+id/imageBoneco_fase2"
         android:layout_width="130dp"
         android:layout_height="174dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintEnd_toStartOf="@+id/ImageBalao2"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEnunPfv3"
+        app:layout_constraintTop_toBottomOf="@+id/btnVoltarAtv2Fase1"
         app:srcCompat="@drawable/avatar_enun" />
 
     <androidx.appcompat.widget.Toolbar
