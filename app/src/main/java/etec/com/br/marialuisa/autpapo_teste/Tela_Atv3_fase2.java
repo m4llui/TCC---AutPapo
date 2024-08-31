@@ -82,7 +82,7 @@ public class Tela_Atv3_fase2 extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        startActivity(new Intent(Tela_Atv3_fase2.this, Tela_Atv3_fase1.class));
+                        startActivity(new Intent(Tela_Atv3_fase2.this, Tela_Atv4_fase2.class));
                         finish();
                     }
                 }, 2000);
