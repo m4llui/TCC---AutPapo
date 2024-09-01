@@ -47,7 +47,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/ImageFinalFase3"
         android:layout_width="215dp"
         android:layout_height="174dp"
         android:layout_marginTop="96dp"
@@ -63,7 +63,7 @@
         android:layout_height="174dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintEnd_toStartOf="@+id/ImageFinalFase3"
         app:layout_constraintHorizontal_bias="0.565"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtEnunPfv4"
@@ -78,7 +78,7 @@
         android:layout_marginEnd="36dp"
         app:layout_constraintEnd_toStartOf="@+id/btn_G"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/ImageFinalFase3"
         app:srcCompat="@drawable/letraopng" />
 
     <ImageView
@@ -90,7 +90,7 @@
         android:layout_marginEnd="61dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_O"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/ImageFinalFase3"
         app:srcCompat="@drawable/letrag" />
 
     <!-- Botões de resposta errados e corretos, ajustados para novos ids -->
