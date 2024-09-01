@@ -7,18 +7,19 @@
     android:name=".TelaAtv5Fase2">
 
 
-<TextView
+    <TextView
         android:id="@+id/txtEnunPfv11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="84dp"
         android:background="#FFFFFF"
         android:fontFamily="@font/fonttitulopreto"
         android:text="@string/enun_fase2_atv5"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.263"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar11" />
 
@@ -26,9 +27,9 @@
         android:id="@+id/imageBoneco_fase2atv5"
         android:layout_width="130dp"
         android:layout_height="174dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageBalaoAtv5Fase2"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtEnunPfv11"
         app:srcCompat="@drawable/avatar_enun" />
@@ -51,8 +52,9 @@
         android:id="@+id/btnVoltarAtv5Fase2"
         android:layout_width="40dp"
         android:layout_height="33dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar11"
         app:srcCompat="@drawable/seta_voltar" />
@@ -60,8 +62,8 @@
     <ImageView
         android:id="@+id/imageBalaoAtv5Fase2"
         android:layout_width="239dp"
-        android:layout_height="197dp"
-        android:layout_marginTop="60dp"
+        android:layout_height="184dp"
+        android:layout_marginTop="88dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.802"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,7 +92,7 @@
 
     <ImageView
         android:id="@+id/btnN"
-        android:layout_width="140dp"
+        android:layout_width="131dp"
         android:layout_height="56dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="44dp"
@@ -111,7 +113,7 @@
     <ImageView
         android:id="@+id/btnA"
         android:layout_width="113dp"
-        android:layout_height="50dp"
+        android:layout_height="63dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="72dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -148,7 +150,7 @@
 
     <ImageView
         android:id="@+id/btnP_certa"
-        android:layout_width="94dp"
+        android:layout_width="136dp"
         android:layout_height="60dp"
         app:layout_constraintBottom_toBottomOf="@+id/btnP"
         app:layout_constraintEnd_toEndOf="@+id/btnP"
@@ -168,13 +170,13 @@
 
     <ImageView
         android:id="@+id/btnN_fase2_errada"
-        android:layout_width="79dp"
-        android:layout_height="37dp"
+        android:layout_width="131dp"
+        android:layout_height="63dp"
         app:layout_constraintBottom_toBottomOf="@+id/btnA"
         app:layout_constraintEnd_toEndOf="@+id/btnA"
-        app:layout_constraintHorizontal_bias="0.617"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btnA"
         app:layout_constraintTop_toTopOf="@+id/btnA"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/btn_seq_letra_a_errada" />
 </androidx.constraintlayout.widget.ConstraintLayout>

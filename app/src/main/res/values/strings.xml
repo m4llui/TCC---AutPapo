@@ -5,9 +5,9 @@
     <string name="enun_figura_imagem">ESCOLHA A FIGURA QUE COMBINE COM A PALAVRA</string>
     <string name="enun_pfv">PALAVRA MÁGICA PARA PEDIR</string>
     <string name="enun_fase1">QUAL IMAGEM É ESSA?</string>
-    <string name="enum_fase2">QUAL OBJETO COMEÇA COM ESSA LETRA?</string>
+    <string name="enum_fase2">QUAL OBJETO COMEÇA ESSA LETRA?</string>
     <string name="enun_qual_letra">QUAL LETRA É ESSA?</string>
-    <string name="enun_fase2_atv4">SELECIONE A SEQUENCIA CORRETA</string>
+    <string name="enun_fase2_atv4">SELECIONE A SEQUÊNCIA CORRETA</string>
     <string name="enun_fase2_atv5">COMPLETE A SEQUÊNCIA</string>
     <string name="enun_fase2_atv7">ESSA BEBIDA COMEÇA COM QUAL LETRA?</string>
     <string name="enun_fase2_atv2">ESSE ANIMAL COMEÇA COM QUAL LETRA?</string>

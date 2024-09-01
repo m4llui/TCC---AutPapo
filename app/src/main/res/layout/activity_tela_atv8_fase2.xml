@@ -41,10 +41,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="42dp"
         android:layout_marginEnd="84dp"
         android:fontFamily="@font/fonttitulopreto"
         android:text="@string/enun_fase2_atv7"
+        android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.416"
@@ -55,20 +56,20 @@
 
     <!-- Imagem do Balão -->
 
+    <!-- Botões de letras -->
+
     <ImageView
         android:id="@+id/imageBalaoLetraZ"
-        android:layout_width="223dp"
-        android:layout_height="199dp"
+        android:layout_width="207dp"
+        android:layout_height="186dp"
         android:layout_marginStart="150dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="92dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.867"
+        app:layout_constraintHorizontal_bias="0.909"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar4"
         app:srcCompat="@drawable/balao_letra_z" />
-
-    <!-- Botões de letras -->
 
     <ImageView
         android:id="@+id/imageBoneco_fase2"
