@@ -41,6 +41,7 @@
         android:layout_marginEnd="84dp"
         android:fontFamily="@font/fonttitulopreto"
         android:text="@string/enun_qual_letra"
+        android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.416"

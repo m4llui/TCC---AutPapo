@@ -52,7 +52,7 @@ public class Tela_Home extends AppCompatActivity {
         imfase3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Tela_Home.this, Tela_Atv_1_fase3.class);
+                Intent intent = new Intent(Tela_Home.this, Tela_fase3.class);
                 startActivity(intent);
             }
         });

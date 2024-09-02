@@ -151,6 +151,7 @@
         android:fontFamily="@font/fonttitulopreto"
         android:text="@string/enun_figura_imagem"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

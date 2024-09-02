@@ -17,6 +17,7 @@
         android:background="#FFFFFF"
         android:fontFamily="@font/fonttitulopreto"
         android:text="@string/enun_fase2_atv5"
+        android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.263"

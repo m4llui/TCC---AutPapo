@@ -14,8 +14,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 
 
-
-
 public class Carregamento extends AppCompatActivity {
 
     ImageView imageView;

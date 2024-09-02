@@ -7,8 +7,8 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewTreeObserver;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import java.util.HashMap;
@@ -19,6 +19,8 @@ public class Tela_Explicacao1 extends AppCompatActivity {
     private HashMap<Integer, Integer> viewAudioMap;
     private MediaPlayer mediaPlayer;
     private View view1, view2, view3, view4, view5;
+    private TextView textViewMessage;
+    private ImageView imageViewIcon;
 
     Button btCriarConta;
     TextView txLogin, txPular;
@@ -38,6 +40,8 @@ public class Tela_Explicacao1 extends AppCompatActivity {
         view3 = findViewById(R.id.view3);
         view4 = findViewById(R.id.view4);
         view5 = findViewById(R.id.view5);
+        textViewMessage = findViewById(R.id.textViewMessage);
+        imageViewIcon = findViewById(R.id.imageViewIcon);
 
         // Clique do botão CRIAR CONTA
         btCriarConta.setOnClickListener(view -> {
@@ -65,32 +69,30 @@ public class Tela_Explicacao1 extends AppCompatActivity {
         viewAudioMap.put(view4.getId(), R.raw.audio_ex4);
         viewAudioMap.put(view5.getId(), -1); // view5 não deve ter áudio
 
-        // Configura o Listener de Scroll com lambda
-        scrollView.getViewTreeObserver().addOnScrollChangedListener(() -> {
-            stopAllAudio();
-            checkAndPlayAudio(view1);
-            checkAndPlayAudio(view2);
-            checkAndPlayAudio(view3);
-            checkAndPlayAudio(view4);
-            // Não chama checkAndPlayAudio para view5, pois view5 não deve ter áudio
-        });
+        // Configura o OnClickListener para cada view
+        setupClickListener(view1, R.raw.audio_exp1);
+        setupClickListener(view2, R.raw.audio_ex2);
+        setupClickListener(view3, R.raw.audio_ex3);
+        setupClickListener(view4, R.raw.audio_ex4);
 
-        // Configura o OnClickListener para view1 com lambda
-        view1.setOnClickListener(v -> {
-            stopAllAudio();
-            playAudio(R.raw.audio_exp1);
+        // Exibe a mensagem e o ícone apenas na view1
+        scrollView.getViewTreeObserver().addOnScrollChangedListener(() -> {
+            if (isViewVisible(view1)) {
+                textViewMessage.setVisibility(View.VISIBLE);
+                imageViewIcon.setVisibility(View.VISIBLE);
+            } else {
+                textViewMessage.setVisibility(View.GONE);
+                imageViewIcon.setVisibility(View.GONE);
+            }
         });
     }
 
-    // Método para verificar se a View está visível e tocar o áudio
-    private void checkAndPlayAudio(View view) {
-        if (isViewVisible(view)) {
-            Integer audioResourceId = viewAudioMap.get(view.getId());
-            Log.d("CheckAndPlayAudio", "Checking view ID: " + view.getId() + " with audio resource: " + audioResourceId);
-            if (audioResourceId != null && audioResourceId != -1) {
-                playAudio(audioResourceId);
-            }
-        }
+    // Configura o OnClickListener para uma view específica
+    private void setupClickListener(View view, int audioResourceId) {
+        view.setOnClickListener(v -> {
+            stopAllAudio();
+            playAudio(audioResourceId);
+        });
     }
 
     // Método para tocar o áudio
@@ -118,10 +120,6 @@ public class Tela_Explicacao1 extends AppCompatActivity {
         boolean visible = view.getGlobalVisibleRect(rect) &&
                 rect.top <= scrollView.getHeight() &&
                 rect.bottom >= 0;
-        Log.d("VisibilityCheck", "View ID: " + view.getId() +
-                " Top: " + rect.top + " Bottom: " + rect.bottom +
-                " ScrollView Height: " + scrollView.getHeight() +
-                " Visible: " + visible);
         return visible;
     }
 
