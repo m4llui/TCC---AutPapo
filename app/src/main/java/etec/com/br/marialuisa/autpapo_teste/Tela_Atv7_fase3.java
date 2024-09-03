@@ -10,6 +10,7 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Tela_Atv7_fase3 extends AppCompatActivity {
 
@@ -139,5 +140,10 @@ public class Tela_Atv7_fase3 extends AppCompatActivity {
             }
         });
 
+    }
+    //BLOQUEIO DO BOTÃO VOLTAR DO CELULAR
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "Utilize a setinha para voltar para home!", Toast.LENGTH_SHORT).show();
     }
 }

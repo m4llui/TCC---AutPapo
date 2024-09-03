@@ -10,6 +10,7 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Tela_Atv5_fase3 extends AppCompatActivity {
 
@@ -37,7 +38,6 @@ public class Tela_Atv5_fase3 extends AppCompatActivity {
         btViolaErrado = findViewById(R.id.btn_viola_errada);
         btVolta = findViewById(R.id.btnVoltarAtv5Fase3);
 
-        // Toca o áudio uma vez quando a Activity é carregada ESTÁ DUPLICANDO ESTE AUDIO
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -58,6 +58,16 @@ public class Tela_Atv5_fase3 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 playAudio(R.raw.enun_escolha_figplvra);
+            }
+        });
+
+        //BOTAO VOLTAR
+        btVolta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //intent verificar se será necessário if e else
+                Intent abrirHome =  new Intent(Tela_Atv5_fase3.this, tela_home_visitante.class);
+                startActivity(abrirHome);
             }
         });
 
@@ -142,5 +152,11 @@ public class Tela_Atv5_fase3 extends AppCompatActivity {
                 audio = null;
             }
         });
+    }
+
+    //BLOQUEIO DO BOTÃO VOLTAR DO CELULAR
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "Utilize a setinha para voltar para home!", Toast.LENGTH_SHORT).show();
     }
 }

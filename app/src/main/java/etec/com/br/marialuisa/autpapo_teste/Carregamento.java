@@ -52,7 +52,6 @@ public class Carregamento extends AppCompatActivity {
                     editor.apply();
                 } else {
                     // O aplicativo já foi executado anteriormente
-                    // Execute qualquer lógica adicional aqui, se necessário
                     Intent abrirCadastro =  new Intent(Carregamento.this, tela_home_visitante.class);
                     startActivity(abrirCadastro);
 
@@ -89,4 +88,9 @@ public class Carregamento extends AppCompatActivity {
         }
 
             }
-        }
+
+    @Override
+    public void onBackPressed() {
+
+    }
+}

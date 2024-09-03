@@ -82,4 +82,9 @@ public class Tela_Home extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }

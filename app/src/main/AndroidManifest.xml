@@ -70,7 +70,7 @@
             android:name=".Tela_Atv6_fase3"
             android:exported="false" />
         <activity
-            android:name=".Tela_Atv_1_fase3"
+            android:name=".Tela_Atv1_fase3"
             android:exported="false" />
         <activity
             android:name=".Tela_Atv1_fase1"

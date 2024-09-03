@@ -10,8 +10,9 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class Tela_Atv_1_fase3 extends AppCompatActivity {
+public class Tela_Atv1_fase3 extends AppCompatActivity {
 
     TextView btEnunciado;
     MediaPlayer audio;
@@ -55,12 +56,21 @@ public class Tela_Atv_1_fase3 extends AppCompatActivity {
             }
         });
 
-        // Configura o clique do botão Balao para tocar o áudio
+        //botão Balao para tocar o áudio
         btBalao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 playAudio(R.raw.audio_pfv);
+            }
+        });
+        //Botão para voltar para a home - VER IF ELSE SE É LOGADO OU VISITANTE
+        btVolta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent abrirHome =  new Intent(Tela_Atv1_fase3.this, tela_home_visitante.class);
+                startActivity(abrirHome);
+
             }
         });
 
@@ -133,7 +143,7 @@ public class Tela_Atv_1_fase3 extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        startActivity(new Intent(Tela_Atv_1_fase3.this, Tela_Atv2_fase3.class));
+                        startActivity(new Intent(Tela_Atv1_fase3.this, Tela_Atv2_fase3.class));
                         finish(); // Fecha a tela atual
                     }
                 }, 2000); // Atraso de 2 segundo em// milissegundos)
@@ -162,5 +172,11 @@ public class Tela_Atv_1_fase3 extends AppCompatActivity {
             audio.release(); // Libere os recursos
             audio = null;
         }
+    }
+    //BLOQUEIO DO BOTÃO VOLTAR DO CELULAR
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "Utilize a setinha para voltar para home!", Toast.LENGTH_SHORT).show();
+
     }
 }

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class Tela_Atv2_fase3 extends AppCompatActivity {
 
@@ -34,10 +35,11 @@ public class Tela_Atv2_fase3 extends AppCompatActivity {
         btVolta = findViewById(R.id.btnVoltarAtv6Fase3);
         btOi = findViewById(R.id.imgOi);
 
-        // Leitura do Enunciado automático
+        //ENUNCIADO AUTOMÁTICO
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
+
                 playAudio(R.raw.monte_palavra);
             }
         }, 1000); // Atraso de 1 segundo
@@ -45,6 +47,7 @@ public class Tela_Atv2_fase3 extends AppCompatActivity {
         btBalao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 playAudio(R.raw.monte_palavra);
             }
         });
@@ -52,9 +55,22 @@ public class Tela_Atv2_fase3 extends AppCompatActivity {
         btOi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 playAudio(R.raw.oi);
             }
         });
+
+        //BOTAO VOLTAR
+        btVolta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //intent verificar se será necessário if e else
+                Intent abrirHome =  new Intent(Tela_Atv2_fase3.this, tela_home_visitante.class);
+                startActivity(abrirHome);
+            }
+        });
+
+
 
         // Inicializa os botões desativados e invisíveis
         botoesInativados();
@@ -99,6 +115,8 @@ public class Tela_Atv2_fase3 extends AppCompatActivity {
                         selecionouI = true;
                         btICerto.setVisibility(View.VISIBLE);
                         btICerto.setEnabled(true);
+                        btI.setVisibility(View.INVISIBLE);
+                        btI.setEnabled(false);
                         playAudio(R.raw.letra_i);
                     } else {
                         selecionouI = true;
@@ -134,5 +152,11 @@ public class Tela_Atv2_fase3 extends AppCompatActivity {
         // Cria um novo MediaPlayer e toca o áudio
         audio = MediaPlayer.create(this, audioResId);
         audio.start();
+    }
+
+    //BLOQUEIO DO BOTÃO VOLTAR DO CELULAR
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "Utilize a setinha para voltar para home!", Toast.LENGTH_SHORT).show();
     }
 }

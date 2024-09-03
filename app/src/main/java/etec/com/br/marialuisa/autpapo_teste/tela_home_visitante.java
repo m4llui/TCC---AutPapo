@@ -69,4 +69,9 @@ public class tela_home_visitante extends AppCompatActivity {
              }
          });
     }
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }

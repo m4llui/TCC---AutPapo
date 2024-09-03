@@ -1,11 +1,10 @@
 package etec.com.br.marialuisa.autpapo_teste;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-public class TelaAtv5Fase2 extends AppCompatActivity {
+public class Tela_Atv5_Fase2 extends AppCompatActivity {
 
 ;
 

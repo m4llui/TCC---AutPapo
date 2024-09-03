@@ -37,7 +37,7 @@ public class Tela_fase3 extends AppCompatActivity {
 
 
         new Handler().postDelayed(() -> {
-            startActivity(new Intent(Tela_fase3.this, Tela_Atv_1_fase3.class));
+            startActivity(new Intent(Tela_fase3.this, Tela_Atv1_fase3.class));
             finish();
         }, DELAY_MILLIS);
     }
