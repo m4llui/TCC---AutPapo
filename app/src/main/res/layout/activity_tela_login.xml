@@ -15,11 +15,12 @@
         android:elevation="4dp"
         android:padding="8dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:logo="@drawable/logo_colorida"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-25dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/edtSenhac"
@@ -42,14 +43,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="51dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="192dp"
         android:layout_marginEnd="298dp"
         android:fontFamily="@font/f_conta_login"
         android:text="EMAIL"
         android:textColor="@color/azul"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         tools:ignore="MissingConstraints" />
@@ -92,7 +93,7 @@
         android:layout_width="169dp"
         android:layout_height="53dp"
         android:layout_marginStart="118dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="124dp"
         android:background="@drawable/fundo_btnc_l"
         android:fontFamily="@font/ftitilos"
@@ -100,10 +101,36 @@
         android:textSize="34sp"
         app:backgroundTint="@color/vermelho"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.431"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtSenhac"
         tools:ignore="MissingConstraints" />
+
+    <CheckBox
+        android:id="@+id/checkBoxLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="83dp"
+        android:fontFamily="@font/fonttitulopreto"
+        android:text="Estou ciente da Coleta de Dados."
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogar" />
+
+    <TextView
+        android:id="@+id/SaibaMaisColetaDados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="39dp"
+        android:text="@string/contaElogin"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxLogin" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
