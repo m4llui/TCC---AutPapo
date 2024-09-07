@@ -88,48 +88,51 @@
         android:id="@+id/btn_letraI_certa"
         android:layout_width="145dp"
         android:layout_height="123dp"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_letraO"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgOi"
-        app:srcCompat="@drawable/bt_letra_i_certa" />
+        app:srcCompat="@drawable/bt_letra_i_certa"
+        tools:layout_editor_absoluteX="49dp"
+        tools:layout_editor_absoluteY="459dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_letraI"
+        app:layout_constraintStart_toStartOf="@+id/btn_letraI"
+        app:layout_constraintTop_toTopOf="@+id/btn_letraI"
+        app:layout_constraintEnd_toEndOf="@+id/btn_letraI"
+        />
 
     <ImageView
         android:id="@+id/btn_letraI_errada"
         android:layout_width="145dp"
         android:layout_height="123dp"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_letraO"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgOi"
-        app:srcCompat="@drawable/bt_letra_i_errada" />
+        app:srcCompat="@drawable/bt_letra_i_errada"
+        tools:layout_editor_absoluteX="49dp"
+        tools:layout_editor_absoluteY="459dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_letraI"
+        app:layout_constraintStart_toStartOf="@+id/btn_letraI"
+        app:layout_constraintTop_toTopOf="@+id/btn_letraI"
+        app:layout_constraintEnd_toEndOf="@+id/btn_letraI"
+        />
 
     <ImageView
         android:id="@+id/btn_letraO_certa"
         android:layout_width="124dp"
         android:layout_height="108dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.291"
-        app:layout_constraintStart_toEndOf="@+id/btn_letraI"
-        app:layout_constraintTop_toBottomOf="@+id/imgOi"
-        app:srcCompat="@drawable/btn_letra_o_certa" />
+        app:srcCompat="@drawable/btn_letra_o_certa"
+        tools:layout_editor_absoluteX="287dp"
+        tools:layout_editor_absoluteY="466dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_letraO"
+        app:layout_constraintStart_toStartOf="@+id/btn_letraO"
+        app:layout_constraintTop_toTopOf="@+id/btn_letraO"
+        app:layout_constraintEnd_toEndOf="@+id/btn_letraO"/>
 
     <ImageView
         android:id="@+id/btn_letraO_errada"
         android:layout_width="144dp"
         android:layout_height="124dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="58dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/btn_letraI_certa"
-        app:layout_constraintTop_toBottomOf="@+id/imgOi"
-        app:srcCompat="@drawable/bt_letra_o_errada" />
+        app:srcCompat="@drawable/bt_letra_o_errada"
+        tools:layout_editor_absoluteX="210dp"
+        tools:layout_editor_absoluteY="458dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_letraO"
+        app:layout_constraintStart_toStartOf="@+id/btn_letraO"
+        app:layout_constraintTop_toTopOf="@+id/btn_letraO"
+        app:layout_constraintEnd_toEndOf="@+id/btn_letraO"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -95,49 +95,49 @@
         android:id="@+id/btn_kpop_errada"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="44dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_navio"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/balao_nao"
-        app:srcCompat="@drawable/btn_kpop_erro" />
+        app:srcCompat="@drawable/btn_kpop_erro"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="361dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_kpop"
+        app:layout_constraintStart_toStartOf="@+id/btn_kpop"
+        app:layout_constraintTop_toTopOf="@+id/btn_kpop"
+        app:layout_constraintEnd_toEndOf="@+id/btn_kpop"/>
 
     <ImageView
         android:id="@+id/btn_navio_errada"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="57dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_kpop"
-        app:layout_constraintTop_toBottomOf="@+id/balao_nao"
-        app:srcCompat="@drawable/btn_navio_erro" />
+        app:srcCompat="@drawable/btn_navio_erro"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="361dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_navio"
+        app:layout_constraintStart_toStartOf="@+id/btn_navio"
+        app:layout_constraintTop_toTopOf="@+id/btn_navio"
+        app:layout_constraintEnd_toEndOf="@+id/btn_navio"/>
 
     <ImageView
         android:id="@+id/btn_viola_errada"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="44dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_joia_nao"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_kpop"
-        app:srcCompat="@drawable/btn_viola_erro" />
+        app:srcCompat="@drawable/btn_viola_erro"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="501dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_viola"
+        app:layout_constraintStart_toStartOf="@+id/btn_viola"
+        app:layout_constraintTop_toTopOf="@+id/btn_viola"
+        app:layout_constraintEnd_toEndOf="@+id/btn_viola"/>
 
     <ImageView
         android:id="@+id/btn_joia_nao_certa"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="57dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_viola"
-        app:layout_constraintTop_toBottomOf="@+id/btn_navio"
-        app:srcCompat="@drawable/btn_nao_certo" />
+        app:srcCompat="@drawable/btn_nao_certo"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="501dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_joia_nao"
+        app:layout_constraintStart_toStartOf="@+id/btn_joia_nao"
+        app:layout_constraintTop_toTopOf="@+id/btn_joia_nao"
+        app:layout_constraintEnd_toEndOf="@+id/btn_joia_nao"/>
 
     <TextView
         android:id="@+id/txtEnunFigura"

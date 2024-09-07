@@ -110,48 +110,49 @@
         android:id="@+id/btn_nao_errada"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="44dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_sim"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/balao_enun_tchau"
-        app:srcCompat="@drawable/btn_naotxt_erro" />
+        app:srcCompat="@drawable/btn_naotxt_erro"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="347dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_nao"
+        app:layout_constraintStart_toStartOf="@+id/btn_nao"
+        app:layout_constraintTop_toTopOf="@+id/btn_nao"
+        app:layout_constraintEnd_toEndOf="@+id/btn_nao"/>
 
     <ImageView
         android:id="@+id/btn_sim_errada"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="57dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_nao"
-        app:layout_constraintTop_toBottomOf="@+id/balao_enun_tchau"
-        app:srcCompat="@drawable/btn_simtxt_err0" />
+        app:srcCompat="@drawable/btn_simtxt_err0"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="347dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_sim"
+        app:layout_constraintStart_toStartOf="@+id/btn_sim"
+        app:layout_constraintTop_toTopOf="@+id/btn_sim"
+        app:layout_constraintEnd_toEndOf="@+id/btn_sim"
+        />
 
     <ImageView
         android:id="@+id/btn_tchau_certa"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="44dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_casa3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_nao"
-        app:srcCompat="@drawable/btn_tchau_certo" />
+        app:srcCompat="@drawable/btn_tchau_certo"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="487dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_tchau"
+        app:layout_constraintStart_toStartOf="@+id/btn_tchau"
+        app:layout_constraintTop_toTopOf="@+id/btn_tchau"
+        app:layout_constraintEnd_toEndOf="@+id/btn_tchau"/>
 
     <ImageView
         android:id="@+id/btn_casa_errada"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="57dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_tchau"
-        app:layout_constraintTop_toBottomOf="@+id/btn_sim"
-        app:srcCompat="@drawable/btn_casa_erro" />
+        app:srcCompat="@drawable/btn_casa_erro"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="487dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_casa3"
+        app:layout_constraintStart_toStartOf="@+id/btn_casa3"
+        app:layout_constraintTop_toTopOf="@+id/btn_casa3"
+        app:layout_constraintEnd_toEndOf="@+id/btn_casa3"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

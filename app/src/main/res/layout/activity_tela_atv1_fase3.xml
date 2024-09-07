@@ -85,51 +85,45 @@
         android:id="@+id/btn_pfv_certo"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_carro"
-        app:layout_constraintHorizontal_bias="0.409"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgBalao"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_pfv"
+        app:layout_constraintEnd_toEndOf="@+id/btn_pfv"
+        app:layout_constraintStart_toStartOf="@+id/btn_pfv"
+        app:layout_constraintTop_toTopOf="@+id/btn_pfv"
         app:srcCompat="@drawable/btn_pfv_certo" />
 
     <ImageView
         android:id="@+id/btn_carro_errado"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="29dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.611"
-        app:layout_constraintStart_toEndOf="@+id/btn_pfv"
-        app:layout_constraintTop_toBottomOf="@+id/imgBalao"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_carro"
+        app:layout_constraintStart_toStartOf="@+id/btn_carro"
+        app:layout_constraintTop_toTopOf="@+id/btn_carro"
+        app:layout_constraintEnd_toEndOf="@+id/btn_carro"
         app:srcCompat="@drawable/btn_carro_erro" />
 
     <ImageView
         android:id="@+id/btn_morango_errado"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="44dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_casa"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_pfv"
-        app:srcCompat="@drawable/btn_morango_erro" />
+        app:srcCompat="@drawable/btn_morango_erro"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="489dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_morango"
+        app:layout_constraintStart_toStartOf="@+id/btn_morango"
+        app:layout_constraintTop_toTopOf="@+id/btn_morango"
+        app:layout_constraintEnd_toEndOf="@+id/btn_morango"/>
 
     <ImageView
         android:id="@+id/btn_casa_errado"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="57dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_morango"
-        app:layout_constraintTop_toBottomOf="@+id/btn_carro"
-        app:srcCompat="@drawable/btn_casatxt_erro" />
+        app:srcCompat="@drawable/btn_casatxt_erro"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="489dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_casa"
+        app:layout_constraintStart_toStartOf="@+id/btn_casa"
+        app:layout_constraintTop_toTopOf="@+id/btn_casa"
+        app:layout_constraintEnd_toEndOf="@+id/btn_casa"/>
 
     <TextView
         android:id="@+id/txtEnunPfv"

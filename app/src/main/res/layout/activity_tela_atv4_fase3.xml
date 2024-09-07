@@ -95,51 +95,49 @@
         android:id="@+id/btn_sim_joia_certo"
         android:layout_width="148dp"
         android:layout_height="117dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_coracao"
-        app:layout_constraintHorizontal_bias="0.357"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/balao_sim"
-        app:srcCompat="@drawable/btn_sim_certo" />
+        app:srcCompat="@drawable/btn_sim_certo"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="361dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_sim_joia"
+        app:layout_constraintStart_toStartOf="@+id/btn_sim_joia"
+        app:layout_constraintTop_toTopOf="@+id/btn_sim_joia"
+        app:layout_constraintEnd_toEndOf="@+id/btn_sim_joia"/>
 
     <ImageView
         android:id="@+id/btn_coracao_errada"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="29dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.611"
-        app:layout_constraintStart_toEndOf="@+id/btn_sim_joia"
-        app:layout_constraintTop_toBottomOf="@+id/balao_sim"
-        app:srcCompat="@drawable/btn_coracao_erro" />
+        app:srcCompat="@drawable/btn_coracao_erro"
+        tools:layout_editor_absoluteX="254dp"
+        tools:layout_editor_absoluteY="361dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_coracao"
+        app:layout_constraintStart_toStartOf="@+id/btn_coracao"
+        app:layout_constraintTop_toTopOf="@+id/btn_coracao"
+        app:layout_constraintEnd_toEndOf="@+id/btn_coracao"/>
 
     <ImageView
         android:id="@+id/btn_morango4_errado"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="44dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_maos"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_sim_joia"
-        app:srcCompat="@drawable/btn_morango_erro" />
+        app:srcCompat="@drawable/btn_morango_erro"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="501dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_morango4"
+        app:layout_constraintStart_toStartOf="@+id/btn_morango4"
+        app:layout_constraintTop_toTopOf="@+id/btn_morango4"
+        app:layout_constraintEnd_toEndOf="@+id/btn_morango4"/>
 
     <ImageView
         android:id="@+id/btn_maos_errada"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="57dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_morango4"
-        app:layout_constraintTop_toBottomOf="@+id/btn_coracao"
-        app:srcCompat="@drawable/btn_maos_erro" />
+        app:srcCompat="@drawable/btn_maos_erro"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="501dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_maos"
+        app:layout_constraintStart_toStartOf="@+id/btn_maos"
+        app:layout_constraintTop_toTopOf="@+id/btn_maos"
+        app:layout_constraintEnd_toEndOf="@+id/btn_maos"/>
 
     <TextView
         android:id="@+id/txtEnunImg"

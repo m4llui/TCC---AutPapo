@@ -87,49 +87,49 @@
         android:id="@+id/btn_triste7_certa"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="44dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_feliz7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/balao_triste"
-        app:srcCompat="@drawable/btn_triste_certo" />
+        app:srcCompat="@drawable/btn_triste_certo"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="357dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_triste7"
+        app:layout_constraintStart_toStartOf="@+id/btn_triste7"
+        app:layout_constraintTop_toTopOf="@+id/btn_triste7"
+        app:layout_constraintEnd_toEndOf="@+id/btn_triste7"/>
 
     <ImageView
         android:id="@+id/btn_feliz7_errada"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="57dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_triste7"
-        app:layout_constraintTop_toBottomOf="@+id/balao_triste"
-        app:srcCompat="@drawable/btn_feliz_erro" />
+        app:srcCompat="@drawable/btn_feliz_erro"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="357dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_feliz7"
+        app:layout_constraintStart_toStartOf="@+id/btn_feliz7"
+        app:layout_constraintTop_toTopOf="@+id/btn_feliz7"
+        app:layout_constraintEnd_toEndOf="@+id/btn_feliz7"/>
 
     <ImageView
         android:id="@+id/btn_raiva7_errada"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="44dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_cansado7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_triste7"
-        app:srcCompat="@drawable/btn_raiva_erro" />
+        app:srcCompat="@drawable/btn_raiva_erro"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="497dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_raiva7"
+        app:layout_constraintStart_toStartOf="@+id/btn_raiva7"
+        app:layout_constraintTop_toTopOf="@+id/btn_raiva7"
+        app:layout_constraintEnd_toEndOf="@+id/btn_raiva7"/>
 
     <ImageView
         android:id="@+id/btn_cansado7_errada"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="57dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_raiva7"
-        app:layout_constraintTop_toBottomOf="@+id/btn_feliz7"
-        app:srcCompat="@drawable/btn_cansado_erro" />
+        app:srcCompat="@drawable/btn_cansado_erro"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="497dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_cansado7"
+        app:layout_constraintStart_toStartOf="@+id/btn_cansado7"
+        app:layout_constraintTop_toTopOf="@+id/btn_cansado7"
+        app:layout_constraintEnd_toEndOf="@+id/btn_cansado7"/>
 
     <ImageView
         android:id="@+id/balao_triste"
