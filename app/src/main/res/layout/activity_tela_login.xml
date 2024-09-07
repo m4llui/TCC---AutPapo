@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fundo_login"
+    android:background="@color/azul"
     tools:context=".Tela_Login">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="411dp"
+        android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="#FFFFFF"
         android:elevation="4dp"
@@ -21,6 +21,18 @@
         app:logo="@drawable/logo_colorida"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="347dp"
+        android:layout_height="364dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:srcCompat="@drawable/quadrado_branco" />
 
     <EditText
         android:id="@+id/edtSenhac"
@@ -43,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="51dp"
-        android:layout_marginTop="192dp"
+        android:layout_marginTop="230dp"
         android:layout_marginEnd="298dp"
         android:fontFamily="@font/f_conta_login"
         android:text="EMAIL"
@@ -90,7 +102,7 @@
 
     <Button
         android:id="@+id/btnLogar"
-        android:layout_width="169dp"
+        android:layout_width="match_parent"
         android:layout_height="53dp"
         android:layout_marginStart="118dp"
         android:layout_marginTop="36dp"
@@ -108,10 +120,9 @@
 
     <CheckBox
         android:id="@+id/checkBoxLogin"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="82dp"
-        android:layout_marginTop="65dp"
         android:layout_marginEnd="83dp"
         android:fontFamily="@font/fonttitulopreto"
         android:text="Estou ciente da Coleta de Dados."
@@ -122,7 +133,7 @@
 
     <TextView
         android:id="@+id/SaibaMaisColetaDados"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
         android:layout_marginEnd="39dp"
@@ -131,6 +142,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBoxLogin" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="304dp"
+        android:layout_height="112dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="49dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@drawable/t_login" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

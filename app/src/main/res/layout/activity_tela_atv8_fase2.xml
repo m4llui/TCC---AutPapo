@@ -8,7 +8,7 @@
     android:background="#FFFFFF"
     tools:context=".Tela_Atv8_fase2">
 
-    <!-- Toolbar -->
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar4"
         android:layout_width="0dp"
@@ -23,7 +23,7 @@
         app:logo="@drawable/logo_colorida"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-    <!-- Botão Voltar -->
+
     <ImageView
         android:id="@+id/btnVoltarAtv8Fase2"
         android:layout_width="40dp"
@@ -35,7 +35,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar4"
         app:srcCompat="@drawable/seta_voltar" />
 
-    <!-- Texto Enunciado -->
+
     <TextView
         android:id="@+id/txtEnunATv7fase2"
         android:layout_width="wrap_content"
@@ -53,11 +53,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar4" />
 
-    <!-- Imagem do Boneco -->
 
-    <!-- Imagem do Balão -->
-
-    <!-- Botões de letras -->
 
     <ImageView
         android:id="@+id/imageBalaoLetraZ"
@@ -132,7 +128,6 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_Nariz"
         app:srcCompat="@drawable/btn_planeta" />
 
-    <!-- Botões de resposta -->
     <ImageView
         android:id="@+id/btn_Flor_errado"
         android:layout_width="128dp"
