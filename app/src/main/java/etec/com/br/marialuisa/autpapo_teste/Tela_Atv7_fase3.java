@@ -109,7 +109,7 @@ public class Tela_Atv7_fase3 extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        startActivity(new Intent(Tela_Atv7_fase3.this, Tela_Finalizacao_fase3.class));
+                        startActivity(new Intent(Tela_Atv7_fase3.this, Tela_Video_fase3.class));
                         finish(); // Fecha a tela atual - VER ERRO, NÃO FOI PARA A PROXÍMA TELA
                     }
                 }, 2000); // Atraso de 2 segundos em milissegundos

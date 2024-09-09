@@ -13,7 +13,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import java.util.HashMap;
 
-public class Tela_Explicacao1 extends AppCompatActivity {
+public class Tela_Explicacao extends AppCompatActivity {
 
     private ScrollView scrollView;
     private HashMap<Integer, Integer> viewAudioMap;
@@ -45,19 +45,19 @@ public class Tela_Explicacao1 extends AppCompatActivity {
 
         // Clique do botão CRIAR CONTA
         btCriarConta.setOnClickListener(view -> {
-            Intent intent = new Intent(Tela_Explicacao1.this, Tela_CriarConta.class);
+            Intent intent = new Intent(Tela_Explicacao.this, Tela_CriarConta.class);
             startActivity(intent);
         });
 
         // Clique do botão LOGIN
         txLogin.setOnClickListener(view -> {
-            Intent intent = new Intent(Tela_Explicacao1.this, Tela_Login.class);
+            Intent intent = new Intent(Tela_Explicacao.this, Tela_Login.class);
             startActivity(intent);
         });
 
         // Clique do botão PULAR - IR PARA HOME
         txPular.setOnClickListener(view -> {
-            Intent intent = new Intent(Tela_Explicacao1.this, Tela_Home.class);
+            Intent intent = new Intent(Tela_Explicacao.this, Tela_Home.class);
             startActivity(intent);
         });
 
