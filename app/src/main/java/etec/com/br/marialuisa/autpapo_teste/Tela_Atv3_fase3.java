@@ -54,7 +54,7 @@ public class Tela_Atv3_fase3 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //intent verificar se será necessário if e else
-                Intent abrirHome =  new Intent(Tela_Atv3_fase3.this, tela_home_visitante.class);
+                Intent abrirHome =  new Intent(Tela_Atv3_fase3.this, Tela_Home.class);
                 startActivity(abrirHome);
             }
         });

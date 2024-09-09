@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageView;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 
 
@@ -43,7 +42,7 @@ public class Carregamento extends AppCompatActivity {
                     // Por exemplo, exibe uma mensagem de boas-vindas
                     //Toast.makeText(this, "Bem-vindo! Este é o primeiro lançamento do aplicativo.", Toast.LENGTH_LONG).show();
 
-                    Intent abrirExplicação =  new Intent(Carregamento.this, Tela_Explicacao1.class);
+                    Intent abrirExplicação =  new Intent(Carregamento.this, Tela_Explicacao.class);
                     startActivity(abrirExplicação);
 
                     // Atualiza o SharedPreferences para indicar que o aplicativo já foi executado

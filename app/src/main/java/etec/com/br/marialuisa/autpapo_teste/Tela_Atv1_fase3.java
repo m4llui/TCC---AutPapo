@@ -68,7 +68,7 @@ public class Tela_Atv1_fase3 extends AppCompatActivity {
         btVolta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent abrirHome =  new Intent(Tela_Atv1_fase3.this, tela_home_visitante.class);
+                Intent abrirHome =  new Intent(Tela_Atv1_fase3.this, Tela_Home.class);
                 startActivity(abrirHome);
 
             }

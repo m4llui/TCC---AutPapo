@@ -35,7 +35,7 @@
         app:srcCompat="@drawable/quadrado_branco" />
 
     <EditText
-        android:id="@+id/edtSenhac"
+        android:id="@+id/edtSenhaL"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="50dp"
@@ -68,7 +68,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/edtEmail"
+        android:id="@+id/edtEmailL"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="50dp"
@@ -97,11 +97,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmail"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmailL"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/btnLogar"
+        android:id="@+id/btnLogarL"
         android:layout_width="match_parent"
         android:layout_height="53dp"
         android:layout_marginStart="118dp"
@@ -115,7 +115,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtSenhac"
+        app:layout_constraintTop_toBottomOf="@+id/edtSenhaL"
         tools:ignore="MissingConstraints" />
 
     <CheckBox
@@ -129,10 +129,10 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogar" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLogarL" />
 
     <TextView
-        android:id="@+id/SaibaMaisColetaDados"
+        android:id="@+id/SaibaMaisColetaDadosL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"

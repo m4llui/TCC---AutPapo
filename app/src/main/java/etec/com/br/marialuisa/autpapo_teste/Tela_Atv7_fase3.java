@@ -55,6 +55,22 @@ public class Tela_Atv7_fase3 extends AppCompatActivity {
                 playAudio(R.raw.triste);
             }
         });
+        btEnunciado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                playAudio(R.raw.enun_emocao);
+            }
+        });
+
+        btVolta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //intent verificar se será necessário if e else
+                Intent abrirHome =  new Intent(Tela_Atv7_fase3.this, Tela_Home.class);
+                startActivity(abrirHome);
+            }
+        });
 
 
         // Inicializa os botões desativados e invisíveis
@@ -109,7 +125,7 @@ public class Tela_Atv7_fase3 extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        startActivity(new Intent(Tela_Atv7_fase3.this, Tela_Finalizacao_fase3.class));
+                        startActivity(new Intent(Tela_Atv7_fase3.this, Tela_Video_fase3.class));
                         finish(); // Fecha a tela atual - VER ERRO, NÃO FOI PARA A PROXÍMA TELA
                     }
                 }, 2000); // Atraso de 2 segundos em milissegundos
