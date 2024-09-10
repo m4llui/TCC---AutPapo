@@ -61,8 +61,8 @@ public class Tela_Home extends AppCompatActivity {
         imHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Toast.makeText(Tela_Home.this, "Home", Toast.LENGTH_SHORT).show();
-                //Colocar Intent para tela Home
+                Intent intent = new Intent(Tela_Home.this, Tela_Home.class);
+                startActivity(intent);
             }
         });
 
@@ -77,8 +77,8 @@ public class Tela_Home extends AppCompatActivity {
         imConfig.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Toast.makeText(Tela_Home.this, "Configurações", Toast.LENGTH_SHORT).show();
-                //  Colocar Intent para tela Configurações
+                Intent intent = new Intent(Tela_Home.this, Tela_Config.class);
+                startActivity(intent);
             }
         });
     }
