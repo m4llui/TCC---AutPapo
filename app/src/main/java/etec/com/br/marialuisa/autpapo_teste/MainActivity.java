@@ -47,4 +47,9 @@ public class MainActivity extends AppCompatActivity {
             }
         }, 4000); // Tempo total de exibição da logo
     }
+//Bloqueio do botão voltar
+    @Override
+    public void onBackPressed() {
+
+    }
 }

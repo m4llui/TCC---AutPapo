@@ -46,7 +46,7 @@
         app:srcCompat="@drawable/btn_sobre" />
 
     <ImageView
-        android:id="@+id/bnt_home_config"
+        android:id="@+id/btn_home_config"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="173dp"
