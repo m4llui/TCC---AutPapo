@@ -19,9 +19,6 @@ public class Tela_Config extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_config);
 
-        btSobre = findViewById(R.id.btn_sobre);
-        btAjuda = findViewById(R.id.btn_ajuda);
-        btHome = findViewById(R.id.btn_home_config);
 
         btSobre.setOnClickListener(new View.OnClickListener() {
             @Override
