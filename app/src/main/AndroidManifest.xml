@@ -103,14 +103,9 @@
             android:name=".Tela_fase2"
             android:exported="false" />
         <activity
-            android:name=".tela_home_visitante"
-            android:exported="false" />
-        <activity
             android:name=".Tela_Video_fase1"
             android:exported="false" />
-        <activity
-            android:name=".Tela_Conta"
-            android:exported="false" />
+
         <activity
             android:name=".Tela_Home"
             android:exported="false" />
