@@ -4,18 +4,24 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class Tela_Atv3_fase1 extends AppCompatActivity {
 
+    TextView btEnunciado;
+    MediaPlayer audio;
+    boolean selecionouO, selecionouI, erroO, erroI;
+
     private ImageView btn_Let_K, btn_Let_K_Inc, btn_Let_I, btn_Let_I_Certo, btn_Let_O, btn_Let_O_Inc,
-            btn_Let_G, btn_Let_G_Inc, btVoltar4, btEnunciado, btBalao;
+            btn_Let_G, btn_Let_G_Inc, btVoltar4, btBalao;
     private Handler handler = new Handler();
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,12 +36,49 @@ public class Tela_Atv3_fase1 extends AppCompatActivity {
         btn_Let_G = findViewById(R.id.btn_G);
         btn_Let_G_Inc = findViewById(R.id.btn_G_errado);
         btVoltar4 = findViewById(R.id.btnVoltarAtv3Fase1);
-        btEnunciado = findViewById(R.id.imageEnunciado3fase1);
-        btBalao = findViewById(R.id.imageBalaoB);
+        btEnunciado = findViewById(R.id.txtEnunAtv3Fase1);
+        btBalao = findViewById(R.id.ImageFinalFase3);
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                playAudio(R.raw.qual_letraessa);
+            }
+        }, 1000);
+
+        btEnunciado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                playAudio(R.raw.qual_letraessa);
+            }
+        });
+
+        btBalao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                playAudio(R.raw.letra_i);
+            }
+        });
+
+        btVoltar4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //intent verificar se será necessário if e else
+                Intent abrirHome =  new Intent(Tela_Atv3_fase1.this, Tela_Home.class);
+                startActivity(abrirHome);
+            }
+        });
+
 
         botoesInativados();
+
+
         setOnClickListeners();
     }
+
 
     private void botoesInativados() {
         btn_Let_K_Inc.setVisibility(View.INVISIBLE);
@@ -61,24 +104,26 @@ public class Tela_Atv3_fase1 extends AppCompatActivity {
                     btn_Let_K_Inc.setVisibility(View.VISIBLE);
                     btn_Let_K_Inc.setEnabled(true);
                     isCorrect = false; // Incorreto
+                    playAudio(R.raw.letra_k);
 
                 } else if (id == R.id.btn_I) {
                     btn_Let_I_Certo.setVisibility(View.VISIBLE);
                     btn_Let_I_Certo.setEnabled(true);
                     isCorrect = true; // Correto
+                    playAudio(R.raw.letra_i);
 
                 } else if (id == R.id.btn_O) {
                     btn_Let_O_Inc.setVisibility(View.VISIBLE);
                     btn_Let_O_Inc.setEnabled(true);
                     isCorrect = false; // Incorreto
+                    playAudio(R.raw.letra_o);
 
                 } else if (id == R.id.btn_G) {
                     btn_Let_G_Inc.setVisibility(View.VISIBLE);
                     btn_Let_G_Inc.setEnabled(true);
                     isCorrect = false; // Incorreto
+                    playAudio(R.raw.letra_g);
                 }
-
-                salvarResultadoNoBanco(isCorrect);
 
                 handler.postDelayed(new Runnable() {
                     @Override
@@ -96,10 +141,22 @@ public class Tela_Atv3_fase1 extends AppCompatActivity {
         btn_Let_G.setOnClickListener(listener);
     }
 
-    private void salvarResultadoNoBanco(boolean isCorrect) {
-        // Código para salvar no banco de dados se a resposta foi correta ou não
-        // Exemplo:
-        // DatabaseHelper db = new DatabaseHelper(this);
-        // db.inserirResultado(isCorrect ? "Correto" : "Incorreto");
+
+    private void playAudio(int audioResId) {
+
+        if (audio != null) {
+            audio.release();
+        }
+
+        audio = MediaPlayer.create(this, audioResId);
+        audio.start();
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "Utilize a setinha para voltar para home!", Toast.LENGTH_SHORT).show();
     }
 }
+
+

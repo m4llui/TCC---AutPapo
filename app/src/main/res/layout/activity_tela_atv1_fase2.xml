@@ -20,7 +20,7 @@
         app:srcCompat="@drawable/avatar_enun" />
 
     <TextView
-        android:id="@+id/txtEnunPfv8"
+        android:id="@+id/txtAtv1_fase2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

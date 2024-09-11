@@ -33,7 +33,7 @@
         app:srcCompat="@drawable/seta_voltar" />
 
     <TextView
-        android:id="@+id/txtEnunATv7fase2"
+        android:id="@+id/txtEnunAtv1Fase1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
@@ -65,7 +65,7 @@
         app:srcCompat="@drawable/balao_enun_yakult" />
 
     <ImageView
-        android:id="@+id/imageBoneco_fase2"
+        android:id="@+id/imageBoneco_fase1aTV2"
         android:layout_width="130dp"
         android:layout_height="174dp"
         android:layout_marginStart="80dp"
@@ -73,7 +73,7 @@
         app:layout_constraintEnd_toStartOf="@+id/imageBalaoLetraZ"
         app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEnunATv7fase2"
+        app:layout_constraintTop_toBottomOf="@+id/txtEnunAtv1Fase1"
         app:srcCompat="@drawable/avatar_enun" />
 
     <ImageView

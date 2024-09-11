@@ -4,18 +4,26 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class Tela_Atv4_fase1 extends AppCompatActivity {
 
+    TextView btEnunciado;
+
+    MediaPlayer audio;
+    boolean selecionouO, selecionouI, erroO, erroI;
+
     private ImageView btn_Let_P, btn_Let_P_Inc, btn_Let_E, btn_Let_E_Inc, btn_Let_O, btn_Let_O_Certo,
-            btn_Let_G, btn_Let_G_Inc, btVoltar4, btEnunciado, btBalao;
+            btn_Let_G, btn_Let_G_Inc, btVoltar4, btBalao;
     private Handler handler = new Handler();
 
-    @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,13 +38,49 @@ public class Tela_Atv4_fase1 extends AppCompatActivity {
         btn_Let_G = findViewById(R.id.btn_G2);
         btn_Let_G_Inc = findViewById(R.id.btn_G_Inc);
         btVoltar4 = findViewById(R.id.btnVoltarAtv4Fase1);
-        btEnunciado = findViewById(R.id.ImageEnunciado_fase1_atv4);
+        btEnunciado = findViewById(R.id.txtEnunAtv4Fase1);
         btBalao = findViewById(R.id.ImageBalao3);
 
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                playAudio(R.raw.qual_letraessa);
+            }
+        }, 1000);
+
+        btEnunciado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                playAudio(R.raw.qual_letraessa);
+            }
+        });
+
+        btBalao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                playAudio(R.raw.letra_o);
+            }
+        });
+
+        btVoltar4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //intent verificar se será necessário if e else
+                Intent abrirHome =  new Intent(Tela_Atv4_fase1.this, Tela_Home.class);
+                startActivity(abrirHome);
+            }
+        });
+
+
         botoesInativados();
+
+
         setOnClickListeners();
     }
-
     private void botoesInativados() {
         btn_Let_P_Inc.setVisibility(View.INVISIBLE);
         btn_Let_E_Inc.setVisibility(View.INVISIBLE);
@@ -61,21 +105,29 @@ public class Tela_Atv4_fase1 extends AppCompatActivity {
                     btn_Let_P_Inc.setVisibility(View.VISIBLE);
                     btn_Let_P_Inc.setEnabled(true);
                     isCorrect = false; // Incorreto
+                   // playAudio(R.raw.letra_p);
+
 
                 } else if (id == R.id.btn_E2) {
                     btn_Let_E_Inc.setVisibility(View.VISIBLE);
                     btn_Let_E_Inc.setEnabled(true);
                     isCorrect = false; // Incorreto
+                    playAudio(R.raw.letra_e);
+
 
                 } else if (id == R.id.btn_O2) {
                     btn_Let_O_Certo.setVisibility(View.VISIBLE);
                     btn_Let_O_Certo.setEnabled(true);
                     isCorrect = true; // Correto
+                    playAudio(R.raw.letra_o);
+
 
                 } else if (id == R.id.btn_G2) {
                     btn_Let_G_Inc.setVisibility(View.VISIBLE);
                     btn_Let_G_Inc.setEnabled(true);
                     isCorrect = false; // Incorreto
+                    playAudio(R.raw.letra_g);
+
                 }
 
                 salvarResultadoNoBanco(isCorrect);
@@ -101,5 +153,21 @@ public class Tela_Atv4_fase1 extends AppCompatActivity {
         // Exemplo:
         // DatabaseHelper db = new DatabaseHelper(this);
         // db.inserirResultado(isCorrect ? "Correto" : "Incorreto");
+    }
+
+    private void playAudio(int audioResId) {
+
+        if (audio != null) {
+            audio.release();
+        }
+
+        audio = MediaPlayer.create(this, audioResId);
+        audio.start();
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "Utilize a setinha para voltar para home!", Toast.LENGTH_SHORT).show();
     }
 }

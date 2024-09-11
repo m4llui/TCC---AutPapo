@@ -25,7 +25,7 @@ public class Tela_Video_fase2 extends AppCompatActivity {
         btProximo = findViewById(R.id.btn_Proximo_V2);
 
 
-        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.testevideo);
+        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video_fase2);
 
         videoView.setVideoURI(videoUri);
 

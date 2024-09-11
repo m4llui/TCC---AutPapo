@@ -4,18 +4,25 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class Tela_Atv5_fase1 extends AppCompatActivity {
 
+    TextView btEnunciado;
+
+    MediaPlayer audio;
+    boolean selecionouO, selecionouI, erroO, erroI;
+
     private ImageView btn_Nm_1, btn_Nm_1_Inc, btn_Let_U, btn_Let_U_Certo, btn_Let_S, btn_Let_S_Inc,
-            btn_Let_D, btn_Let_D_Inc, btVoltar5, btEnunciado, btBalao;
+            btn_Let_D, btn_Let_D_Inc, btVoltar5, btBalao;
     private Handler handler = new Handler();
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,13 +37,49 @@ public class Tela_Atv5_fase1 extends AppCompatActivity {
         btn_Let_D = findViewById(R.id.btn_LetD);
         btn_Let_D_Inc = findViewById(R.id.btn_D_inc);
         btVoltar5 = findViewById(R.id.btnVoltarAtv5Fase1);
-        btEnunciado = findViewById(R.id.imageEnunciado_fase1);
+        btEnunciado = findViewById(R.id.txtEnunAtv5Fase1);
         btBalao = findViewById(R.id.ImageBalaofase1);
 
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                playAudio(R.raw.qual_letraessa);
+            }
+        }, 1000);
+
+        btEnunciado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                playAudio(R.raw.qual_letraessa);
+            }
+        });
+
+        btBalao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                playAudio(R.raw.letra_u);
+            }
+        });
+
+        btVoltar5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //intent verificar se será necessário if e else
+                Intent abrirHome =  new Intent(Tela_Atv5_fase1.this, Tela_Home.class);
+                startActivity(abrirHome);
+            }
+        });
+
+
         botoesInativados();
+
+
         setOnClickListeners();
     }
-
     private void botoesInativados() {
         btn_Nm_1_Inc.setVisibility(View.INVISIBLE);
         btn_Let_U_Certo.setVisibility(View.INVISIBLE);
@@ -61,21 +104,29 @@ public class Tela_Atv5_fase1 extends AppCompatActivity {
                     btn_Nm_1_Inc.setVisibility(View.VISIBLE);
                     btn_Nm_1_Inc.setEnabled(true);
                     isCorrect = false; // Incorreto
+                    playAudio(R.raw.num_1);
+
 
                 } else if (id == R.id.btn_LetU) {
                     btn_Let_U_Certo.setVisibility(View.VISIBLE);
                     btn_Let_U_Certo.setEnabled(true);
                     isCorrect = true; // Correto
+                    playAudio(R.raw.letra_u);
+
 
                 } else if (id == R.id.btn_LetS) {
                     btn_Let_S_Inc.setVisibility(View.VISIBLE);
                     btn_Let_S_Inc.setEnabled(true);
                     isCorrect = false; // Incorreto
+                    playAudio(R.raw.letra_s);
+
 
                 } else if (id == R.id.btn_LetD){
                     btn_Let_D_Inc.setVisibility(View.VISIBLE);
                     btn_Let_D_Inc.setEnabled(true);
                     isCorrect = false; // Incorreto
+                    playAudio(R.raw.letra_d);
+
                 }
 
                 salvarResultadoNoBanco(isCorrect);
@@ -96,10 +147,27 @@ public class Tela_Atv5_fase1 extends AppCompatActivity {
         btn_Let_D.setOnClickListener(listener);
     }
 
+
     private void salvarResultadoNoBanco(boolean isCorrect) {
         // Código para salvar no banco de dados se a resposta foi correta ou não
         // Exemplo:
         // DatabaseHelper db = new DatabaseHelper(this);
         // db.inserirResultado(isCorrect ? "Correto" : "Incorreto");
+    }
+
+    private void playAudio(int audioResId) {
+
+        if (audio != null) {
+            audio.release();
+        }
+
+        audio = MediaPlayer.create(this, audioResId);
+        audio.start();
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "Utilize a setinha para voltar para home!", Toast.LENGTH_SHORT).show();
     }
 }
