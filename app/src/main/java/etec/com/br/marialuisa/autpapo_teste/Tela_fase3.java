@@ -26,6 +26,8 @@ public class Tela_fase3 extends AppCompatActivity {
         audio = MediaPlayer.create(this, R.raw.intro_fase3);
         audio.start();
 
+
+        //ARRUMAR BOTÃO VOLTAR
         if (btVoltar != null) {
             btVoltar.setOnClickListener(view -> {
                 Intent intent = new Intent(Tela_fase3.this, Tela_Fase1.class);
