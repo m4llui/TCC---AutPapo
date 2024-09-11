@@ -7,14 +7,18 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 public class Tela_fase3 extends AppCompatActivity {
 
+
     private MediaPlayer audio;
     private ImageView btVoltar;
     private static final int DELAY_MILLIS = 4000; // 4 segundos
+    private Handler handler;
+    private Runnable startAtv1Runnable;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -26,27 +30,47 @@ public class Tela_fase3 extends AppCompatActivity {
         audio = MediaPlayer.create(this, R.raw.intro_fase3);
         audio.start();
 
-        if (btVoltar != null) {
-            btVoltar.setOnClickListener(view -> {
-                Intent intent = new Intent(Tela_fase3.this, Tela_Fase1.class);
-                startActivity(intent);
-            });
-        } else {
-            Toast.makeText(this, "Botão 'Voltar' não encontrado", Toast.LENGTH_SHORT).show();
-        }
-
-
-        new Handler().postDelayed(() -> {
+        handler = new Handler();
+        startAtv1Runnable = () -> {
             startActivity(new Intent(Tela_fase3.this, Tela_Atv1_fase3.class));
             finish();
-        }, DELAY_MILLIS);
+        };
+
+
+        handler.postDelayed(startAtv1Runnable, DELAY_MILLIS);
+
+        btVoltar.setOnClickListener(view -> {
+
+            handler.removeCallbacks(startAtv1Runnable);
+            Intent voltarHome = new Intent(Tela_fase3.this, Tela_Home.class);
+            startActivity(voltarHome);
+            //LIBERA O AUDIO
+            if (audio != null) {
+                audio.stop();
+                audio.release();
+                audio = null;
+            }
+        });
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        //PARA E LIBERA O AUDIO EM SEGUNDO PLANO
+        if (audio != null) {
+            audio.stop();
+            audio.release();
+            audio = null;
+        }
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        //LIBERANDO O AUDIO QUANDO A ACTIVITY É DESTRUIDA
         if (audio != null) {
             audio.release();
+            audio = null;
         }
     }
 
@@ -55,3 +79,4 @@ public class Tela_fase3 extends AppCompatActivity {
         Toast.makeText(this, "Use a seta do app para voltar!", Toast.LENGTH_SHORT).show();
     }
 }
+

@@ -1,18 +1,24 @@
 package etec.com.br.marialuisa.autpapo_teste;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 public class Tela_Fase1 extends AppCompatActivity {
-    private MediaPlayer mediaPlayer;
-    ImageView btVoltar;
-    private static final int DELAY_MILLIS = 4000; // 4 segundos em milissegundos
+
+
+    private MediaPlayer audio;
+    private ImageView btVoltar;
+    private static final int DELAY_MILLIS = 4000; // 4 segundos
+    private Handler handler;
+    private Runnable startAtv1Runnable;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -21,46 +27,56 @@ public class Tela_Fase1 extends AppCompatActivity {
         setContentView(R.layout.activity_tela_fase1);
 
         btVoltar = findViewById(R.id.btnVoltarFase1);
+        audio = MediaPlayer.create(this, R.raw.intro_fase1);
+        audio.start();
 
-        // Inicializa o MediaPlayer com o áudio do recurso raw
-        mediaPlayer = MediaPlayer.create(this, R.raw.intro_fase1);
+        handler = new Handler();
+        startAtv1Runnable = () -> {
+            startActivity(new Intent(Tela_Fase1.this, Tela_Atv1_fase1.class));
+            finish();
+        };
 
-        // Inicia a reprodução do áudio
-        mediaPlayer.start();
 
-        // Libere o MediaPlayer quando a Activity for destruída
-        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-                mp.release();
+        handler.postDelayed(startAtv1Runnable, DELAY_MILLIS);
+
+        btVoltar.setOnClickListener(view -> {
+
+            handler.removeCallbacks(startAtv1Runnable);
+            Intent voltarHome = new Intent(Tela_Fase1.this, Tela_Home.class);
+            startActivity(voltarHome);
+            //LIBERA O AUDIO
+            if (audio != null) {
+                audio.stop();
+                audio.release();
+                audio = null;
             }
         });
+    }
 
-        // Usar Handler para iniciar a nova Activity após 5 segundos
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                // Inicia a nova Activity após o delay
-                Intent intent = new Intent(Tela_Fase1.this, Tela_Atv1_fase1.class);
-                startActivity(intent);
-                finish(); // Finaliza a Activity atual
-            }
-        }, DELAY_MILLIS);
+    @Override
+    protected void onPause() {
+        super.onPause();
+        //PARA E LIBERA O AUDIO EM SEGUNDO PLANO
+        if (audio != null) {
+            audio.stop();
+            audio.release();
+            audio = null;
+        }
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        // Certifique-se de liberar o MediaPlayer quando a Activity for destruída
-        if (mediaPlayer != null) {
-            mediaPlayer.release();
-            mediaPlayer = null;
+        //LIBERANDO O AUDIO QUANDO A ACTIVITY É DESTRUIDA
+        if (audio != null) {
+            audio.release();
+            audio = null;
         }
     }
 
     @Override
     public void onBackPressed() {
-        // Bloqueia a ação de voltar e mostra uma mensagem
         Toast.makeText(this, "Use a seta do app para voltar!", Toast.LENGTH_SHORT).show();
     }
 }
+
