@@ -42,7 +42,7 @@ public class Tela_Atv1_fase2 extends AppCompatActivity {
             }
         }, 1000);
 
-        btEnunciado.setOnClickListener(new View.OnClickListener() {
+        btBalao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 

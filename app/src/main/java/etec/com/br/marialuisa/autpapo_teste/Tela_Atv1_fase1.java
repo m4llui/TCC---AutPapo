@@ -16,7 +16,7 @@ public class Tela_Atv1_fase1 extends AppCompatActivity {
     private ImageView btn_Let_A, btn_Let_A_Certo, btn_Let_B, btn_Let_B_Inc, btn_Let_C, btn_Let_C_Inc,
             btn_Let_D, btn_Let_D_Inc, btVoltar2, btEnunciado, btBalao;
     private Handler handler = new Handler();
-    //
+//
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +41,7 @@ public class Tela_Atv1_fase1 extends AppCompatActivity {
             }
         }, 1000);
 
-        btEnunciado.setOnClickListener(new View.OnClickListener() {
+        btBalao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
