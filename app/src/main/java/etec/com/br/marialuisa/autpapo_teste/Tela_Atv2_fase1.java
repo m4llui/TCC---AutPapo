@@ -15,7 +15,7 @@ import android.widget.Toast;
 public class Tela_Atv2_fase1 extends AppCompatActivity {
     TextView btEnunciado;
     MediaPlayer audio;
-    boolean selecionouO, selecionouI, erroO, erroI;
+
     private ImageView btn_Let_A, btn_Let_A_Inc, btn_Let_B, btn_Let_B_Inc, btn_Let_E, btn_Let_E_Certo,
             btn_Let_Y, btn_Let_Y_Inc, btVoltar3, btBalao;
     private Handler handler = new Handler();

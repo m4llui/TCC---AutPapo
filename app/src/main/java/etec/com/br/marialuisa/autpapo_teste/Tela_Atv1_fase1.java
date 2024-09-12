@@ -15,7 +15,6 @@ import android.widget.Toast;
 public class Tela_Atv1_fase1 extends AppCompatActivity {
     TextView btEnunciado;
     MediaPlayer audio;
-    boolean selecionouO, selecionouI, erroO, erroI;
     private ImageView btn_Let_A, btn_Let_A_Certo, btn_Let_B, btn_Let_B_Inc, btn_Let_C, btn_Let_C_Inc,
             btn_Let_D, btn_Let_D_Inc, btVoltar2, btBalao;
     private Handler handler = new Handler();
@@ -26,8 +25,8 @@ public class Tela_Atv1_fase1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_atv1_fase1);
 
-        btn_Let_A = findViewById(R.id.btn_Flor);
-        btn_Let_A_Certo = findViewById(R.id.btn_Let_YCerto);
+        btn_Let_A = findViewById(R.id.btn_LetraA);
+        btn_Let_A_Certo = findViewById(R.id.btn_Let_ACerto);
         btn_Let_B = findViewById(R.id.btn_Nariz);
         btn_Let_B_Inc = findViewById(R.id.btn_Let_A_errado);
         btn_Let_C = findViewById(R.id.btn_Zebra);
@@ -110,6 +109,8 @@ public class Tela_Atv1_fase1 extends AppCompatActivity {
                 if (id == R.id.btn_Flor) {
                     btn_Let_A_Certo.setVisibility(View.VISIBLE);
                     btn_Let_A_Certo.setEnabled(true);
+                    btn_Let_A.setVisibility(View.INVISIBLE);
+                    btn_Let_A.setEnabled(false);
                     playAudio(R.raw.letra_a);
 
                 } else if (id == R.id.btn_Nariz) {
@@ -129,9 +130,6 @@ public class Tela_Atv1_fase1 extends AppCompatActivity {
 
 
                 }
-
-                // Salva o resultado no banco de dados
-                //salvarResultadoNoBanco(isCorrect);
 
 
                 handler.postDelayed(new Runnable() {

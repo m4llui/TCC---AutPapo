@@ -54,14 +54,14 @@
         android:layout_height="174dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageBalaoLetraZ"
+        app:layout_constraintEnd_toStartOf="@+id/imageBalaoLetraA"
         app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtEnunAtv1Fase1"
         app:srcCompat="@drawable/avatar_enun" />
 
     <ImageView
-        android:id="@+id/imageBalaoLetraZ"
+        android:id="@+id/imageBalaoLetraA"
         android:layout_width="223dp"
         android:layout_height="199dp"
         android:layout_marginStart="150dp"
@@ -75,7 +75,7 @@
 
     <!-- Botões de letras -->
     <ImageView
-        android:id="@+id/btn_Flor"
+        android:id="@+id/btn_LetraA"
         android:layout_width="128dp"
         android:layout_height="116dp"
         android:layout_marginStart="58dp"
@@ -83,7 +83,7 @@
         android:layout_marginEnd="36dp"
         app:layout_constraintEnd_toStartOf="@+id/btn_Nariz"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageBalaoLetraZ"
+        app:layout_constraintTop_toBottomOf="@+id/imageBalaoLetraA"
         app:srcCompat="@drawable/letraa_fase1" />
 
     <ImageView
@@ -94,8 +94,8 @@
         android:layout_marginTop="14dp"
         android:layout_marginEnd="61dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_Flor"
-        app:layout_constraintTop_toBottomOf="@+id/imageBalaoLetraZ"
+        app:layout_constraintStart_toEndOf="@+id/btn_LetraA"
+        app:layout_constraintTop_toBottomOf="@+id/imageBalaoLetraA"
         app:srcCompat="@drawable/letrab_fase1" />
 
     <ImageView
@@ -107,7 +107,7 @@
         android:layout_marginEnd="36dp"
         app:layout_constraintEnd_toStartOf="@+id/btn_Planeta"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Flor"
+        app:layout_constraintTop_toBottomOf="@+id/btn_LetraA"
         app:srcCompat="@drawable/letrac_fase1" />
 
     <ImageView
@@ -124,13 +124,13 @@
 
     <!-- Botões com respostas corretas ou incorretas -->
     <ImageView
-        android:id="@+id/btn_Let_YCerto"
+        android:id="@+id/btn_Let_ACerto"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_Flor"
-        app:layout_constraintEnd_toEndOf="@+id/btn_Flor"
-        app:layout_constraintStart_toStartOf="@+id/btn_Flor"
-        app:layout_constraintTop_toTopOf="@+id/btn_Flor"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_LetraA"
+        app:layout_constraintEnd_toEndOf="@+id/btn_LetraA"
+        app:layout_constraintStart_toStartOf="@+id/btn_LetraA"
+        app:layout_constraintTop_toTopOf="@+id/btn_LetraA"
         app:srcCompat="@drawable/corretoletraa_fase1" />
 
     <ImageView

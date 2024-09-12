@@ -104,40 +104,35 @@ public class Tela_Atv4_fase1 extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean isCorrect = false;
+
 
                 int id = view.getId();
 
                 if (id == R.id.btn_P2) {
                     btn_Let_P_Inc.setVisibility(View.VISIBLE);
                     btn_Let_P_Inc.setEnabled(true);
-                    isCorrect = false; // Incorreto
-                   // playAudio(R.raw.letra_p);
+                    playAudio(R.raw.letra_p);
 
 
                 } else if (id == R.id.btn_E2) {
                     btn_Let_E_Inc.setVisibility(View.VISIBLE);
                     btn_Let_E_Inc.setEnabled(true);
-                    isCorrect = false; // Incorreto
                     playAudio(R.raw.letra_e);
 
 
                 } else if (id == R.id.btn_O2) {
                     btn_Let_O_Certo.setVisibility(View.VISIBLE);
                     btn_Let_O_Certo.setEnabled(true);
-                    isCorrect = true; // Correto
                     playAudio(R.raw.letra_o);
 
 
                 } else if (id == R.id.btn_G2) {
                     btn_Let_G_Inc.setVisibility(View.VISIBLE);
                     btn_Let_G_Inc.setEnabled(true);
-                    isCorrect = false; // Incorreto
                     playAudio(R.raw.letra_g);
 
                 }
 
-                salvarResultadoNoBanco(isCorrect);
 
                 handler.postDelayed(new Runnable() {
                     @Override
@@ -153,13 +148,6 @@ public class Tela_Atv4_fase1 extends AppCompatActivity {
         btn_Let_E.setOnClickListener(listener);
         btn_Let_O.setOnClickListener(listener);
         btn_Let_G.setOnClickListener(listener);
-    }
-
-    private void salvarResultadoNoBanco(boolean isCorrect) {
-        // Código para salvar no banco de dados se a resposta foi correta ou não
-        // Exemplo:
-        // DatabaseHelper db = new DatabaseHelper(this);
-        // db.inserirResultado(isCorrect ? "Correto" : "Incorreto");
     }
 
     private void playAudio(int audioResId) {

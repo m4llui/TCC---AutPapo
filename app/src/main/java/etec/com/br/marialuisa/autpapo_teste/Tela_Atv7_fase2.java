@@ -17,7 +17,6 @@ public class Tela_Atv7_fase2 extends AppCompatActivity {
 
     TextView btEnunciado;
     MediaPlayer audio;
-    boolean selecionouO, selecionouI, erroO, erroI;
 
     private ImageView btn_Let_Y, btn_Let_Y_Certo, btn_Let_A, btn_Let_A_Inc, btn_Let_K, btn_Let_K_Inc,
             btn_Let_Q, btn_Let_Q_Inc, btVoltar, btBalao;
@@ -105,7 +104,6 @@ public class Tela_Atv7_fase2 extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(@NonNull View view) {
-                boolean isCorrect = false;
 
                 int id = view.getId();
 
@@ -152,12 +150,6 @@ public class Tela_Atv7_fase2 extends AppCompatActivity {
         btn_Let_Q.setOnClickListener(listener);
     }
 
-    private void salvarResultadoNoBanco(boolean isCorrect) {
-        // Código para salvar no banco de dados se a resposta foi correta ou não
-        // Exemplo:
-        // DatabaseHelper db = new DatabaseHelper(this);
-        // db.inserirResultado(isCorrect ? "Correto" : "Incorreto");
-    }
 
     private void playAudio(int audioResId) {
 

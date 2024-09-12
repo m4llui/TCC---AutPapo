@@ -16,7 +16,7 @@ public class Tela_Atv5_fase3 extends AppCompatActivity {
 
     MediaPlayer audio;
     TextView btEnunciado;
-    private ImageView btNao, btNaoCerto, btKpop, btKpopErrado, btNavio, btNavioErrado,
+    private ImageView btNao, btNaoCerto, btDois, btDoisErrado, btNavio, btNavioErrado,
             btViola, btViolaErrado, btVolta, btBalao;
     private Handler handler = new Handler();
 
@@ -30,8 +30,8 @@ public class Tela_Atv5_fase3 extends AppCompatActivity {
         btBalao = findViewById(R.id.balao_nao);
         btNao = findViewById(R.id.btn_joia_nao);
         btNaoCerto = findViewById(R.id.btn_joia_nao_certa);
-        btKpop = findViewById(R.id.btn_kpop);
-        btKpopErrado = findViewById(R.id.btn_kpop_errada);
+        btDois = findViewById(R.id.btn_dois);
+        btDoisErrado = findViewById(R.id.btn_dois_errada);
         btNavio = findViewById(R.id.btn_navio);
         btNavioErrado = findViewById(R.id.btn_navio_errada);
         btViola = findViewById(R.id.btn_viola);
@@ -90,13 +90,13 @@ public class Tela_Atv5_fase3 extends AppCompatActivity {
         // Inicializa os botões "certo" e "errado" como invisíveis
         btNaoCerto.setVisibility(View.INVISIBLE);
         btNavioErrado.setVisibility(View.INVISIBLE);
-        btKpopErrado.setVisibility(View.INVISIBLE);
+        btDoisErrado.setVisibility(View.INVISIBLE);
         btViolaErrado.setVisibility(View.INVISIBLE);
 
         // Inicializa os botões "certo" e "errado" como desativados
         btNaoCerto.setEnabled(false);
         btNavioErrado.setEnabled(false);
-        btKpopErrado.setEnabled(false);
+        btDoisErrado.setEnabled(false);
         btViolaErrado.setEnabled(false);
     }
 
@@ -109,18 +109,22 @@ public class Tela_Atv5_fase3 extends AppCompatActivity {
                 if (id == R.id.btn_joia_nao) {
                     btNaoCerto.setVisibility(View.VISIBLE);
                     btNaoCerto.setEnabled(true);
+                    playAudio(R.raw.nao);
 
                 } else if (id == R.id.btn_navio) {
                     btNavioErrado.setVisibility(View.VISIBLE);
                     btNavioErrado.setEnabled(true);
+                    playAudio(R.raw.navio);
 
-                } else if (id == R.id.btn_kpop) {
-                    btKpopErrado.setVisibility(View.VISIBLE);
-                    btKpopErrado.setEnabled(true);
+                } else if (id == R.id.btn_dois) {
+                    btDoisErrado.setVisibility(View.VISIBLE);
+                    btDoisErrado.setEnabled(true);
+                    playAudio(R.raw.dois);
 
                 } else if (id == R.id.btn_viola) {
                     btViolaErrado.setVisibility(View.VISIBLE);
                     btViolaErrado.setEnabled(true);
+                    playAudio(R.raw.violao);
 
                 }
 
@@ -138,7 +142,7 @@ public class Tela_Atv5_fase3 extends AppCompatActivity {
         // Configura o mesmo listener para todos os botões
         btNao.setOnClickListener(listener);
         btNavio.setOnClickListener(listener);
-        btKpop.setOnClickListener(listener);
+        btDois.setOnClickListener(listener);
         btViola.setOnClickListener(listener);
     }
 

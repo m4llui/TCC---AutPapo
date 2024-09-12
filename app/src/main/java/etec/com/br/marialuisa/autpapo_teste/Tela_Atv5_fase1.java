@@ -103,40 +103,35 @@ public class Tela_Atv5_fase1 extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean isCorrect = false;
+
 
                 int id = view.getId();
 
                 if (id == R.id.btn_Nm1) {
                     btn_Nm_1_Inc.setVisibility(View.VISIBLE);
                     btn_Nm_1_Inc.setEnabled(true);
-                    isCorrect = false; // Incorreto
                     playAudio(R.raw.num_1);
 
 
                 } else if (id == R.id.btn_LetU) {
                     btn_Let_U_Certo.setVisibility(View.VISIBLE);
                     btn_Let_U_Certo.setEnabled(true);
-                    isCorrect = true; // Correto
                     playAudio(R.raw.letra_u);
 
 
                 } else if (id == R.id.btn_LetS) {
                     btn_Let_S_Inc.setVisibility(View.VISIBLE);
                     btn_Let_S_Inc.setEnabled(true);
-                    isCorrect = false; // Incorreto
                     playAudio(R.raw.letra_s);
 
 
                 } else if (id == R.id.btn_LetD){
                     btn_Let_D_Inc.setVisibility(View.VISIBLE);
                     btn_Let_D_Inc.setEnabled(true);
-                    isCorrect = false; // Incorreto
                     playAudio(R.raw.letra_d);
 
                 }
 
-                salvarResultadoNoBanco(isCorrect);
 
                 handler.postDelayed(new Runnable() {
                     @Override
@@ -155,12 +150,6 @@ public class Tela_Atv5_fase1 extends AppCompatActivity {
     }
 
 
-    private void salvarResultadoNoBanco(boolean isCorrect) {
-        // Código para salvar no banco de dados se a resposta foi correta ou não
-        // Exemplo:
-        // DatabaseHelper db = new DatabaseHelper(this);
-        // db.inserirResultado(isCorrect ? "Correto" : "Incorreto");
-    }
 
     private void playAudio(int audioResId) {
 
