@@ -45,7 +45,7 @@
         app:srcCompat="@drawable/balao_enun_nao" />
 
     <ImageView
-        android:id="@+id/btn_kpop"
+        android:id="@+id/btn_dois"
         android:layout_width="128dp"
         android:layout_height="116dp"
         android:layout_marginStart="58dp"
@@ -54,7 +54,7 @@
         app:layout_constraintEnd_toStartOf="@+id/btn_navio"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/balao_nao"
-        app:srcCompat="@drawable/btn_kpop" />
+        app:srcCompat="@drawable/btn_dois" />
 
     <ImageView
         android:id="@+id/btn_navio"
@@ -64,7 +64,7 @@
         android:layout_marginTop="14dp"
         android:layout_marginEnd="61dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_kpop"
+        app:layout_constraintStart_toEndOf="@+id/btn_dois"
         app:layout_constraintTop_toBottomOf="@+id/balao_nao"
         app:srcCompat="@drawable/btn_navio" />
 
@@ -77,7 +77,7 @@
         android:layout_marginEnd="36dp"
         app:layout_constraintEnd_toStartOf="@+id/btn_joia_nao"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_kpop"
+        app:layout_constraintTop_toBottomOf="@+id/btn_dois"
         app:srcCompat="@drawable/btn_viola" />
 
     <ImageView
@@ -90,19 +90,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_viola"
         app:layout_constraintTop_toBottomOf="@+id/btn_navio"
-        app:srcCompat="@drawable/btn_nao" />
+        app:srcCompat="@drawable/btn_nao_joia" />
 
     <ImageView
-        android:id="@+id/btn_kpop_errada"
+        android:id="@+id/btn_dois_errada"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        app:srcCompat="@drawable/btn_kpop_erro"
+        app:srcCompat="@drawable/btn_dois_erro"
         tools:layout_editor_absoluteX="54dp"
         tools:layout_editor_absoluteY="361dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_kpop"
-        app:layout_constraintStart_toStartOf="@+id/btn_kpop"
-        app:layout_constraintTop_toTopOf="@+id/btn_kpop"
-        app:layout_constraintEnd_toEndOf="@+id/btn_kpop"/>
+        app:layout_constraintBottom_toBottomOf="@+id/btn_dois"
+        app:layout_constraintStart_toStartOf="@+id/btn_dois"
+        app:layout_constraintTop_toTopOf="@+id/btn_dois"
+        app:layout_constraintEnd_toEndOf="@+id/btn_dois"/>
 
     <ImageView
         android:id="@+id/btn_navio_errada"
@@ -162,7 +162,7 @@
         android:layout_height="174dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintHorizontal_bias="0.145"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtEnunFigura"
         app:srcCompat="@drawable/avatar_enun" />

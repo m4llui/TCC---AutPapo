@@ -10,13 +10,16 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Tela_Atv4_fase2 extends AppCompatActivity {
+
+    TextView btEnunciado;
     MediaPlayer audio;
     boolean selecionouO, selecionouI, erroO, erroI;
     private ImageView btn_ABCD, btn_ABCD_errado, btn_EFGH, btn_EFGH_Certo, btn_NBFH, btn_NBFH_errado,
-            btn_JKLM, btn_JKLM_errado, btVoltar, btEnunciado, btBalao;
+            btn_JKLM, btn_JKLM_errado, btVoltar, btBalao;
     private Handler delayHandler = new Handler();  // Renomeado de 'handler' para 'delayHandler'
 
 
@@ -35,7 +38,7 @@ public class Tela_Atv4_fase2 extends AppCompatActivity {
         btn_JKLM = findViewById(R.id.btn_jklm);
         btn_JKLM_errado = findViewById(R.id.btn_jklm_errado);
         btVoltar = findViewById(R.id.btnVoltarAtv4Fase2);
-        btEnunciado = findViewById(R.id.imageEnunciadoAtv4Fase2);
+        btEnunciado = findViewById(R.id.txtEnunAtv4Fase2);
         btBalao = findViewById(R.id.balaoAtv4);
 
 
@@ -47,7 +50,7 @@ public class Tela_Atv4_fase2 extends AppCompatActivity {
             }
         }, 1000);
 
-        btBalao.setOnClickListener(new View.OnClickListener() {
+        btEnunciado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -59,16 +62,23 @@ public class Tela_Atv4_fase2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                playAudio(R.raw.abcd);
+                playAudio(R.raw.efgh);
             }
         });
 
+        //Botão para voltar para a home
         btVoltar.setOnClickListener(new View.OnClickListener() {
+            //Função p/ fazer o audio para quando sair da atividade
             @Override
             public void onClick(View view) {
-                //intent verificar se será necessário if e else
+                if (audio != null && audio.isPlaying()) {
+                    audio.stop();
+                    audio.release();
+                    audio = null;
+                }
                 Intent abrirHome =  new Intent(Tela_Atv4_fase2.this, Tela_Home.class);
                 startActivity(abrirHome);
+                finish();
             }
         });
 

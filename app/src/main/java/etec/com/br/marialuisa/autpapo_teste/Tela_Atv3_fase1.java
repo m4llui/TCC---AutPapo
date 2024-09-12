@@ -2,22 +2,23 @@ package etec.com.br.marialuisa.autpapo_teste;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Tela_Atv3_fase1 extends AppCompatActivity {
 
+    TextView btEnunciado;
     MediaPlayer audio;
     boolean selecionouO, selecionouI, erroO, erroI;
 
     private ImageView btn_Let_K, btn_Let_K_Inc, btn_Let_I, btn_Let_I_Certo, btn_Let_O, btn_Let_O_Inc,
-            btn_Let_G, btn_Let_G_Inc, btVoltar4, btEnunciado, btBalao;
+            btn_Let_G, btn_Let_G_Inc, btVoltar4, btBalao;
     private Handler handler = new Handler();
 
     @Override
@@ -34,7 +35,8 @@ public class Tela_Atv3_fase1 extends AppCompatActivity {
         btn_Let_G = findViewById(R.id.btn_G);
         btn_Let_G_Inc = findViewById(R.id.btn_G_errado);
         btVoltar4 = findViewById(R.id.btnVoltarAtv3Fase1);
-        btBalao = findViewById(R.id.ImageFinalFase3);
+        btEnunciado = findViewById(R.id.txtEnunAtv3Fase1);
+        btBalao = findViewById(R.id.BalaoAtv3Fase1);
 
         handler.postDelayed(new Runnable() {
             @Override
@@ -44,7 +46,7 @@ public class Tela_Atv3_fase1 extends AppCompatActivity {
             }
         }, 1000);
 
-        btBalao.setOnClickListener(new View.OnClickListener() {
+        btEnunciado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -60,12 +62,19 @@ public class Tela_Atv3_fase1 extends AppCompatActivity {
             }
         });
 
+        //Botão para voltar para a home
         btVoltar4.setOnClickListener(new View.OnClickListener() {
+            //Função p/ fazer o audio para quando sair da atividade
             @Override
             public void onClick(View view) {
-                //intent verificar se será necessário if e else
+                if (audio != null && audio.isPlaying()) {
+                    audio.stop();
+                    audio.release();
+                    audio = null;
+                }
                 Intent abrirHome =  new Intent(Tela_Atv3_fase1.this, Tela_Home.class);
                 startActivity(abrirHome);
+                finish();
             }
         });
 

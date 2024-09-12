@@ -63,12 +63,19 @@ public class Tela_Atv7_fase3 extends AppCompatActivity {
             }
         });
 
+        //Botão para voltar para a home
         btVolta.setOnClickListener(new View.OnClickListener() {
+            //Função p/ fazer oa udio para quando sair da atividade
             @Override
             public void onClick(View view) {
-                //intent verificar se será necessário if e else
+                if (audio != null && audio.isPlaying()) {
+                    audio.stop();
+                    audio.release();
+                    audio = null;
+                }
                 Intent abrirHome =  new Intent(Tela_Atv7_fase3.this, Tela_Home.class);
                 startActivity(abrirHome);
+                finish();
             }
         });
 

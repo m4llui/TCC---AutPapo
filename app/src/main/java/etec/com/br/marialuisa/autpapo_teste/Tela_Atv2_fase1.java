@@ -1,5 +1,7 @@
 package etec.com.br.marialuisa.autpapo_teste;
 
+import static etec.com.br.marialuisa.autpapo_teste.R.id.txtEnunAtv2Fase2;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -9,33 +11,35 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Tela_Atv2_fase1 extends AppCompatActivity {
-
-    //Teste
-
+    TextView btEnunciado;
     MediaPlayer audio;
-    boolean selecionouO, selecionouI, erroO, erroI;
+
     private ImageView btn_Let_A, btn_Let_A_Inc, btn_Let_B, btn_Let_B_Inc, btn_Let_E, btn_Let_E_Certo,
-            btn_Let_Y, btn_Let_Y_Inc, btVoltar3, btEnunciado, btBalao;
+            btn_Let_Y, btn_Let_Y_Inc, btVoltar3, btBalao;
     private Handler handler = new Handler();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_atv2_fase1);
 
-        btn_Let_A = findViewById(R.id.btn_Let_A2);
-        btn_Let_A_Inc = findViewById(R.id.btn_Let_A_errado2);
-        btn_Let_B = findViewById(R.id.btn_Let_B2);
-        btn_Let_B_Inc = findViewById(R.id.btn_Let_B_errado);
-        btn_Let_E = findViewById(R.id.btn_Let_E);
-        btn_Let_E_Certo = findViewById(R.id.btn_Let_E_certo);
-        btn_Let_Y = findViewById(R.id.btn_Let_Y);
-        btn_Let_Y_Inc = findViewById(R.id.btn_Let_y_errado);
+        btn_Let_A = findViewById(R.id.btn_Let_A1);
+        btn_Let_A_Inc = findViewById(R.id.btn_Let_A1_errado);
+        btn_Let_B = findViewById(R.id.btn_Let_B1);
+        btn_Let_B_Inc = findViewById(R.id.btn_Let_B1_errado);
+        btn_Let_E = findViewById(R.id.btn_Let_E1);
+        btn_Let_E_Certo = findViewById(R.id.btn_Let_E_certo1);
+        btn_Let_Y = findViewById(R.id.btn_Let_Y1);
+        btn_Let_Y_Inc = findViewById(R.id.btn_Let_Y_errado1);
         btVoltar3 = findViewById(R.id.btnVoltarAtv2Fase1);
-        btBalao = findViewById(R.id.ImageBalao_Atv2_fase1);
+        btEnunciado = findViewById(R.id.txtEnunAtv2Fase1);
+        btBalao = findViewById(R.id.ImageBalao_Atv2_fase2);
 
         handler.postDelayed(new Runnable() {
             @Override
@@ -45,7 +49,7 @@ public class Tela_Atv2_fase1 extends AppCompatActivity {
             }
         }, 1000);
 
-        btBalao.setOnClickListener(new View.OnClickListener() {
+        btEnunciado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -98,22 +102,22 @@ public class Tela_Atv2_fase1 extends AppCompatActivity {
 
                 int id = view.getId();
 
-                if (id == R.id.btn_Let_A2) {
+                if (id == R.id.btn_Let_A1) {
                     btn_Let_A_Inc.setVisibility(View.VISIBLE);
                     btn_Let_A_Inc.setEnabled(true);
                     playAudio(R.raw.letra_a);
 
-                } else if (id == R.id.btn_Let_B2) {
+                } else if (id == R.id.btn_Let_B1) {
                     btn_Let_B_Inc.setVisibility(View.VISIBLE);
                     btn_Let_B_Inc.setEnabled(true);
                     playAudio(R.raw.letra_b);
 
-                } else if (id == R.id.btn_Let_E) {
+                } else if (id == R.id.btn_Let_E1) {
                     btn_Let_E_Certo.setVisibility(View.VISIBLE);
                     btn_Let_E_Certo.setEnabled(true);
                     playAudio(R.raw.letra_e);
 
-                } else if (id == R.id.btn_Let_Y) {
+                } else if (id == R.id.btn_Let_Y1) {
                     btn_Let_Y_Inc.setVisibility(View.VISIBLE);
                     btn_Let_Y_Inc.setEnabled(true);
                     playAudio(R.raw.letra_y);

@@ -51,8 +51,8 @@ public class Carregamento extends AppCompatActivity {
                     editor.apply();
                 } else {
                     // O aplicativo já foi executado anteriormente
-                    Intent abrirCadastro =  new Intent(Carregamento.this, Tela_Explicacao.class);
-                    startActivity(abrirCadastro);
+                    Intent abrirHome =  new Intent(Carregamento.this, Tela_Home.class);
+                    startActivity(abrirHome);
 
                 }
             }

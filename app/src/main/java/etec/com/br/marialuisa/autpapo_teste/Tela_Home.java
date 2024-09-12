@@ -74,6 +74,7 @@ public class Tela_Home extends AppCompatActivity {
             }
         });
 
+        imConfig = findViewById(R.id.imgConfig);
         imConfig.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -81,6 +82,8 @@ public class Tela_Home extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
 
     @Override
