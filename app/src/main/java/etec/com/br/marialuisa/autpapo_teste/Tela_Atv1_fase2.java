@@ -61,12 +61,19 @@ public class Tela_Atv1_fase2 extends AppCompatActivity {
             }
         });
 
+        //Botão para voltar para a home
         btVoltar.setOnClickListener(new View.OnClickListener() {
+            //Função p/ fazer o audio para quando sair da atividade
             @Override
             public void onClick(View view) {
-                //intent verificar se será necessário if e else
+                if (audio != null && audio.isPlaying()) {
+                    audio.stop();
+                    audio.release();
+                    audio = null;
+                }
                 Intent abrirHome =  new Intent(Tela_Atv1_fase2.this, Tela_Home.class);
                 startActivity(abrirHome);
+                finish();
             }
         });
 
@@ -93,7 +100,6 @@ public class Tela_Atv1_fase2 extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean isCorrect = false;
 
                 int id = view.getId();
 
@@ -135,12 +141,6 @@ public class Tela_Atv1_fase2 extends AppCompatActivity {
         btn_mao.setOnClickListener(listener);
     }
 
-    private void salvarResultadoNoBanco(boolean isCorrect) {
-        // Código para salvar no banco de dados se a resposta foi correta ou não
-        // Exemplo:
-        // DatabaseHelper db = new DatabaseHelper(this);
-        // db.inserirResultado(isCorrect ? "Correto" : "Incorreto");
-    }
 
     private void playAudio(int audioResId) {
 

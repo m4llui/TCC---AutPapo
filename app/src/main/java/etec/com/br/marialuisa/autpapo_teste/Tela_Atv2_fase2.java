@@ -64,15 +64,21 @@ public class Tela_Atv2_fase2 extends AppCompatActivity {
             }
         });
 
+        //Botão para voltar para a home
         btVoltar2.setOnClickListener(new View.OnClickListener() {
+            //Função p/ fazer o audio para quando sair da atividade
             @Override
             public void onClick(View view) {
-                //intent verificar se será necessário if e else
+                if (audio != null && audio.isPlaying()) {
+                    audio.stop();
+                    audio.release();
+                    audio = null;
+                }
                 Intent abrirHome =  new Intent(Tela_Atv2_fase2.this, Tela_Home.class);
                 startActivity(abrirHome);
+                finish();
             }
         });
-
 
         botoesInativados();
 
