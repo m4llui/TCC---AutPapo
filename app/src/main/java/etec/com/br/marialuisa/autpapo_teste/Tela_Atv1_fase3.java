@@ -64,15 +64,22 @@ public class Tela_Atv1_fase3 extends AppCompatActivity {
                 playAudio(R.raw.audio_pfv);
             }
         });
-        //Botão para voltar para a home - VER IF ELSE SE É LOGADO OU VISITANTE
+        //Botão para voltar para a home
         btVolta.setOnClickListener(new View.OnClickListener() {
+            //Função p/ fazer o audio para quando sair da atividade
             @Override
             public void onClick(View view) {
+                if (audio != null && audio.isPlaying()) {
+                    audio.stop();
+                    audio.release();
+                    audio = null;
+                }
                 Intent abrirHome =  new Intent(Tela_Atv1_fase3.this, Tela_Home.class);
                 startActivity(abrirHome);
-
+                finish();
             }
         });
+
 
         // Inicializa os botões desativados e invisíveis
         botoesInativados();

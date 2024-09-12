@@ -9,13 +9,15 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Tela_Atv1_fase2 extends AppCompatActivity {
+    TextView btEnunciado;
     MediaPlayer audio;
     boolean selecionouO, selecionouI, erroO, erroI;
     private ImageView btn_Bola, btn_Let_Bola_Certo, btn_Arvore, btn_Arvore_errado, btn_limao, btn_limao_errado,
-            btn_mao, btn_mao_errado, btVoltar, btEnunciado, btBalao;
+            btn_mao, btn_mao_errado, btVoltar, btBalao;
     private Handler handler = new Handler();
 
     @Override
@@ -32,6 +34,7 @@ public class Tela_Atv1_fase2 extends AppCompatActivity {
         btn_mao = findViewById(R.id.btn_mao);
         btn_mao_errado = findViewById(R.id.btn_mao_errada);
         btVoltar = findViewById(R.id.btnVoltarAtv1Fase2);
+        btEnunciado = findViewById(R.id.txtAtv1_fase2);
         btBalao = findViewById(R.id.imageBalaoB);
 
         handler.postDelayed(new Runnable() {
@@ -42,7 +45,7 @@ public class Tela_Atv1_fase2 extends AppCompatActivity {
             }
         }, 1000);
 
-        btBalao.setOnClickListener(new View.OnClickListener() {
+        btEnunciado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -54,16 +57,23 @@ public class Tela_Atv1_fase2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                playAudio(R.raw.bola);
+                playAudio(R.raw.letra_b);
             }
         });
 
+        //Botão para voltar para a home
         btVoltar.setOnClickListener(new View.OnClickListener() {
+            //Função p/ fazer o audio para quando sair da atividade
             @Override
             public void onClick(View view) {
-                //intent verificar se será necessário if e else
+                if (audio != null && audio.isPlaying()) {
+                    audio.stop();
+                    audio.release();
+                    audio = null;
+                }
                 Intent abrirHome =  new Intent(Tela_Atv1_fase2.this, Tela_Home.class);
                 startActivity(abrirHome);
+                finish();
             }
         });
 
@@ -90,7 +100,6 @@ public class Tela_Atv1_fase2 extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean isCorrect = false;
 
                 int id = view.getId();
 
@@ -132,12 +141,6 @@ public class Tela_Atv1_fase2 extends AppCompatActivity {
         btn_mao.setOnClickListener(listener);
     }
 
-    private void salvarResultadoNoBanco(boolean isCorrect) {
-        // Código para salvar no banco de dados se a resposta foi correta ou não
-        // Exemplo:
-        // DatabaseHelper db = new DatabaseHelper(this);
-        // db.inserirResultado(isCorrect ? "Correto" : "Incorreto");
-    }
 
     private void playAudio(int audioResId) {
 

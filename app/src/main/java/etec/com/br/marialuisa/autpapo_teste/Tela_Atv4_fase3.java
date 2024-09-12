@@ -16,7 +16,7 @@ public class Tela_Atv4_fase3 extends AppCompatActivity {
     MediaPlayer audio;
     TextView btEnunciado;
     private ImageView btSim, btSimCerto, btCoracao, btCoracaoErrado, btMorango, btMorangoErrado,
-            btMaos, btMaosErrado, btVolta, btBalao;
+            btNao, btNaoErrado, btVolta, btBalao;
     private Handler handler = new Handler();
 
     @Override
@@ -33,8 +33,8 @@ public class Tela_Atv4_fase3 extends AppCompatActivity {
         btCoracaoErrado = findViewById(R.id.btn_coracao_errada);
         btMorango = findViewById(R.id.btn_morango4);
         btMorangoErrado = findViewById(R.id.btn_morango4_errado);
-        btMaos = findViewById(R.id.btn_maos);
-        btMaosErrado = findViewById(R.id.btn_maos_errada);
+        btNao = findViewById(R.id.btn_nao_joia);
+        btNaoErrado = findViewById(R.id.btn_nao_joia_errado);
         btVolta = findViewById(R.id.btnVoltarAtv4Fase3);
 
         // Toca o áudio uma vez quando a Activity é carregada ESTÁ DUPLICANDO ESTE AUDIO
@@ -62,12 +62,19 @@ public class Tela_Atv4_fase3 extends AppCompatActivity {
         });
 
         //BOTAO VOLTAR
+        //Botão para voltar para a home
         btVolta.setOnClickListener(new View.OnClickListener() {
+            //Função p/ fazer o audio para quando sair da atividade
             @Override
             public void onClick(View view) {
-                //intent verificar se será necessário if e else
+                if (audio != null && audio.isPlaying()) {
+                    audio.stop();
+                    audio.release();
+                    audio = null;
+                }
                 Intent abrirHome =  new Intent(Tela_Atv4_fase3.this, Tela_Home.class);
                 startActivity(abrirHome);
+                finish();
             }
         });
 
@@ -84,13 +91,13 @@ public class Tela_Atv4_fase3 extends AppCompatActivity {
         btSimCerto.setVisibility(View.INVISIBLE);
         btCoracaoErrado.setVisibility(View.INVISIBLE);
         btMorangoErrado.setVisibility(View.INVISIBLE);
-        btMaosErrado.setVisibility(View.INVISIBLE);
+        btNaoErrado.setVisibility(View.INVISIBLE);
 
         // Inicializa os botões "certo" e "errado" como desativados
         btSimCerto.setEnabled(false);
         btCoracaoErrado.setEnabled(false);
         btMorangoErrado.setEnabled(false);
-        btMaosErrado.setEnabled(false);
+        btNaoErrado.setEnabled(false);
     }
 
     private void setOnClickListeners() {
@@ -102,18 +109,22 @@ public class Tela_Atv4_fase3 extends AppCompatActivity {
                 if (id == R.id.btn_sim_joia) {
                     btSimCerto.setVisibility(View.VISIBLE);
                     btSimCerto.setEnabled(true);
+                    playAudio(R.raw.sim);
 
                 } else if (id == R.id.btn_coracao) {
                     btCoracaoErrado.setVisibility(View.VISIBLE);
                     btCoracaoErrado.setEnabled(true);
+                    playAudio(R.raw.coracao);
 
                 } else if (id == R.id.btn_morango4) {
                     btMorangoErrado.setVisibility(View.VISIBLE);
                     btMorangoErrado.setEnabled(true);
+                    playAudio(R.raw.morango);
 
-                } else if (id == R.id.btn_maos) {
-                    btMaosErrado.setVisibility(View.VISIBLE);
-                    btMaosErrado.setEnabled(true);
+                } else if (id == R.id.btn_nao_joia) {
+                    btNaoErrado.setVisibility(View.VISIBLE);
+                    btNaoErrado.setEnabled(true);
+                    playAudio(R.raw.nao);
 
                 }
 
@@ -130,7 +141,7 @@ public class Tela_Atv4_fase3 extends AppCompatActivity {
 
         // Configura o mesmo listener para todos os botões
         btMorango.setOnClickListener(listener);
-        btMaos.setOnClickListener(listener);
+        btNao.setOnClickListener(listener);
         btSim.setOnClickListener(listener);
         btCoracao.setOnClickListener(listener);
     }

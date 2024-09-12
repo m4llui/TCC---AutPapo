@@ -38,7 +38,7 @@
         app:srcCompat="@drawable/seta_voltar" />
 
     <TextView
-        android:id="@+id/txtEnunPfv5"
+        android:id="@+id/txtEnunAtv4Fase1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -72,7 +72,7 @@
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toStartOf="@+id/ImageBalao3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEnunPfv5"
+        app:layout_constraintTop_toBottomOf="@+id/txtEnunAtv4Fase1"
         app:srcCompat="@drawable/avatar_enun" />
 
     <!-- Botões de Letras -->

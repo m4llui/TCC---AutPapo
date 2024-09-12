@@ -33,7 +33,7 @@
         app:srcCompat="@drawable/seta_voltar" />
 
     <TextView
-        android:id="@+id/txtEnunFase1Atv3"
+        android:id="@+id/txtEnunAtv3Fase1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
@@ -48,7 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
 
     <ImageView
-        android:id="@+id/ImageBalaoB"
+        android:id="@+id/BalaoAtv3Fase1"
         android:layout_width="215dp"
         android:layout_height="174dp"
         android:layout_marginTop="96dp"
@@ -64,10 +64,10 @@
         android:layout_height="174dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/ImageBalaoB"
+        app:layout_constraintEnd_toStartOf="@+id/BalaoAtv3Fase1"
         app:layout_constraintHorizontal_bias="0.565"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEnunFase1Atv3"
+        app:layout_constraintTop_toBottomOf="@+id/txtEnunAtv3Fase1"
         app:srcCompat="@drawable/avatar_enun" />
 
     <ImageView
@@ -79,7 +79,7 @@
         android:layout_marginEnd="36dp"
         app:layout_constraintEnd_toStartOf="@+id/btn_G"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ImageBalaoB"
+        app:layout_constraintTop_toBottomOf="@+id/BalaoAtv3Fase1"
         app:srcCompat="@drawable/letraopng" />
 
     <ImageView
@@ -91,7 +91,7 @@
         android:layout_marginEnd="61dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_O"
-        app:layout_constraintTop_toBottomOf="@+id/ImageBalaoB"
+        app:layout_constraintTop_toBottomOf="@+id/BalaoAtv3Fase1"
         app:srcCompat="@drawable/letrag" />
 
     <!-- Botões de resposta errados e corretos, ajustados para novos ids -->
