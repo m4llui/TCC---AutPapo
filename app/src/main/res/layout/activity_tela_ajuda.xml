@@ -57,6 +57,16 @@
         app:layout_constraintStart_toEndOf="@+id/imgHomeA"
         app:srcCompat="@drawable/ic_desempenho" />
 
+    <ImageView
+        android:id="@+id/imgAjuda"
+        android:layout_width="355dp"
+        android:layout_height="510dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbarAjuda"
+        app:srcCompat="@drawable/ajuda" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
