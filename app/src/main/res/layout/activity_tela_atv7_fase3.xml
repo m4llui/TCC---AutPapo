@@ -88,13 +88,13 @@
         android:id="@+id/btn_triste7_certa"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        app:srcCompat="@drawable/btn_triste_certo"
-        tools:layout_editor_absoluteX="54dp"
-        tools:layout_editor_absoluteY="357dp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_triste7"
+        app:layout_constraintEnd_toEndOf="@+id/btn_triste7"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btn_triste7"
         app:layout_constraintTop_toTopOf="@+id/btn_triste7"
-        app:layout_constraintEnd_toEndOf="@+id/btn_triste7"/>
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/btn_triste_certo" />
 
     <ImageView
         android:id="@+id/btn_feliz7_errada"
@@ -165,9 +165,9 @@
         android:layout_width="130dp"
         android:layout_height="174dp"
         android:layout_marginStart="122dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="280dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/balao_triste"
+        app:layout_constraintHorizontal_bias="0.786"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtEnunEmocao"
         app:srcCompat="@drawable/avatar_enun" />

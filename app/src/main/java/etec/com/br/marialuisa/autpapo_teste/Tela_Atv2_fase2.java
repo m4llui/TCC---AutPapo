@@ -1,8 +1,9 @@
 package etec.com.br.marialuisa.autpapo_teste;
 
+import static etec.com.br.marialuisa.autpapo_teste.R.id.btnVoltarAtv1Fase2;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -28,15 +29,15 @@ public class Tela_Atv2_fase2 extends AppCompatActivity {
         setContentView(R.layout.activity_tela_atv2_fase2);
 
         // Vincular as views do XML com o código
-        btn_Let_L = findViewById(R.id.btn_Let_A2);
-        btn_Let_L_Inc = findViewById(R.id.btn_Let_A_errado2);
-        btn_Let_I = findViewById(R.id.btn_Let_B2);
-        btn_Let_I_Inc = findViewById(R.id.btn_Let_B_errado);
-        btn_Let_M = findViewById(R.id.btn_Let_E);
-        btn_Let_M_Inc = findViewById(R.id.btn_Let_E_certo);
-        btn_Let_G = findViewById(R.id.btn_Let_Y);
-        btn_Let_G_Certo = findViewById(R.id.btn_Let_y_errado);
-        btVoltar2 = findViewById(R.id.btnVoltarAtv2Fase1);
+        btn_Let_L = findViewById(R.id.btn_Let_L1);
+        btn_Let_L_Inc = findViewById(R.id.btn_Let_L_errado2);
+        btn_Let_I = findViewById(R.id.btn_Let_I2);
+        btn_Let_I_Inc = findViewById(R.id.btn_Let_B_errado2);
+        btn_Let_M = findViewById(R.id.btn_Let_M2);
+        btn_Let_M_Inc = findViewById(R.id.btn_Let_M_errado2);
+        btn_Let_G = findViewById(R.id.btn_Let_G2);
+        btn_Let_G_Certo = findViewById(R.id.btn_Let_G_certo2);
+        btVoltar2 = findViewById(R.id.btnVoltarAtv2Fase2);
         btEnunciado = findViewById(R.id.txtEnunAtv2Fase2);
         btBalao = findViewById(R.id.ImageBalao_Atv2_fase1);
 
@@ -107,22 +108,22 @@ public class Tela_Atv2_fase2 extends AppCompatActivity {
                 int id = view.getId();
 
                 // Verificar qual letra foi clicada e exibir a resposta correspondente
-                if (id == R.id.btn_Let_A2) {
+                if (id == R.id.btn_Let_L1) {
                     btn_Let_L_Inc.setVisibility(View.VISIBLE);
                     btn_Let_L_Inc.setEnabled(true);
                     playAudio(R.raw.letra_l);
 
-                } else if (id == R.id.btn_Let_B2) {
+                } else if (id == R.id.btn_Let_I2) {
                     btn_Let_I_Inc.setVisibility(View.VISIBLE);
                     btn_Let_I_Inc.setEnabled(true);
                     playAudio(R.raw.letra_i);
 
-                } else if (id == R.id.btn_Let_E) {
+                } else if (id == R.id.btn_Let_M2) {
                     btn_Let_M_Inc.setVisibility(View.VISIBLE);
                     btn_Let_M_Inc.setEnabled(true);
                     playAudio(R.raw.letra_m);
 
-                } else if (id == R.id.btn_Let_Y) {
+                } else if (id == R.id.btn_Let_G2) {
                     btn_Let_G_Certo.setVisibility(View.VISIBLE);
                     btn_Let_G_Certo.setEnabled(true);
                     playAudio(R.raw.letra_g);

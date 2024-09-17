@@ -2,7 +2,6 @@ package etec.com.br.marialuisa.autpapo_teste;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -37,7 +36,7 @@ public class Tela_Atv3_fase1 extends AppCompatActivity {
         btn_Let_G_Inc = findViewById(R.id.btn_G_errado);
         btVoltar4 = findViewById(R.id.btnVoltarAtv3Fase1);
         btEnunciado = findViewById(R.id.txtEnunAtv3Fase1);
-        btBalao = findViewById(R.id.ImageFinalFase3);
+        btBalao = findViewById(R.id.BalaoAtv3Fase1);
 
         handler.postDelayed(new Runnable() {
             @Override

@@ -162,10 +162,9 @@
         android:layout_width="130dp"
         android:layout_height="174dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="320dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.256"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/balao_feliz"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtEnunEmocao6"
         app:srcCompat="@drawable/avatar_enun" />

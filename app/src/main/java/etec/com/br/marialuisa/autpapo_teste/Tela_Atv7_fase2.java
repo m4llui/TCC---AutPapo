@@ -3,7 +3,6 @@ package etec.com.br.marialuisa.autpapo_teste;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -28,17 +27,17 @@ public class Tela_Atv7_fase2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_atv7_fase2);
 
-        btn_Let_Y = findViewById(R.id.btn_Flor);
+        btn_Let_Y = findViewById(R.id.btn_Y2);
         btn_Let_Y_Certo = findViewById(R.id.btn_Let_YCerto);
-        btn_Let_A = findViewById(R.id.btn_Nariz);
-        btn_Let_A_Inc = findViewById(R.id.btn_Let_A_errado);
-        btn_Let_K = findViewById(R.id.btn_Zebra);
-        btn_Let_K_Inc = findViewById(R.id.btn_Let_K_errado);
-        btn_Let_Q = findViewById(R.id.btn_Planeta);
-        btn_Let_Q_Inc = findViewById(R.id.btn_Let_Q_errado);
-        btVoltar = findViewById(R.id.btnVoltarAtv7Fase2);
-        btEnunciado = findViewById(R.id.txtEnunAtv1Fase1);
-        btBalao = findViewById(R.id.imageBalaoLetraZ);
+        btn_Let_A = findViewById(R.id.btn_B);
+        btn_Let_A_Inc = findViewById(R.id.btn_Let_B_errado);
+        btn_Let_K = findViewById(R.id.btn_K2);
+        btn_Let_K_Inc = findViewById(R.id.btn_Let_C_errado);
+        btn_Let_Q = findViewById(R.id.btn_Y);
+        btn_Let_Q_Inc = findViewById(R.id.btn_Let_D_errado);
+        btVoltar = findViewById(R.id.btnVoltarAtv1Fase1);
+        btEnunciado = findViewById(R.id.txtEnunAtv7Fase2);
+        btBalao = findViewById(R.id.imageBalaoLetraYakult);
 
         handler.postDelayed(new Runnable() {
             @Override
@@ -107,24 +106,24 @@ public class Tela_Atv7_fase2 extends AppCompatActivity {
 
                 int id = view.getId();
 
-                if (id == R.id.btn_Flor) {
+                if (id == R.id.btn_Y2) {
                     btn_Let_Y_Certo.setVisibility(View.VISIBLE);
                     btn_Let_Y_Certo.setEnabled(true);
                     playAudio(R.raw.letra_y);
 
-                } else if (id == R.id.btn_Nariz) {
+                } else if (id == R.id.btn_B) {
                     btn_Let_A_Inc.setVisibility(View.VISIBLE);
                     btn_Let_A_Inc.setEnabled(true);
                     playAudio(R.raw.d_h_i_j);
                     playAudio(R.raw.letra_a);
 
-                } else if (id == R.id.btn_Zebra) {
+                } else if (id == R.id.btn_K2) {
                     btn_Let_K_Inc.setVisibility(View.VISIBLE);
                     btn_Let_K_Inc.setEnabled(true);
                     playAudio(R.raw.d_h_i_j);
                     playAudio(R.raw.letra_k);
 
-                } else if (id == R.id.btn_Planeta) {
+                } else if (id == R.id.btn_Y) {
                     btn_Let_Q_Inc.setVisibility(View.VISIBLE);
                     btn_Let_Q_Inc.setEnabled(true);
                     playAudio(R.raw.d_h_i_j);

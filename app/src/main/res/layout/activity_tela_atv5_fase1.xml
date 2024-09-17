@@ -74,19 +74,20 @@
         android:id="@+id/btn_Nm1"
         android:layout_width="128dp"
         android:layout_height="116dp"
+        android:layout_marginStart="44dp"
         android:layout_marginTop="12dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_LetU"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ImageBalaofase1"
         app:srcCompat="@drawable/n1_fase1" />
 
     <ImageView
         android:id="@+id/btn_LetU"
-        android:layout_width="128dp"
-        android:layout_height="116dp"
+        android:layout_width="132dp"
+        android:layout_height="114dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.426"
         app:layout_constraintStart_toEndOf="@+id/btn_Nm1"
         app:layout_constraintTop_toBottomOf="@+id/ImageBalaofase1"
         app:srcCompat="@drawable/letrau_fase1" />
@@ -103,8 +104,8 @@
 
     <ImageView
         android:id="@+id/btn_U_Correta"
-        android:layout_width="134dp"
-        android:layout_height="121dp"
+        android:layout_width="133dp"
+        android:layout_height="118dp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_LetU"
         app:layout_constraintEnd_toEndOf="@+id/btn_LetU"
         app:layout_constraintHorizontal_bias="0.333"

@@ -22,7 +22,7 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <ImageView
-        android:id="@+id/btnVoltarAtv2Fase1"
+        android:id="@+id/btnVoltarAtv2Fase2"
         android:layout_width="40dp"
         android:layout_height="33dp"
         android:layout_marginTop="12dp"
@@ -68,96 +68,96 @@
         android:layout_marginTop="48dp"
         app:layout_constraintEnd_toStartOf="@+id/ImageBalao_Atv2_fase1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnVoltarAtv2Fase1"
+        app:layout_constraintTop_toBottomOf="@+id/btnVoltarAtv2Fase2"
         app:srcCompat="@drawable/avatar_enun" />
 
     <ImageView
-        android:id="@+id/btn_Let_A2"
+        android:id="@+id/btn_Let_L1"
         android:layout_width="128dp"
         android:layout_height="116dp"
         android:layout_marginStart="58dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="36dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_Let_B2"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Let_I2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ImageBalao_Atv2_fase1"
         app:srcCompat="@drawable/atvd2_letral" />
 
     <ImageView
-        android:id="@+id/btn_Let_B2"
+        android:id="@+id/btn_Let_I2"
         android:layout_width="128dp"
         android:layout_height="116dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="14dp"
         android:layout_marginEnd="61dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_Let_A2"
+        app:layout_constraintStart_toEndOf="@+id/btn_Let_L1"
         app:layout_constraintTop_toBottomOf="@+id/ImageBalao_Atv2_fase1"
         app:srcCompat="@drawable/atvd2_letrai" />
 
     <ImageView
-        android:id="@+id/btn_Let_E"
+        android:id="@+id/btn_Let_M2"
         android:layout_width="128dp"
         android:layout_height="116dp"
         android:layout_marginStart="58dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="36dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_Let_Y"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Let_G2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Let_A2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Let_L1"
         app:srcCompat="@drawable/atvd2_letram" />
 
     <ImageView
-        android:id="@+id/btn_Let_Y"
+        android:id="@+id/btn_Let_G2"
         android:layout_width="128dp"
         android:layout_height="116dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="61dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_Let_E"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Let_B2"
+        app:layout_constraintStart_toEndOf="@+id/btn_Let_M2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Let_I2"
         app:srcCompat="@drawable/atvd2_letrag" />
 
     <!-- Botões com respostas corretas ou incorretas -->
     <ImageView
-        android:id="@+id/btn_Let_A_errado2"
+        android:id="@+id/btn_Let_L_errado2"
         android:layout_width="129dp"
         android:layout_height="123dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_Let_A2"
-        app:layout_constraintEnd_toEndOf="@+id/btn_Let_A2"
-        app:layout_constraintStart_toStartOf="@+id/btn_Let_A2"
-        app:layout_constraintTop_toTopOf="@+id/btn_Let_A2"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_Let_L1"
+        app:layout_constraintEnd_toEndOf="@+id/btn_Let_L1"
+        app:layout_constraintStart_toStartOf="@+id/btn_Let_L1"
+        app:layout_constraintTop_toTopOf="@+id/btn_Let_L1"
         app:srcCompat="@drawable/atvd2_letralvermelha" />
 
     <ImageView
-        android:id="@+id/btn_Let_B_errado"
+        android:id="@+id/btn_Let_B_errado2"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_Let_B2"
-        app:layout_constraintEnd_toEndOf="@+id/btn_Let_B2"
-        app:layout_constraintStart_toStartOf="@+id/btn_Let_B2"
-        app:layout_constraintTop_toTopOf="@+id/btn_Let_B2"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_Let_I2"
+        app:layout_constraintEnd_toEndOf="@+id/btn_Let_I2"
+        app:layout_constraintStart_toStartOf="@+id/btn_Let_I2"
+        app:layout_constraintTop_toTopOf="@+id/btn_Let_I2"
         app:srcCompat="@drawable/atvd2_letraivermelha" />
 
     <ImageView
-        android:id="@+id/btn_Let_E_certo"
+        android:id="@+id/btn_Let_M_errado2"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_Let_E"
-        app:layout_constraintEnd_toEndOf="@+id/btn_Let_E"
-        app:layout_constraintStart_toStartOf="@+id/btn_Let_E"
-        app:layout_constraintTop_toTopOf="@+id/btn_Let_E"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_Let_M2"
+        app:layout_constraintEnd_toEndOf="@+id/btn_Let_M2"
+        app:layout_constraintStart_toStartOf="@+id/btn_Let_M2"
+        app:layout_constraintTop_toTopOf="@+id/btn_Let_M2"
         app:srcCompat="@drawable/atvd2_letramvermelha" />
 
     <ImageView
-        android:id="@+id/btn_Let_y_errado"
+        android:id="@+id/btn_Let_G_certo2"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_Let_Y"
-        app:layout_constraintEnd_toEndOf="@+id/btn_Let_Y"
-        app:layout_constraintStart_toStartOf="@+id/btn_Let_Y"
-        app:layout_constraintTop_toTopOf="@+id/btn_Let_Y"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_Let_G2"
+        app:layout_constraintEnd_toEndOf="@+id/btn_Let_G2"
+        app:layout_constraintStart_toStartOf="@+id/btn_Let_G2"
+        app:layout_constraintTop_toTopOf="@+id/btn_Let_G2"
         app:srcCompat="@drawable/atvd2_letragverde" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

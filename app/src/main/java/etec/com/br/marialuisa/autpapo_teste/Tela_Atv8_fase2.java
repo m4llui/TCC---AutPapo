@@ -1,6 +1,7 @@
 package etec.com.br.marialuisa.autpapo_teste;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -21,6 +22,7 @@ public class Tela_Atv8_fase2 extends AppCompatActivity {
     private Handler handler = new Handler();
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,14 +30,14 @@ public class Tela_Atv8_fase2 extends AppCompatActivity {
 
         btn_Flor = findViewById(R.id.btn_Flor);
         btn_Flor_errado = findViewById(R.id.btn_Flor_errado);
-        btn_Nariz = findViewById(R.id.btn_Nariz);
+        btn_Nariz = findViewById(R.id.btn_Nariz1);
         btn_Nariz_errado = findViewById(R.id.btn_Nariz_errado);
         btn_Zebra = findViewById(R.id.btn_Zebra);
         btn_Zebra_certa = findViewById(R.id.btn_Zebra_certa);
         btn_Planeta = findViewById(R.id.btn_Planeta);
         btn_Planeta_errado = findViewById(R.id.btn_Planeta_errado);
         btVoltar = findViewById(R.id.btnVoltarAtv8Fase2);
-        btEnunciado = findViewById(R.id.txtEnunAtv1Fase1);
+        btEnunciado = findViewById(R.id.txtEnunAtv8Fase2);
         btBalao = findViewById(R.id.imageBalaoLetraZ);
 
         handler.postDelayed(new Runnable() {
@@ -107,7 +109,7 @@ public class Tela_Atv8_fase2 extends AppCompatActivity {
                     btn_Flor_errado.setEnabled(true);
                     playAudio(R.raw.flor);
 
-                } else if (id == R.id.btn_Nariz) {
+                } else if (id == R.id.btn_Nariz1) {
                     btn_Nariz_errado.setVisibility(View.VISIBLE);
                     btn_Nariz_errado.setEnabled(true);
                     playAudio(R.raw.nariz);
