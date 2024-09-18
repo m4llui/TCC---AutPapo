@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 public class Tela_Atv7_fase2 extends AppCompatActivity {
 
+    private boolean buttonSelected = false;
+
     TextView btEnunciado;
     MediaPlayer audio;
 
@@ -102,9 +104,13 @@ public class Tela_Atv7_fase2 extends AppCompatActivity {
     private void setOnClickListeners() {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
-            public void onClick(@NonNull View view) {
-
+            public void onClick(View view) {
+                if (buttonSelected) {
+                    //PARA SELECIONAR SÓ UM BOTÃO
+                    return;
+                }
                 int id = view.getId();
+                buttonSelected = true;
 
                 if (id == R.id.btn_Y2) {
                     btn_Let_Y_Certo.setVisibility(View.VISIBLE);
