@@ -15,6 +15,7 @@ import android.widget.Toast;
 public class Tela_Atv1_fase3 extends AppCompatActivity {
 
     TextView btEnunciado;
+    private boolean buttonSelected = false;
     MediaPlayer audio;
     private ImageView btPfv, btPfvCerto, btCarro, btCarroErrado, btMorango, btMorangoErrado,
             btCasa, btCasaErrado, btVolta, btBalao;
@@ -116,8 +117,12 @@ public class Tela_Atv1_fase3 extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //boolean isCorrect = false;
+                if (buttonSelected) {
+                    //PARA SELECIONAR SÓ UM BOTÃO
+                    return;
+                }
                 int id = view.getId();
+                buttonSelected = true;
 
                 if (id == R.id.btn_pfv) {
                     btPfvCerto.setVisibility(View.VISIBLE);
@@ -141,9 +146,6 @@ public class Tela_Atv1_fase3 extends AppCompatActivity {
                     //isCorrect = false;  // Marca como incorreto
                 }
 
-                // Salva o resultado no banco de dados
-                //salvarResultadoNoBanco(isCorrect);
-                //teste
 
 
                 //HANDLER É QUEM FAZ O ATRASO ANTES DE IR PARA APROXÍMA TELA
@@ -164,12 +166,6 @@ public class Tela_Atv1_fase3 extends AppCompatActivity {
         btCasa.setOnClickListener(listener);
     }
 
-    private void salvarResultadoNoBanco(boolean isCorrect) {
-        // Código para salvar no banco de dados se a resposta foi correta ou não
-        // Exemplo:
-        // DatabaseHelper db = new DatabaseHelper(this);
-        // db.inserirResultado(isCorrect ? "Correto" : "Incorreto");
-    }
 
     //Destroi o audio dps da atividade
     @Override
