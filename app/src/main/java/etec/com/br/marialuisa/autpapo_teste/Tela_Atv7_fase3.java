@@ -17,6 +17,7 @@ public class Tela_Atv7_fase3 extends AppCompatActivity {
 
     MediaPlayer audio;
     TextView btEnunciado;
+    private boolean buttonSelected = false;
     private ImageView btTriste, btTristeCerto, btFeliz, btFelizErrado, btCansado, btCansadoErrado,
             btRaiva, btRaivaErrado, btVolta, btBalao;
     private Handler handler = new Handler();
@@ -104,7 +105,12 @@ public class Tela_Atv7_fase3 extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (buttonSelected) {
+                    //PARA SELECIONAR SÓ UM BOTÃO
+                    return;
+                }
                 int id = view.getId();
+                buttonSelected = true;
 
                 if (id == R.id.btn_triste7) {
                     btTristeCerto.setVisibility(View.VISIBLE);

@@ -2,6 +2,7 @@ package etec.com.br.marialuisa.autpapo_teste;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -17,11 +18,12 @@ public class Tela_Atv1_fase1 extends AppCompatActivity {
     TextView btEnunciado;
     MediaPlayer audio;
     private ImageView btn_Let_A, btn_Let_A_Certo, btn_Let_B, btn_Let_B_Inc, btn_Let_C, btn_Let_C_Inc,
-            btn_Let_D, btn_Let_D_Inc, btVoltar2, btBalao;
+            btn_Let_D, btn_Let_D_Inc, btVoltar2, btBalao, notErro;
     private Handler handler = new Handler();
 //
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +40,7 @@ public class Tela_Atv1_fase1 extends AppCompatActivity {
         btVoltar2 = findViewById(R.id.btnVoltarAtv1Fase1);
         btEnunciado = findViewById(R.id.txtEnunAtv8Fase2);
         btBalao = findViewById(R.id.imageBalaoLetraA);
+        notErro = findViewById(R.id.not_erro);
 
         handler.postDelayed(new Runnable() {
             @Override
@@ -92,11 +95,13 @@ public class Tela_Atv1_fase1 extends AppCompatActivity {
         btn_Let_B_Inc.setVisibility(View.INVISIBLE);
         btn_Let_C_Inc.setVisibility(View.INVISIBLE);
         btn_Let_D_Inc.setVisibility(View.INVISIBLE);
+        notErro.setVisibility(View.INVISIBLE);
 
         btn_Let_A_Certo.setEnabled(false);
         btn_Let_B_Inc.setEnabled(false);
         btn_Let_C_Inc.setEnabled(false);
         btn_Let_D_Inc.setEnabled(false);
+
     }
 
 
@@ -138,6 +143,17 @@ public class Tela_Atv1_fase1 extends AppCompatActivity {
 
 
                 }
+                if(id==R.id.btn_LetraA){
+                    Toast.makeText(Tela_Atv1_fase1.this, "acertou", Toast.LENGTH_SHORT).show();
+                }else {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                           notErro.setVisibility(View.VISIBLE);
+                            playAudio(R.raw.not_erro);
+                        }
+                    }, 1100);
+                }
 
 
                 handler.postDelayed(new Runnable() {
@@ -146,7 +162,7 @@ public class Tela_Atv1_fase1 extends AppCompatActivity {
                         startActivity(new Intent(Tela_Atv1_fase1.this, Tela_Atv2_fase1.class));
                         finish();//
                     }
-                }, 2000);
+                }, 3000);
             }
         };
 

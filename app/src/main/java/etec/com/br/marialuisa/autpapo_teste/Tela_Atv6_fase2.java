@@ -16,6 +16,7 @@ import android.widget.Toast;
 public class Tela_Atv6_fase2 extends AppCompatActivity {
 
     MediaPlayer audio;
+    private boolean buttonSelected = false;
     TextView btEnunciado;
 
     private ImageView btSU, btAB, btSUCerto, btABerrado, btVoltarAtv6Fase2, btbalaoSeq2, retangulo1, retangulo2,sVerde, sVermelho,uVerde,uVermelho;
@@ -105,7 +106,12 @@ public class Tela_Atv6_fase2 extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (buttonSelected) {
+                    //PARA SELECIONAR SÓ UM BOTÃO
+                    return;
+                }
                 int id = view.getId();
+                buttonSelected = true;
 
                 if (id == R.id.btn_SU) {
 

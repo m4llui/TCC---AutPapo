@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 public class Tela_Atv4_fase3 extends AppCompatActivity {
 
+    private boolean buttonSelected = false;
     MediaPlayer audio;
     TextView btEnunciado;
     private ImageView btSim, btSimCerto, btCoracao, btCoracaoErrado, btMorango, btMorangoErrado,
@@ -104,7 +105,12 @@ public class Tela_Atv4_fase3 extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (buttonSelected) {
+                    //PARA SELECIONAR SÓ UM BOTÃO
+                    return;
+                }
                 int id = view.getId();
+                buttonSelected = true;
 
                 if (id == R.id.btn_sim_joia) {
                     btSimCerto.setVisibility(View.VISIBLE);

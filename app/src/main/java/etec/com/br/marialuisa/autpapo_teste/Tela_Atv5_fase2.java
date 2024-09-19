@@ -14,8 +14,10 @@ import android.widget.TextView;
 public class Tela_Atv5_fase2 extends AppCompatActivity {
 
     MediaPlayer audio;
+    private boolean buttonSelected = false;
     TextView enunciado;
-    private ImageView btJP, btNA, btJPCerto, btNAerrado, btVoltarAtv5Fase2, btbalaoSeq, triangulo, losangulo,jVerde, jVermelho,pVerde, pVermelho;
+    private ImageView btJP, btNA, btJPCerto, btNAerrado,
+            btVoltarAtv5Fase2, btbalaoSeq, triangulo, losangulo,jVerde, jVermelho,pVerde, pVermelho;
     private Handler handler = new Handler();
 
     @SuppressLint("MissingInflatedId")
@@ -102,6 +104,12 @@ public class Tela_Atv5_fase2 extends AppCompatActivity {
         btJP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (buttonSelected) {
+                    //PARA SELECIONAR SÓ UM BOTÃO
+                    return;
+                }
+
+                buttonSelected = true;
 
                 btJPCerto.setVisibility(View.VISIBLE);
                 playAudio(R.raw.j_p);

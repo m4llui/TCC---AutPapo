@@ -15,6 +15,7 @@ import android.widget.Toast;
 public class Tela_Atv5_fase3 extends AppCompatActivity {
 
     MediaPlayer audio;
+    private boolean buttonSelected = false;
     TextView btEnunciado;
     private ImageView btNao, btNaoCerto, btDois, btDoisErrado, btNavio, btNavioErrado,
             btViola, btViolaErrado, btVolta, btBalao;
@@ -104,7 +105,12 @@ public class Tela_Atv5_fase3 extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (buttonSelected) {
+                    //PARA SELECIONAR SÓ UM BOTÃO
+                    return;
+                }
                 int id = view.getId();
+                buttonSelected = true;
 
                 if (id == R.id.btn_joia_nao) {
                     btNaoCerto.setVisibility(View.VISIBLE);

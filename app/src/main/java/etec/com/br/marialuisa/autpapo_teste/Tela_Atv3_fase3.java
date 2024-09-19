@@ -14,6 +14,7 @@ public class Tela_Atv3_fase3 extends AppCompatActivity {
     MediaPlayer audio;
     private ImageView btNao, btNaoErrado, btSim, btSimErrado, btTchau, btTchauCerto,
             btCasa, btCasaErrado, btVolta, btBalao;
+    private boolean buttonSelected = false;
     private Handler handler = new Handler();
 
     @Override
@@ -91,7 +92,13 @@ public class Tela_Atv3_fase3 extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                if (buttonSelected) {
+                    //PARA SELECIONAR SÓ UM BOTÃO
+                    return;
+                }
                 int id = view.getId();
+                buttonSelected = true;
 
                 if (id == R.id.btn_tchau) {
                     btTchauCerto.setVisibility(View.VISIBLE);

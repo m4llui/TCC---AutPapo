@@ -152,12 +152,7 @@ public class Tela_Atv2_fase2 extends AppCompatActivity {
         btn_Let_M.setOnClickListener(listener);
         btn_Let_G.setOnClickListener(listener);
     }
-    private void salvarResultadoNoBanco(boolean isCorrect) {
-        // Código para salvar no banco de dados se a resposta foi correta ou não
-        // Exemplo:
-        // DatabaseHelper db = new DatabaseHelper(this);
-        // db.inserirResultado(isCorrect ? "Correto" : "Incorreto");
-    }
+
 
     private void playAudio(int audioResId) {
 
