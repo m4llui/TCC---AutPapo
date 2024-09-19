@@ -13,9 +13,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Tela_Atv1_fase2 extends AppCompatActivity {
+
+    private boolean buttonSelected = false;
     TextView btEnunciado;
     MediaPlayer audio;
-    private boolean buttonSelected = false;
     boolean selecionouO, selecionouI, erroO, erroI;
     private ImageView btn_Bola, btn_Let_Bola_Certo, btn_Arvore, btn_Arvore_errado, btn_limao, btn_limao_errado,
             btn_mao, btn_mao_errado, btVoltar, btBalao;
@@ -107,7 +108,6 @@ public class Tela_Atv1_fase2 extends AppCompatActivity {
                 }
                 int id = view.getId();
                 buttonSelected = true;
-
                 if (id == R.id.btn_bola) {
                     btn_Let_Bola_Certo.setVisibility(View.VISIBLE);
                     btn_Let_Bola_Certo.setEnabled(true);

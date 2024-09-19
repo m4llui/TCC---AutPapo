@@ -12,8 +12,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Tela_Atv1_fase1 extends AppCompatActivity {
-    TextView btEnunciado;
+
     private boolean buttonSelected = false;
+    TextView btEnunciado;
     MediaPlayer audio;
     private ImageView btn_Let_A, btn_Let_A_Certo, btn_Let_B, btn_Let_B_Inc, btn_Let_C, btn_Let_C_Inc,
             btn_Let_D, btn_Let_D_Inc, btVoltar2, btBalao;
@@ -102,6 +103,7 @@ public class Tela_Atv1_fase1 extends AppCompatActivity {
     private void setOnClickListeners() {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
+
             public void onClick(View view) {
                 if (buttonSelected) {
                     //PARA SELECIONAR SÓ UM BOTÃO
@@ -109,6 +111,8 @@ public class Tela_Atv1_fase1 extends AppCompatActivity {
                 }
                 int id = view.getId();
                 buttonSelected = true;
+
+
 
                 if (id == R.id.btn_LetraA) {
                     btn_Let_A_Certo.setVisibility(View.VISIBLE);

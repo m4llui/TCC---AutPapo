@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 public class Tela_Atv3_fase1 extends AppCompatActivity {
 
+    private boolean buttonSelected = false;
+
     TextView btEnunciado;
     MediaPlayer audio;
     boolean selecionouO, selecionouI, erroO, erroI;
@@ -102,32 +104,36 @@ public class Tela_Atv3_fase1 extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean isCorrect = false;
-
+                if (buttonSelected) {
+                    //PARA SELECIONAR SÓ UM BOTÃO
+                    return;
+                }
                 int id = view.getId();
+                buttonSelected = true;
+
 
                 if (id == R.id.btn_K) {
                     btn_Let_K_Inc.setVisibility(View.VISIBLE);
                     btn_Let_K_Inc.setEnabled(true);
-                    isCorrect = false; // Incorreto
+
                     playAudio(R.raw.letra_k);
 
                 } else if (id == R.id.btn_I) {
                     btn_Let_I_Certo.setVisibility(View.VISIBLE);
                     btn_Let_I_Certo.setEnabled(true);
-                    isCorrect = true; // Correto
+
                     playAudio(R.raw.letra_i);
 
                 } else if (id == R.id.btn_O) {
                     btn_Let_O_Inc.setVisibility(View.VISIBLE);
                     btn_Let_O_Inc.setEnabled(true);
-                    isCorrect = false; // Incorreto
+
                     playAudio(R.raw.letra_o);
 
                 } else if (id == R.id.btn_G) {
                     btn_Let_G_Inc.setVisibility(View.VISIBLE);
                     btn_Let_G_Inc.setEnabled(true);
-                    isCorrect = false; // Incorreto
+
                     playAudio(R.raw.letra_g);
                 }
 

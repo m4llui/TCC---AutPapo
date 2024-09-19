@@ -69,11 +69,12 @@ public class Tela_Home extends AppCompatActivity {
         imDesempenho.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Toast.makeText(Tela_Home.this, "Desempenho", Toast.LENGTH_SHORT).show();
-                //Colocar Intent para tela Desempenho
+                //Intent intent = new Intent(Tela_Home.this, .class);
+                //startActivity(intent);
             }
         });
 
+        imConfig = findViewById(R.id.imgConfig);
         imConfig.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
