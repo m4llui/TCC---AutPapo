@@ -133,7 +133,7 @@ public class Tela_Atv4_fase2 extends AppCompatActivity {
                 delayHandler.postDelayed(new Runnable() {  // Usando 'delayHandler' em vez de 'handler'
                     @Override
                     public void run() {
-                        startActivity(new Intent(Tela_Atv4_fase2.this, Tela_Atv7_fase2.class));
+                        startActivity(new Intent(Tela_Atv4_fase2.this, Tela_Atv5_fase2.class));
                         finish();
                     }
                 }, 2000);
