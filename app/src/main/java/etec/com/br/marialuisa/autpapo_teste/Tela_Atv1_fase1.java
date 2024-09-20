@@ -18,7 +18,7 @@ public class Tela_Atv1_fase1 extends AppCompatActivity {
     TextView btEnunciado;
     MediaPlayer audio;
     private ImageView btn_Let_A, btn_Let_A_Certo, btn_Let_B, btn_Let_B_Inc, btn_Let_C, btn_Let_C_Inc,
-            btn_Let_D, btn_Let_D_Inc, btVoltar2, btBalao, notErro;
+            btn_Let_D, btn_Let_D_Inc, btVoltar2, btBalao, notErro, notAcerto;
     private Handler handler = new Handler();
 //
 
@@ -41,7 +41,7 @@ public class Tela_Atv1_fase1 extends AppCompatActivity {
         btEnunciado = findViewById(R.id.txtEnunAtv8Fase2);
         btBalao = findViewById(R.id.imageBalaoLetraA);
         notErro = findViewById(R.id.not_erro);
-
+        notAcerto = findViewById(R.id.not_acerto);
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -84,8 +84,6 @@ public class Tela_Atv1_fase1 extends AppCompatActivity {
 
 
         botoesInativados();
-
-
         setOnClickListeners();
     }
 
@@ -96,6 +94,7 @@ public class Tela_Atv1_fase1 extends AppCompatActivity {
         btn_Let_C_Inc.setVisibility(View.INVISIBLE);
         btn_Let_D_Inc.setVisibility(View.INVISIBLE);
         notErro.setVisibility(View.INVISIBLE);
+        notAcerto.setVisibility(View.INVISIBLE);
 
         btn_Let_A_Certo.setEnabled(false);
         btn_Let_B_Inc.setEnabled(false);
@@ -117,8 +116,6 @@ public class Tela_Atv1_fase1 extends AppCompatActivity {
                 int id = view.getId();
                 buttonSelected = true;
 
-
-
                 if (id == R.id.btn_LetraA) {
                     btn_Let_A_Certo.setVisibility(View.VISIBLE);
                     btn_Let_A_Certo.setEnabled(true);
@@ -134,7 +131,7 @@ public class Tela_Atv1_fase1 extends AppCompatActivity {
                 } else if (id == R.id.btn_C) {
                     btn_Let_C_Inc.setVisibility(View.VISIBLE);
                     btn_Let_C_Inc.setEnabled(true);
-                    playAudio(R.raw.letra_o);
+                    playAudio(R.raw.letra_c);
 
                 } else if (id == R.id.btn_D) {
                     btn_Let_D_Inc.setVisibility(View.VISIBLE);
@@ -144,7 +141,13 @@ public class Tela_Atv1_fase1 extends AppCompatActivity {
 
                 }
                 if(id==R.id.btn_LetraA){
-                    Toast.makeText(Tela_Atv1_fase1.this, "acertou", Toast.LENGTH_SHORT).show();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            notAcerto.setVisibility(View.VISIBLE);
+                            playAudio(R.raw.not_acertou);
+                        }
+                    }, 1100);
                 }else {
                     handler.postDelayed(new Runnable() {
                         @Override
