@@ -81,19 +81,19 @@
         android:layout_width="128dp"
         android:layout_height="116dp"
         android:layout_marginStart="58dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="36dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_B"
+        app:layout_constraintEnd_toStartOf="@+id/btn_A"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageBalaoLetraYakult"
         app:srcCompat="@drawable/btn_letra_y" />
 
     <ImageView
-        android:id="@+id/btn_B"
+        android:id="@+id/btn_A"
         android:layout_width="128dp"
         android:layout_height="116dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="61dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_Y2"
@@ -107,13 +107,13 @@
         android:layout_marginStart="58dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="36dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_Y"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Q"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_Y2"
         app:srcCompat="@drawable/btn_letra_k" />
 
     <ImageView
-        android:id="@+id/btn_Y"
+        android:id="@+id/btn_Q"
         android:layout_width="128dp"
         android:layout_height="116dp"
         android:layout_marginStart="8dp"
@@ -121,7 +121,7 @@
         android:layout_marginEnd="61dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_K2"
-        app:layout_constraintTop_toBottomOf="@+id/btn_B"
+        app:layout_constraintTop_toBottomOf="@+id/btn_A"
         app:srcCompat="@drawable/btn_letra_q" />
 
     <!-- Botões com respostas corretas ou incorretas -->
@@ -137,17 +137,17 @@
 
 
     <ImageView
-        android:id="@+id/btn_Let_B_errado"
+        android:id="@+id/btn_Let_A_errado"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_B"
-        app:layout_constraintEnd_toEndOf="@+id/btn_B"
-        app:layout_constraintStart_toStartOf="@+id/btn_B"
-        app:layout_constraintTop_toTopOf="@+id/btn_B"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_A"
+        app:layout_constraintEnd_toEndOf="@+id/btn_A"
+        app:layout_constraintStart_toStartOf="@+id/btn_A"
+        app:layout_constraintTop_toTopOf="@+id/btn_A"
         app:srcCompat="@drawable/btn_letra_a_errada" />
 
     <ImageView
-        android:id="@+id/btn_Let_C_errado"
+        android:id="@+id/btn_Let_K_errado"
         android:layout_width="128dp"
         android:layout_height="116dp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_K2"
@@ -159,13 +159,38 @@
         app:srcCompat="@drawable/btn_letra_k_errada" />
 
     <ImageView
-        android:id="@+id/btn_Let_D_errado"
+        android:id="@+id/btn_Let_Q_errado"
         android:layout_width="128dp"
         android:layout_height="116dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_Y"
-        app:layout_constraintEnd_toEndOf="@+id/btn_Y"
-        app:layout_constraintStart_toStartOf="@+id/btn_Y"
-        app:layout_constraintTop_toTopOf="@+id/btn_Y"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_Q"
+        app:layout_constraintEnd_toEndOf="@+id/btn_Q"
+        app:layout_constraintStart_toStartOf="@+id/btn_Q"
+        app:layout_constraintTop_toTopOf="@+id/btn_Q"
         app:srcCompat="@drawable/btn_letra_q_errada" />
+
+    <ImageView
+        android:id="@+id/not_erro"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="580dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar4"
+        app:srcCompat="@drawable/not_erro" />
+
+    <ImageView
+        android:id="@+id/not_acerto"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="576dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar4"
+        app:srcCompat="@drawable/not_acerto" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

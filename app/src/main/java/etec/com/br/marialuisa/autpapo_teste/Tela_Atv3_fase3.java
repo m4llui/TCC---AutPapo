@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class Tela_Atv3_fase3 extends AppCompatActivity {
     MediaPlayer audio;
     private ImageView btNao, btNaoErrado, btSim, btSimErrado, btTchau, btTchauCerto,
-            btCasa, btCasaErrado, btVolta, btBalao;
+            btCasa, btCasaErrado, btVolta, btBalao, notCerto,notErro;
     private boolean buttonSelected = false;
     private Handler handler = new Handler();
 
@@ -32,6 +32,8 @@ public class Tela_Atv3_fase3 extends AppCompatActivity {
         btCasaErrado = findViewById(R.id.btn_casa_errada);
         btVolta = findViewById(R.id.btnVoltarAtv6Fase3);
         btBalao = findViewById(R.id.balao_enun_tchau);
+        notCerto = findViewById(R.id.not_acerto);
+        notErro = findViewById(R.id.not_erro);
 
         // Toca o áudio uma vez quando a Activity é carregada ESTÁ DUPLICANDO ESTE AUDIO
         handler.postDelayed(new Runnable() {
@@ -80,6 +82,8 @@ public class Tela_Atv3_fase3 extends AppCompatActivity {
         btNaoErrado.setVisibility(View.INVISIBLE);
         btSimErrado.setVisibility(View.INVISIBLE);
         btCasaErrado.setVisibility(View.INVISIBLE);
+        notErro.setVisibility(View.INVISIBLE);
+        notCerto.setVisibility(View.INVISIBLE);
 
         // Inicializa os botões "certo" e "errado" como desativados
         btTchauCerto.setEnabled(false);
@@ -117,6 +121,24 @@ public class Tela_Atv3_fase3 extends AppCompatActivity {
                     btCasaErrado.setEnabled(true);
                     playAudio(R.raw.casa);
                 }
+                if(id==R.id.btn_tchau){
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            notCerto.setVisibility(View.VISIBLE);
+                            playAudio(R.raw.not_acertou);
+                        }
+                    }, 1100);
+                }else {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            notErro.setVisibility(View.VISIBLE);
+                            playAudio(R.raw.not_erro);
+                        }
+                    }, 1100);
+                }
+
 
                 // HANDLER É QUEM FAZ O ATRASO ANTES DE IR PARA A PRÓXIMA TELA
                 handler.postDelayed(new Runnable() {
@@ -125,7 +147,7 @@ public class Tela_Atv3_fase3 extends AppCompatActivity {
                         startActivity(new Intent(Tela_Atv3_fase3.this, Tela_Atv4_fase3.class));
                         finish(); // Fecha a tela atual
                     }
-                }, 2000); // Atraso de 2 segundos em milissegundos
+                }, 3000); // Atraso de 2 segundos em milissegundos
             }
         };
 

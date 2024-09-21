@@ -17,7 +17,8 @@ public class Tela_Atv5_fase2 extends AppCompatActivity {
     private boolean buttonSelected = false;
     TextView enunciado;
     private ImageView btJP, btNA, btJPCerto, btNAerrado,
-            btVoltarAtv5Fase2, btbalaoSeq, triangulo, losangulo,jVerde, jVermelho,pVerde, pVermelho;
+            btVoltarAtv5Fase2, btbalaoSeq, triangulo, losangulo,jVerde, jVermelho,pVerde, pVermelho,
+    notCerto, notErro;
     private Handler handler = new Handler();
 
     @SuppressLint("MissingInflatedId")
@@ -40,7 +41,8 @@ public class Tela_Atv5_fase2 extends AppCompatActivity {
         jVermelho = findViewById(R.id.j_vermelho);
         pVerde = findViewById(R.id.p_verde);
         pVermelho = findViewById(R.id.p_vermelho);
-
+        notErro = findViewById(R.id.not_erro);
+        notCerto = findViewById(R.id.not_acerto);
 
         handler.postDelayed(new Runnable() {
             @Override
@@ -89,6 +91,8 @@ public class Tela_Atv5_fase2 extends AppCompatActivity {
         jVermelho.setVisibility(View.INVISIBLE);
         pVermelho.setVisibility(View.INVISIBLE);
         pVerde.setVisibility(View.INVISIBLE);
+        notCerto.setVisibility(View.INVISIBLE);
+        notErro.setVisibility(View.INVISIBLE);
 
         jVermelho.setEnabled(false);
         jVerde.setEnabled(false);
@@ -121,9 +125,11 @@ public class Tela_Atv5_fase2 extends AppCompatActivity {
                         losangulo.setVisibility(View.INVISIBLE);
                         pVerde.setVisibility(View.VISIBLE);
                         jVerde.setVisibility(View.VISIBLE);
+                        notCerto.setVisibility(View.VISIBLE);
+                        playAudio(R.raw.not_acertou);
 
                     }
-                }, 1500);
+                }, 1100);
 
 
                 handler.postDelayed(new Runnable() {
@@ -149,6 +155,7 @@ public class Tela_Atv5_fase2 extends AppCompatActivity {
                     public void run() {
                         triangulo.setVisibility(View.INVISIBLE);
                         losangulo.setVisibility(View.INVISIBLE);
+
                     }
                 }, 1100);
 
@@ -157,6 +164,8 @@ public class Tela_Atv5_fase2 extends AppCompatActivity {
                     public void run() {
                         pVermelho.setVisibility(View.VISIBLE);
                         jVermelho.setVisibility(View.VISIBLE);
+                        notErro.setVisibility(View.VISIBLE);
+                        playAudio(R.raw.not_erro);
                     }
                 }, 1000);
 

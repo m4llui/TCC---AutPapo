@@ -15,7 +15,8 @@ public class Tela_Atv2_fase3 extends AppCompatActivity {
 
     MediaPlayer audio;
     boolean selecionouO, selecionouI, erroO, erroI;
-    private ImageView btI, btO, btOi, btIErrado, btOErrado, btICerto, btOCerto, btVolta, btBalao;
+    private ImageView btI, btO, btOi, btIErrado, btOErrado, btICerto, btOCerto, btVolta, btBalao,
+            notCerto, notErro;
     private Handler handler = new Handler();
 
     @SuppressLint("MissingInflatedId")
@@ -33,6 +34,8 @@ public class Tela_Atv2_fase3 extends AppCompatActivity {
         btOErrado = findViewById(R.id.btn_letraO_errada);
         btVolta = findViewById(R.id.btnVoltarAtv6Fase3);
         btOi = findViewById(R.id.imgOi);
+        notCerto = findViewById(R.id.not_acerto);
+        notErro = findViewById(R.id.not_erro);
 
         //ENUNCIADO AUTOMÁTICO
         handler.postDelayed(new Runnable() {
@@ -90,6 +93,8 @@ public class Tela_Atv2_fase3 extends AppCompatActivity {
         btIErrado.setVisibility(View.INVISIBLE);
         btOErrado.setVisibility(View.INVISIBLE);
         btOCerto.setVisibility(View.INVISIBLE);
+       notErro.setVisibility(View.INVISIBLE);
+       notCerto.setVisibility(View.INVISIBLE);
 
         // Inicializa os botões "certo" e "errado" como desativados
         btICerto.setEnabled(false);
@@ -131,8 +136,25 @@ public class Tela_Atv2_fase3 extends AppCompatActivity {
                         playAudio(R.raw.letra_i);
                     }
                 }
+                if (selecionouO && selecionouI) {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            notCerto.setVisibility(View.VISIBLE);
+                            playAudio(R.raw.not_acertou);
+                        }
+                    }, 1100);
+                } else if (btIErrado.getVisibility() == View.VISIBLE || btOErrado.getVisibility() == View.VISIBLE) {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            notErro.setVisibility(View.VISIBLE);
+                            playAudio(R.raw.not_erro);
+                        }
+                    }, 1100);
+                }
 
-                // Sempre vai para a próxima tela, independentemente das seleções
+               
                 if ((selecionouO && selecionouI) || (btIErrado.getVisibility() == View.VISIBLE && btOErrado.getVisibility() == View.VISIBLE)) {
                     handler.postDelayed(new Runnable() {
                         @Override
@@ -140,7 +162,7 @@ public class Tela_Atv2_fase3 extends AppCompatActivity {
                             startActivity(new Intent(Tela_Atv2_fase3.this, Tela_Atv3_fase3.class));
                             finish();
                         }
-                    }, 2000); // Atraso de 2 segundos
+                    }, 3000);
                 }
             }
         };

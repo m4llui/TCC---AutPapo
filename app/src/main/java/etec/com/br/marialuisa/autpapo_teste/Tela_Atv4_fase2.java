@@ -21,8 +21,8 @@ public class Tela_Atv4_fase2 extends AppCompatActivity {
     MediaPlayer audio;
     boolean selecionouO, selecionouI, erroO, erroI;
     private ImageView btn_ABCD, btn_ABCD_errado, btn_EFGH, btn_EFGH_Certo, btn_NBFH, btn_NBFH_errado,
-            btn_JKLM, btn_JKLM_errado, btVoltar, btBalao;
-    private Handler delayHandler = new Handler();  // Renomeado de 'handler' para 'delayHandler'
+            btn_JKLM, btn_JKLM_errado, btVoltar, btBalao, notCerto, notErro;
+    private Handler handler = new Handler();
 
 
     @Override
@@ -42,9 +42,11 @@ public class Tela_Atv4_fase2 extends AppCompatActivity {
         btVoltar = findViewById(R.id.btnVoltarAtv4Fase2);
         btEnunciado = findViewById(R.id.txtEnunAtv4Fase2);
         btBalao = findViewById(R.id.balaoAtv4);
+        notCerto = findViewById(R.id.not_acerto);
+        notErro = findViewById(R.id.not_erro);
 
 
-        delayHandler.postDelayed(new Runnable() {
+      handler.postDelayed(new Runnable() {
             @Override
             public void run() {
 
@@ -86,8 +88,6 @@ public class Tela_Atv4_fase2 extends AppCompatActivity {
 
 
         botoesInativados();
-
-
         setOnClickListeners();
     }
 
@@ -96,6 +96,8 @@ public class Tela_Atv4_fase2 extends AppCompatActivity {
         btn_EFGH_Certo.setVisibility(View.INVISIBLE);
         btn_NBFH_errado.setVisibility(View.INVISIBLE);
         btn_JKLM_errado.setVisibility(View.INVISIBLE);
+        notCerto.setVisibility(View.INVISIBLE);
+        notErro.setVisibility(View.INVISIBLE);
 
         btn_ABCD_errado.setEnabled(false);
         btn_EFGH_Certo.setEnabled(false);
@@ -135,14 +137,31 @@ public class Tela_Atv4_fase2 extends AppCompatActivity {
                     playAudio(R.raw.j_k_l_m);
                 }
 
-                // Aguarda 2 segundos antes de navegar para a próxima atividade
-                delayHandler.postDelayed(new Runnable() {  // Usando 'delayHandler' em vez de 'handler'
+                if(id==R.id.btn_efgh){
+                   handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            notCerto.setVisibility(View.VISIBLE);
+                            playAudio(R.raw.not_acertou);
+                        }
+                    }, 1900);
+                }else {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            notErro.setVisibility(View.VISIBLE);
+                            playAudio(R.raw.not_erro);
+                        }
+                    }, 1900);
+                }
+
+                handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         startActivity(new Intent(Tela_Atv4_fase2.this, Tela_Atv5_fase2.class));
                         finish();
                     }
-                }, 2000);
+                }, 3200);
             }
         };
 
@@ -152,12 +171,6 @@ public class Tela_Atv4_fase2 extends AppCompatActivity {
         btn_NBFH.setOnClickListener(listener);
         btn_JKLM.setOnClickListener(listener);
     }
- private void salvarResultadoNoBanco(boolean isCorrect) {
-    // Código para salvar no banco de dados se a resposta foi correta ou não
-    // Exemplo:
-    // DatabaseHelper db = new DatabaseHelper(this);
-    // db.inserirResultado(isCorrect ? "Correto" : "Incorreto");
-}
 
     private void playAudio(int audioResId) {
 

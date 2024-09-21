@@ -164,4 +164,29 @@
         app:layout_constraintTop_toTopOf="@+id/btn_efgh"
         app:srcCompat="@drawable/atvd4_letra_efgh_verde" />
 
+    <ImageView
+        android:id="@+id/not_erro"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="568dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar10"
+        app:srcCompat="@drawable/not_erro" />
+
+    <ImageView
+        android:id="@+id/not_acerto"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="560dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar10"
+        app:srcCompat="@drawable/not_acerto" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,7 +19,8 @@ public class Tela_Atv6_fase2 extends AppCompatActivity {
     private boolean buttonSelected = false;
     TextView btEnunciado;
 
-    private ImageView btSU, btAB, btSUCerto, btABerrado, btVoltarAtv6Fase2, btbalaoSeq2, retangulo1, retangulo2,sVerde, sVermelho,uVerde,uVermelho;
+    private ImageView btSU, btAB, btSUCerto, btABerrado, btVoltarAtv6Fase2, btbalaoSeq2, retangulo1,
+            retangulo2,sVerde, sVermelho,uVerde,uVermelho, notCerto, notErro;
     private Handler handler = new Handler();
 
 
@@ -43,6 +44,8 @@ public class Tela_Atv6_fase2 extends AppCompatActivity {
         sVermelho =findViewById(R.id.s_vermelho);
         uVerde = findViewById(R.id.u_verde);
         uVermelho = findViewById(R.id.u_vermelha);
+        notCerto = findViewById(R.id.not_acerto);
+        notErro = findViewById(R.id.not_erro);
 
         handler.postDelayed(new Runnable() {
             @Override
@@ -77,10 +80,7 @@ public class Tela_Atv6_fase2 extends AppCompatActivity {
             }
         });
 
-
         botoesInativados();
-
-
         setOnClickListeners();
     }
 
@@ -92,6 +92,8 @@ public class Tela_Atv6_fase2 extends AppCompatActivity {
         sVermelho.setVisibility(View.INVISIBLE);
         uVerde.setVisibility(View.INVISIBLE);
         uVermelho.setVisibility(View.INVISIBLE);
+        notCerto.setVisibility(View.INVISIBLE);
+        notErro.setVisibility(View.INVISIBLE);
 
 
         btSUCerto.setEnabled(false);
@@ -126,6 +128,8 @@ public class Tela_Atv6_fase2 extends AppCompatActivity {
                             retangulo2.setVisibility(View.INVISIBLE);
                             uVerde.setVisibility(View.VISIBLE);
                             sVerde.setVisibility(View.VISIBLE);
+                            notCerto.setVisibility(View.VISIBLE);
+                            playAudio(R.raw.not_acertou);
                         }
                     }, 1000);
 
@@ -145,8 +149,11 @@ public class Tela_Atv6_fase2 extends AppCompatActivity {
                     }, 1000);
                     handler.postDelayed(new Runnable() {
                         @Override
-                        public void run() {  uVermelho.setVisibility(View.VISIBLE);
-                                             sVermelho.setVisibility(View.VISIBLE);
+                        public void run() {
+                            uVermelho.setVisibility(View.VISIBLE);
+                            sVermelho.setVisibility(View.VISIBLE);
+                            notErro.setVisibility(View.VISIBLE);
+                            playAudio(R.raw.not_erro);
                         }
                     }, 1000);
                 }

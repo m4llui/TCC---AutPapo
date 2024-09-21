@@ -21,7 +21,8 @@ public class Tela_Atv2_fase2 extends AppCompatActivity {
     MediaPlayer audio;
     boolean selecionouO, selecionouI, erroO, erroI;
     private ImageView btn_Let_L, btn_Let_L_Inc, btn_Let_I, btn_Let_I_Inc,
-            btn_Let_M, btn_Let_M_Inc, btn_Let_G, btn_Let_G_Certo, btVoltar2, btBalao;
+            btn_Let_M, btn_Let_M_Inc, btn_Let_G, btn_Let_G_Certo, btVoltar2, btBalao,
+            notCerto, notErro;
     private Handler handler = new Handler();
 
 
@@ -42,6 +43,8 @@ public class Tela_Atv2_fase2 extends AppCompatActivity {
         btVoltar2 = findViewById(R.id.btnVoltarAtv2Fase2);
         btEnunciado = findViewById(R.id.txtEnunAtv2Fase2);
         btBalao = findViewById(R.id.ImageBalao_Atv2_fase1);
+        notCerto = findViewById(R.id.not_acerto);
+        notErro = findViewById(R.id.not_erro);
 
         handler.postDelayed(new Runnable() {
             @Override
@@ -95,6 +98,8 @@ public class Tela_Atv2_fase2 extends AppCompatActivity {
         btn_Let_I_Inc.setVisibility(View.INVISIBLE);
         btn_Let_M_Inc.setVisibility(View.INVISIBLE);
         btn_Let_G_Certo.setVisibility(View.INVISIBLE);
+        notErro.setVisibility(View.INVISIBLE);
+        notCerto.setVisibility(View.INVISIBLE);
 
         btn_Let_L_Inc.setEnabled(false);
         btn_Let_I_Inc.setEnabled(false);
@@ -134,6 +139,23 @@ public class Tela_Atv2_fase2 extends AppCompatActivity {
                     btn_Let_G_Certo.setEnabled(true);
                     playAudio(R.raw.letra_g);
                 }
+                if(id==R.id.btn_Let_G2){
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            notCerto.setVisibility(View.VISIBLE);
+                            playAudio(R.raw.not_acertou);
+                        }
+                    }, 1100);
+                }else {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            notErro.setVisibility(View.VISIBLE);
+                            playAudio(R.raw.not_erro);
+                        }
+                    }, 1100);
+                }
 
                 // Delay antes de mudar de tela
                 handler.postDelayed(new Runnable() {
@@ -142,7 +164,7 @@ public class Tela_Atv2_fase2 extends AppCompatActivity {
                         startActivity(new Intent(Tela_Atv2_fase2.this, Tela_Atv3_fase2.class));
                         finish();
                     }
-                }, 2000); // 2 segundos de atraso
+                }, 3000); // 3 segundos de atraso
             }
         };
 

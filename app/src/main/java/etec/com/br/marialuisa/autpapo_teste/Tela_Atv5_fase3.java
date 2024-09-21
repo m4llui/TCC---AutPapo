@@ -18,7 +18,7 @@ public class Tela_Atv5_fase3 extends AppCompatActivity {
     private boolean buttonSelected = false;
     TextView btEnunciado;
     private ImageView btNao, btNaoCerto, btDois, btDoisErrado, btNavio, btNavioErrado,
-            btViola, btViolaErrado, btVolta, btBalao;
+            btViola, btViolaErrado, btVolta, btBalao, notCerto, notErro;
     private Handler handler = new Handler();
 
     @SuppressLint("MissingInflatedId")
@@ -38,6 +38,8 @@ public class Tela_Atv5_fase3 extends AppCompatActivity {
         btViola = findViewById(R.id.btn_viola);
         btViolaErrado = findViewById(R.id.btn_viola_errada);
         btVolta = findViewById(R.id.btnVoltarAtv5Fase3);
+        notCerto = findViewById(R.id.not_acerto);
+        notErro = findViewById(R.id.not_erro);
 
         handler.postDelayed(new Runnable() {
             @Override
@@ -58,11 +60,11 @@ public class Tela_Atv5_fase3 extends AppCompatActivity {
         btEnunciado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 playAudio(R.raw.enun_escolha_figplvra);
             }
         });
 
-        //BOTAO VOLTAR
         //Botão para voltar para a home
         btVolta.setOnClickListener(new View.OnClickListener() {
             //Função p/ fazer o audio para quando sair da atividade
@@ -93,6 +95,8 @@ public class Tela_Atv5_fase3 extends AppCompatActivity {
         btNavioErrado.setVisibility(View.INVISIBLE);
         btDoisErrado.setVisibility(View.INVISIBLE);
         btViolaErrado.setVisibility(View.INVISIBLE);
+        notErro.setVisibility(View.INVISIBLE);
+        notCerto.setVisibility(View.INVISIBLE);
 
         // Inicializa os botões "certo" e "errado" como desativados
         btNaoCerto.setEnabled(false);
@@ -134,6 +138,25 @@ public class Tela_Atv5_fase3 extends AppCompatActivity {
 
                 }
 
+                if(id==R.id.btn_joia_nao){
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            notCerto.setVisibility(View.VISIBLE);
+                            playAudio(R.raw.not_acertou);
+                        }
+                    }, 1100);
+                }else {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            notErro.setVisibility(View.VISIBLE);
+                            playAudio(R.raw.not_erro);
+                        }
+                    }, 1100);
+                }
+
+
                 // HANDLER É QUEM FAZ O ATRASO ANTES DE IR PARA A PRÓXIMA TELA
                 handler.postDelayed(new Runnable() {
                     @Override
@@ -141,7 +164,7 @@ public class Tela_Atv5_fase3 extends AppCompatActivity {
                         startActivity(new Intent(Tela_Atv5_fase3.this, Tela_Atv6_fase3.class));
                         finish(); // Fecha a tela atual
                     }
-                }, 2000); // Atraso de 2 segundos em milissegundos
+                }, 3000);
             }
         };
 

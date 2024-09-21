@@ -22,7 +22,7 @@ public class Tela_Atv5_fase1 extends AppCompatActivity {
     boolean selecionouO, selecionouI, erroO, erroI;
 
     private ImageView btn_Nm_1, btn_Nm_1_Inc, btn_Let_U, btn_Let_U_Certo, btn_Let_S, btn_Let_S_Inc,
-            btn_Let_D, btn_Let_D_Inc, btVoltar5, btBalao;
+            btn_Let_D, btn_Let_D_Inc, btVoltar5, btBalao, notCerto, notErro;
     private Handler handler = new Handler();
 
     @Override
@@ -41,6 +41,8 @@ public class Tela_Atv5_fase1 extends AppCompatActivity {
         btVoltar5 = findViewById(R.id.btnVoltarAtv5Fase1);
         btEnunciado = findViewById(R.id.txtEnunAtv5Fase1);
         btBalao = findViewById(R.id.ImageBalaofase1);
+        notCerto = findViewById(R.id.not_acerto);
+        notErro = findViewById(R.id.not_erro);
 
 
         handler.postDelayed(new Runnable() {
@@ -85,8 +87,6 @@ public class Tela_Atv5_fase1 extends AppCompatActivity {
 
 
         botoesInativados();
-
-
         setOnClickListeners();
     }
     private void botoesInativados() {
@@ -94,6 +94,8 @@ public class Tela_Atv5_fase1 extends AppCompatActivity {
         btn_Let_U_Certo.setVisibility(View.INVISIBLE);
         btn_Let_S_Inc.setVisibility(View.INVISIBLE);
         btn_Let_D_Inc.setVisibility(View.INVISIBLE);
+        notErro.setVisibility(View.INVISIBLE);
+        notCerto.setVisibility(View.INVISIBLE);
 
         btn_Nm_1_Inc.setEnabled(false);
         btn_Let_U_Certo.setEnabled(false);
@@ -136,7 +138,23 @@ public class Tela_Atv5_fase1 extends AppCompatActivity {
                     playAudio(R.raw.letra_d);
 
                 }
-
+                if(id==R.id.btn_LetU){
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            notCerto.setVisibility(View.VISIBLE);
+                            playAudio(R.raw.not_acertou);
+                        }
+                    }, 1100);
+                }else {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            notErro.setVisibility(View.VISIBLE);
+                            playAudio(R.raw.not_erro);
+                        }
+                    }, 1100);
+                }
 
                 handler.postDelayed(new Runnable() {
                     @Override
@@ -144,7 +162,7 @@ public class Tela_Atv5_fase1 extends AppCompatActivity {
                         startActivity(new Intent(Tela_Atv5_fase1.this, Tela_Finalizacao_fase1.class));
                         finish();
                     }
-                }, 2000);
+                }, 3000);
             }
         };
 
