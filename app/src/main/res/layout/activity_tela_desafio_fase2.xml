@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/desafio"
+    tools:context=".TelaDesafio_Fase2">
+
+    <ImageView
+        android:id="@+id/imgConseguiFase2"
+        android:layout_width="152dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="36dp"
+        app:layout_constraintEnd_toStartOf="@+id/imgPassoFase1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgDesafioFase2"
+        app:srcCompat="@drawable/btnconsegui" />
+
+    <ImageView
+        android:id="@+id/imgPassoFase2"
+        android:layout_width="152dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgDesafioFase2"
+        app:srcCompat="@drawable/btnpasso" />
+
+    <ImageView
+        android:id="@+id/imgDesafioFase2"
+        android:layout_width="324dp"
+        android:layout_height="245dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEnunDesafio2"
+        app:srcCompat="@drawable/img_desafio" />
+
+    <TextView
+        android:id="@+id/txtEnunDesafio2"
+        android:layout_width="339dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="144dp"
+        android:fontFamily="@font/fonttitulopreto"
+        android:text="FALE UMA LETRA DO ALFABETO QUE VOCÊ  APRENDEU HOJE"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar12" />
+
+    <ImageView
+        android:id="@+id/btnVoltarDesafio2"
+        android:layout_width="40dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar12"
+        app:srcCompat="@drawable/seta_voltar" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar12"
+        android:layout_width="411dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:padding="8dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@drawable/logo_colorida"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+</androidx.constraintlayout.widget.ConstraintLayout>

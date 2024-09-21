@@ -3,8 +3,10 @@ package etec.com.br.marialuisa.autpapo_teste;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.MediaController;
@@ -35,6 +37,13 @@ public class Tela_Video_fase3 extends AppCompatActivity {
         videoView.setMediaController(mediaController);
 
         videoView.start();
-        //ACRESCENTAR INTENT PARA O BTPROXIMO
+        btProximo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Intent para config
+                Intent abrirConfig = new Intent(Tela_Video_fase3.this,TelaDesafio_Fase3.class);
+                startActivity(abrirConfig);
+            }
+        });
     }
 }
