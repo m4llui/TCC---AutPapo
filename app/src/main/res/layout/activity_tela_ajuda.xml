@@ -59,8 +59,8 @@
 
     <ImageView
         android:id="@+id/imgAjuda"
-        android:layout_width="355dp"
-        android:layout_height="510dp"
+        android:layout_width="356dp"
+        android:layout_height="466dp"
         android:layout_marginTop="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

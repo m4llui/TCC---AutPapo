@@ -11,7 +11,7 @@ import android.widget.ImageView;
 
 public class Tela_Home extends AppCompatActivity {
 
-    ImageView imfase1,imfase2,imfase3, imFasesBloqueadas, imDesempenho, imConfig, imHome;
+    ImageView imfase1,imfase2,imfase3, imDesempenho, imConfig, imHome;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -69,8 +69,8 @@ public class Tela_Home extends AppCompatActivity {
         imDesempenho.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent intent = new Intent(Tela_Home.this, .class);
-                //startActivity(intent);
+                Intent intent = new Intent(Tela_Home.this, Tela_Desempenho.class);
+                startActivity(intent);
             }
         });
 
