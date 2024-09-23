@@ -22,7 +22,7 @@
     <string name="txtano">ANO DE NASCIMENTO</string>
     <string name="btn_desempenho">DESEMPENHO</string>
     <string name="tpolitica">POLÍTICA DE PRIVACIDADE</string>
-    <string name="textopolitica">O AutPapo valoriza a sua privacidade e esta comprometidos em proteger seus dados pessoais. Ao utilizar o aplicativo, você fornece as seguintes informações:e-mail, senha, nome da criança, ano de nascimento, grau do espectro autista e nacionalidade.
+    <string name="textopolitica">O AutPapo valoriza a sua privacidade e está comprometido em proteger seus dados pessoais. Ao utilizar o aplicativo, você fornece as seguintes informações:e-mail, senha, nome da criança, ano de nascimento, grau do espectro autista e nacionalidade.
 </string>
     <string name="tcoleta">COLETA E USO DE DADOS</string>
     <string name="textocoleta">Coletamos e usamos esses dados para proporcionar uma experiência personalizada e segura para você e sua família. O e-mail e a senha são utilizados para autenticação e proteção da conta. O nome da criança, ano de nascimento, grau do espectro autista enacionalidade nos ajudam a identificar cada criança.</string>

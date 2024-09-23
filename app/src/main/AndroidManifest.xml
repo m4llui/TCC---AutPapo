@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AUTPAPO_TESTE"
         tools:targetApi="31">
         <activity
+            android:name=".Tela_Politica_Priv"
+            android:exported="false" />
+        <activity
             android:name=".TelaDesafio_Fase3"
             android:exported="false" />
         <activity
