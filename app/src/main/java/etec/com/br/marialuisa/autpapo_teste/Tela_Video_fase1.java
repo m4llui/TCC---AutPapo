@@ -39,7 +39,6 @@ public class Tela_Video_fase1 extends AppCompatActivity {
         btProximo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent para config
                 Intent abrirConfig = new Intent(Tela_Video_fase1.this,TelaDesafio_Fase1.class);
                 startActivity(abrirConfig);
             }

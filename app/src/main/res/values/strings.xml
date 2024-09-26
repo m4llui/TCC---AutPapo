@@ -29,10 +29,13 @@
     <string name="tconsentimento">CONSENTIMENTO E REGULAMENTAÇÃO</string>
     <string name="textoconsentimento">Para garantir a transparência, solicitamos seu consentimento explícito antes de coletar e processar essas informações. O AutPapo está em  conformidade com o Regulamento Geral sobre a Proteção de Dados (GDPR) e outras regulamentações de privacidade aplicáveis. </string>
     <string-array name="niveis_autismo">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
+        <item>1 - Leve</item>
+        <item>2 - Moderado</item>
+        <item>3 - Severo</item>
     </string-array>
+    <string name="tela_consegui">VOCÊ ARRASOU, CONTINUE ASSIM</string>
+    <string name="tela_passo">VOCÊ CONSEGUE, SÓ É QUESTÃO DE TEMPO</string>
+    <string name="tudubem_passo">TUDO BEM AMIGUINHO</string>
     <string name="description_exp1">Description for exp1 image</string>
     <string name="description_ex2">Description for ex2 image</string>
     <string name="description_ex3">Description for ex3 image</string>

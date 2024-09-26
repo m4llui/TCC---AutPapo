@@ -31,7 +31,6 @@ public class Tela_Video_fase2 extends AppCompatActivity {
 
         videoView.setVideoURI(videoUri);
 
-
         MediaController mediaController = new MediaController(this);
         mediaController.setAnchorView(videoView);
         videoView.setMediaController(mediaController);
@@ -41,9 +40,10 @@ public class Tela_Video_fase2 extends AppCompatActivity {
         btProximo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent para config
-                Intent abrirConfig = new Intent(Tela_Video_fase2.this,TelaDesafio_Fase2.class);
-                startActivity(abrirConfig);
+                Intent abrirDesafio = new Intent(Tela_Video_fase2.this,TelaDesafio_Fase2.class);
+                startActivity(abrirDesafio);
+
+
             }
         });
     }

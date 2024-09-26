@@ -42,6 +42,7 @@ public class Tela_Atv1_fase1 extends AppCompatActivity {
         btBalao = findViewById(R.id.imageBalaoLetraA);
         notErro = findViewById(R.id.not_erro);
         notAcerto = findViewById(R.id.not_acerto);
+
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
