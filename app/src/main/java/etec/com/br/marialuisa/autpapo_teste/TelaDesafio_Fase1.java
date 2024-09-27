@@ -14,6 +14,7 @@ public class TelaDesafio_Fase1 extends AppCompatActivity {
     ImageView btConsegui;
     ImageView btPasso;
     MediaPlayer audio;
+    String fase;
     private Handler handler = new Handler();
 
     @Override
@@ -37,6 +38,7 @@ public class TelaDesafio_Fase1 extends AppCompatActivity {
             public void onClick(View view) {
                 playAudio(R.raw.dconsegui);
                 Intent abrirCon = new Intent(TelaDesafio_Fase1.this,Tela_Consegui.class);
+                abrirCon.putExtra("fase1",fase);
                 startActivity(abrirCon);
             }
         });
@@ -46,6 +48,7 @@ public class TelaDesafio_Fase1 extends AppCompatActivity {
             public void onClick(View view) {
                 playAudio(R.raw.dpasso);
                 Intent abrirPasso = new Intent(TelaDesafio_Fase1.this,Tela_Passo.class);
+                abrirPasso.putExtra("fase1",fase);
                 startActivity(abrirPasso);
             }
         });

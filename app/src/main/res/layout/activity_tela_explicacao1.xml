@@ -61,27 +61,43 @@
                     android:layout_width="389dp"
                     android:layout_height="640dp"
                     android:background="@drawable/exp1"
-                    android:contentDescription="@string/description_exp1" />
+                    app:layout_constraintDimensionRatio="H,16:9"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
 
                 <View
                     android:id="@+id/view2"
                     android:layout_width="382dp"
                     android:layout_height="640dp"
                     android:background="@drawable/ex2"
-                    android:contentDescription="@string/description_ex2" />
+                    app:layout_constraintDimensionRatio="H,16:9"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                     />
 
                 <View
                     android:id="@+id/view3"
                     android:layout_width="382dp"
                     android:layout_height="640dp"
                     android:background="@drawable/ex3"
-                    android:contentDescription="@string/description_ex3" />
+                    app:layout_constraintDimensionRatio="H,16:9"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
 
                 <FrameLayout
                     android:id="@+id/view4"
                     android:layout_width="383dp"
                     android:layout_height="640dp"
                     android:background="@drawable/ex4"
+                    app:layout_constraintDimensionRatio="H,16:9"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     android:gravity="center">
 
                     <pl.droidsonroids.gif.GifImageView
@@ -98,6 +114,10 @@
                     android:layout_height="640dp"
                     android:background="@color/white"
                     android:orientation="vertical"
+                    app:layout_constraintDimensionRatio="H,16:9"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     android:gravity="center">
 
                     <ImageView
@@ -113,7 +133,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginStart="89dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="8dp"
                         android:layout_marginEnd="89dp"
                         android:backgroundTint="@color/azul"
                         android:gravity="center"

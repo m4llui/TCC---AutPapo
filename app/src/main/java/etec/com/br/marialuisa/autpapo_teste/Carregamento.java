@@ -38,10 +38,6 @@ public class Carregamento extends AppCompatActivity {
                 if (primeiroUso) {
                     // É a primeira vez que o aplicativo está sendo executado
                     // Executa qualquer lógica que você deseja fazer na primeira execução
-
-                    // Por exemplo, exibe uma mensagem de boas-vindas
-                    //Toast.makeText(this, "Bem-vindo! Este é o primeiro lançamento do aplicativo.", Toast.LENGTH_LONG).show();
-
                     Intent abrirExplicação =  new Intent(Carregamento.this, Tela_Explicacao.class);
                     startActivity(abrirExplicação);
 
@@ -51,7 +47,7 @@ public class Carregamento extends AppCompatActivity {
                     editor.apply();
                 } else {
                     // O aplicativo já foi executado anteriormente
-                    Intent abrirHome =  new Intent(Carregamento.this, Tela_Home.class);
+                    Intent abrirHome =  new Intent(Carregamento.this, Tela_Explicacao.class);
                     startActivity(abrirHome);
 
                 }
