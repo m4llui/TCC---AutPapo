@@ -75,7 +75,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtEnunAtv4Fase1"
         app:srcCompat="@drawable/avatar_enun" />
 
-    <!-- Botões de Letras -->
+
     <ImageView
         android:id="@+id/btn_P2"
         android:layout_width="128dp"
@@ -123,7 +123,6 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_E2"
         app:srcCompat="@drawable/letrag_fase1" />
 
-    <!-- Feedback de Respostas -->
 
     <ImageView
         android:id="@+id/btn_P_Inc"
