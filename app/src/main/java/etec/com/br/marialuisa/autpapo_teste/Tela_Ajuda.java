@@ -43,8 +43,8 @@ public class Tela_Ajuda extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Intent para Desemp
-                //Intent abrirDesemp = new Intent(Tela_Ajuda.this,Tela_Home.class);
-                //startActivity(abrirDesemp);
+                Intent abrirDesemp = new Intent(Tela_Ajuda.this,Tela_Desempenho.class);
+                startActivity(abrirDesemp);
             }
         });
     }

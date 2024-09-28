@@ -59,8 +59,8 @@ public class Tela_Sobre extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Intent para Desemp
-                //Intent abrirDesemp = new Intent(Tela_Sobre.this,Tela_Home.class);
-                //startActivity(abrirDesemp);
+                Intent abrirDesemp = new Intent(Tela_Sobre.this,Tela_Desempenho.class);
+                startActivity(abrirDesemp);
             }
         });
     }
