@@ -80,54 +80,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="294dp"
-        android:fontFamily="@font/ftitilos"
-        android:text="@string/txtnivel"
-        android:textColor="@color/azul"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtAno" />
-
     <Spinner
         android:id="@+id/spinnerNivel"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="7dp"
         android:layout_marginEnd="50dp"
         android:background="@drawable/fundo_select"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="305dp"
-        android:fontFamily="@font/ftitilos"
-        android:text="@string/txtpais"
-        android:textColor="@color/azul"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerNivel" />
+        tools:layout_editor_absoluteY="317dp" />
 
     <EditText
         android:id="@+id/edtPais"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="7dp"
         android:layout_marginEnd="50dp"
         android:background="@drawable/fundo_edittext"
         android:ems="10"
@@ -136,7 +104,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        tools:layout_editor_absoluteY="413dp" />
 
     <Button
         android:id="@+id/btnSalvar"
@@ -204,5 +172,30 @@
         app:layout_constraintHorizontal_bias="0.603"
         app:layout_constraintStart_toEndOf="@+id/imgHomeC"
         app:srcCompat="@drawable/ic_desempenho" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="80dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="280dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtAno"
+        app:srcCompat="@drawable/t_nivel" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="69dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="305dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerNivel"
+        app:srcCompat="@drawable/t_pais" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
