@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context=".Tela_Explicacao">
+
+        <!-- LinearLayout para o TextView e a ImageView juntos -->
+        <LinearLayout
+            android:id="@+id/layoutMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:padding="16dp"
+            android:visibility="visible">
+
+            <!-- TextView para a mensagem -->
+            <TextView
+                android:id="@+id/textViewMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Toque na tela para ouvir o som!"
+                android:fontFamily="@font/fonttitulopreto"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+            <!-- ImageView para a imagem ao lado do texto -->
+            <ImageView
+                android:id="@+id/imageViewIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_toque"
+                android:layout_marginStart="8dp" />
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="389dp"
+                    android:layout_height="640dp"
+                    android:background="@drawable/exp1"
+                    app:layout_constraintDimensionRatio="H,16:9"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:contentDescription="@string/description_exp1" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="382dp"
+                    android:layout_height="640dp"
+                    android:background="@drawable/ex2"
+                    android:contentDescription="@string/description_ex2" />
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="382dp"
+                    android:layout_height="640dp"
+                    android:background="@drawable/ex3"
+                    app:layout_constraintDimensionRatio="H,16:9"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:contentDescription="@string/description_ex3" />
+
+                <FrameLayout
+                    android:id="@+id/view4"
+                    android:layout_width="383dp"
+                    android:layout_height="640dp"
+                    android:background="@drawable/ex4"
+                    android:gravity="center">
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_width="300dp"
+                        android:layout_height="310dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/animacaoex4"
+                        android:contentDescription="@string/description_animacaoex4" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/view5"
+                    android:layout_width="379dp"
+                    android:layout_height="640dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/logo2"
+                        android:layout_gravity="center" />
+
+                    <Button
+                        android:id="@+id/btnCriarConta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="89dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="89dp"
+                        android:backgroundTint="@color/azul"
+                        android:gravity="center"
+                        android:fontFamily="@font/ftitilos"
+                        android:text="CRIAR CONTA"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="50dp">
+
+                        <TextView
+                            android:id="@+id/txtLogin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Já tem uma conta? Faça login"
+                            android:textColor="@color/azul"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtPular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="142dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="142dp"
+                        android:text="PULAR"
+                        android:gravity="center"
+                        android:textColor="@color/azul"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+</ScrollView>
