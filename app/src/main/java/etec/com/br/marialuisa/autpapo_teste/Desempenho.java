@@ -1,7 +1,7 @@
 package etec.com.br.marialuisa.autpapo_teste;
 
 public class Desempenho {
-    //classe Desempenhoo
+    //classe Desempenho
     private int codDesempenho;
     private boolean totalAcertosErros;
     private int codCriança;

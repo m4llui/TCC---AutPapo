@@ -13,7 +13,7 @@ import android.widget.TextView;
 public class TelaDesafio_Fase3 extends AppCompatActivity {
 
     ImageView btConsegui3, btPasso3;
-    TextView txEnun;
+    TextView txEnun;//Para tocar e o audio sair (enunciado)
     MediaPlayer audio;
     private Handler handler = new Handler();
 

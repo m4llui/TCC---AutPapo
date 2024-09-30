@@ -1,7 +1,7 @@
 package etec.com.br.marialuisa.autpapo_teste;
 
 public class Atividade {
-    //classe atividade
+    //classe atividadee
     private int codAtividade;
     private String nomeAtividade;
     private int fase;

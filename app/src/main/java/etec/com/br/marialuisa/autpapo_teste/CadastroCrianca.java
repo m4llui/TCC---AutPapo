@@ -1,7 +1,7 @@
 package etec.com.br.marialuisa.autpapo_teste;
 
 public class CadastroCrianca {
-    //classe Criança
+    //classe Crianca
     private int codCriança;
     private String nome;
     private int grau;

@@ -1,7 +1,7 @@
 package etec.com.br.marialuisa.autpapo_teste;
 
 public class CadastroUsuario {
-    //classe Usuario
+    //classe Usuário
     private int codUsuario;
     private String email;
     private String senha;

@@ -4,7 +4,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class BancoAutPapo extends SQLiteOpenHelper {
-    //classe do BANCO
+    //classe do Banco
     private static final String DATABASE_NAME = "bd_autpapo.db";
     private static final int DATABASE_VERSION = 1;
 
