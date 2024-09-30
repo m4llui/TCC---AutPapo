@@ -14,6 +14,7 @@ import android.widget.TextView;
 public class Tela_Atv5_fase2 extends AppCompatActivity {
 
     MediaPlayer audio;
+    //atualizando
     private boolean buttonSelected = false;
     TextView enunciado;
     private ImageView btJP, btNA, btJPCerto, btNAerrado,

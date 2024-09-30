@@ -20,6 +20,7 @@ public class Tela_Atv2_fase1 extends AppCompatActivity {
     private boolean buttonSelected = false;
     TextView btEnunciado;
     MediaPlayer audio;
+    //atualizando
 
     private ImageView btn_Let_A, btn_Let_A_Inc, btn_Let_B, btn_Let_B_Inc, btn_Let_E, btn_Let_E_Certo,
             btn_Let_Y, btn_Let_Y_Inc, btVoltar3, btBalao, notCerto, notErro;

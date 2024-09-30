@@ -16,6 +16,7 @@ public class Tela_Atv7_fase3 extends AppCompatActivity {
 
 
     MediaPlayer audio;
+    //atualizando
     TextView btEnunciado;
     private boolean buttonSelected = false;
     private ImageView btTriste, btTristeCerto, btFeliz, btFelizErrado, btCansado, btCansadoErrado,

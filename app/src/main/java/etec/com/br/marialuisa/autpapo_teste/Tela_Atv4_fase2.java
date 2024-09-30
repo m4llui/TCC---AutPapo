@@ -16,6 +16,7 @@ import android.widget.Toast;
 public class Tela_Atv4_fase2 extends AppCompatActivity {
 
     private boolean buttonSelected = false;
+    //atualizando
 
     TextView btEnunciado;
     MediaPlayer audio;

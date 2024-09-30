@@ -11,6 +11,7 @@ import android.widget.Toast;
 public class Tela_Ajuda extends AppCompatActivity {
 
     ImageView btHome, btDesemp, btConfig;
+    //atualizando
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

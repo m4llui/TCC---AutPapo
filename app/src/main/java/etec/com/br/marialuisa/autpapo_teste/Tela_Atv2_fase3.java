@@ -14,6 +14,7 @@ public class Tela_Atv2_fase3 extends AppCompatActivity {
 
 
     MediaPlayer audio;
+    //atualizando
     boolean selecionouO, selecionouI, erroO, erroI;
     private ImageView btI, btO, btOi, btIErrado, btOErrado, btICerto, btOCerto, btVolta, btBalao,
             notCerto, notErro;

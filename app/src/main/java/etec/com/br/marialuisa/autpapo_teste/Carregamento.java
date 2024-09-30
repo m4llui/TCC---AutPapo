@@ -14,6 +14,7 @@ import android.content.SharedPreferences;
 
 
 public class Carregamento extends AppCompatActivity {
+    //atualizando
 
     ImageView imageView;
     private SharedPreferences sharedPreferences;

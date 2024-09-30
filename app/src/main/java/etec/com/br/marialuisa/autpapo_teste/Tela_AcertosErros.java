@@ -12,6 +12,7 @@ public class Tela_AcertosErros extends AppCompatActivity {
 
     TextView txNomeIdade, txNivel, txAcertos, txErros;
     ImageView btDesemp, btConfig, btHome;
+    //atualizando
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

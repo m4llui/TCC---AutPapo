@@ -17,6 +17,7 @@ public class Tela_Atv1_fase1 extends AppCompatActivity {
     private boolean buttonSelected = false;
     TextView btEnunciado;
     MediaPlayer audio;
+    //atualizando
     private ImageView btn_Let_A, btn_Let_A_Certo, btn_Let_B, btn_Let_B_Inc, btn_Let_C, btn_Let_C_Inc,
             btn_Let_D, btn_Let_D_Inc, btVoltar2, btBalao, notErro, notAcerto;
     private Handler handler = new Handler();
