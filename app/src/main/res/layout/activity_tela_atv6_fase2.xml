@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Tela_Atv6_fase2">
+
+    <ImageView
+        android:id="@+id/btnVoltarAtv6Fase"
+        android:layout_width="40dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="355dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar11"
+        app:srcCompat="@drawable/seta_voltar" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar11"
+        android:layout_width="411dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:padding="8dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@drawable/logo_colorida"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <TextView
+        android:id="@+id/txtEnunciadoSeq2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="69dp"
+        android:background="#FFFFFF"
+        android:fontFamily="@font/fonttitulopreto"
+        android:text="@string/enun_fase2_atv5"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVoltarAtv6Fase" />
+
+    <ImageView
+        android:id="@+id/imageBoneco_fase2atv5"
+        android:layout_width="130dp"
+        android:layout_height="174dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEnunciadoSeq2"
+        app:srcCompat="@drawable/avatar_enun" />
+
+    <ImageView
+        android:id="@+id/balaoSeq2"
+        android:layout_width="239dp"
+        android:layout_height="184dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.924"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEnunciadoSeq2"
+        app:srcCompat="@drawable/balao_enun_letras_faltando" />
+
+    <ImageView
+        android:id="@+id/btn_SU"
+        android:layout_width="200dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/btn_letra_su"
+        app:layout_constraintEnd_toStartOf="@+id/btn_AB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sequencia2" />
+
+    <ImageView
+        android:id="@+id/btn_AB"
+        android:layout_width="200dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/btn_letra_ab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_SU"
+        app:layout_constraintTop_toBottomOf="@+id/sequencia2" />
+
+    <ImageView
+        android:id="@+id/btn_SUcerto"
+        android:layout_width="200dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/btn_su_certo"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_SU"
+        app:layout_constraintEnd_toEndOf="@+id/btn_SU"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_SU"
+        app:layout_constraintTop_toTopOf="@+id/btn_SU"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/btn_ABerrada"
+        android:layout_width="200dp"
+        android:layout_height="62dp"
+        android:src="@drawable/btn_ab_errada2"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_AB"
+        app:layout_constraintEnd_toEndOf="@+id/btn_AB"
+        app:layout_constraintStart_toStartOf="@+id/btn_AB"
+        app:layout_constraintTop_toTopOf="@+id/btn_AB" />
+
+    <ImageView
+        android:id="@+id/sequencia2"
+        android:layout_width="393dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageBoneco_fase2atv5"
+        app:srcCompat="@drawable/enunc_seq2" />
+
+    <ImageView
+        android:id="@+id/u_verde"
+        android:layout_width="38dp"
+        android:layout_height="51dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sequencia2"
+        app:layout_constraintEnd_toEndOf="@+id/sequencia2"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toStartOf="@+id/sequencia2"
+        app:layout_constraintTop_toTopOf="@+id/sequencia2"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/u_verde" />
+
+    <ImageView
+        android:id="@+id/s_verde"
+        android:layout_width="35dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sequencia2"
+        app:layout_constraintEnd_toEndOf="@+id/sequencia2"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintStart_toStartOf="@+id/sequencia2"
+        app:layout_constraintTop_toTopOf="@+id/sequencia2"
+        app:layout_constraintVertical_bias="0.384"
+        app:srcCompat="@drawable/s_verde" />
+
+    <ImageView
+        android:id="@+id/s_vermelho"
+        android:layout_width="34dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sequencia2"
+        app:layout_constraintEnd_toEndOf="@+id/sequencia2"
+        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintStart_toStartOf="@+id/sequencia2"
+        app:layout_constraintTop_toTopOf="@+id/sequencia2"
+        app:layout_constraintVertical_bias="0.384"
+        app:srcCompat="@drawable/s_vermelho" />
+
+    <ImageView
+        android:id="@+id/u_vermelha"
+        android:layout_width="36dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sequencia2"
+        app:layout_constraintEnd_toEndOf="@+id/sequencia2"
+        app:layout_constraintHorizontal_bias="0.565"
+        app:layout_constraintStart_toStartOf="@+id/sequencia2"
+        app:layout_constraintTop_toTopOf="@+id/sequencia2"
+        app:layout_constraintVertical_bias="0.384"
+        app:srcCompat="@drawable/u_vermelho" />
+
+    <ImageView
+        android:id="@+id/retangulo1"
+        android:layout_width="27dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sequencia2"
+        app:layout_constraintEnd_toEndOf="@+id/sequencia2"
+        app:layout_constraintHorizontal_bias="0.353"
+        app:layout_constraintStart_toStartOf="@+id/sequencia2"
+        app:layout_constraintTop_toTopOf="@+id/sequencia2"
+        app:layout_constraintVertical_bias="0.208"
+        app:srcCompat="@drawable/retangulo1" />
+
+    <ImageView
+        android:id="@+id/retangulo2"
+        android:layout_width="27dp"
+        android:layout_height="35dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sequencia2"
+        app:layout_constraintEnd_toEndOf="@+id/sequencia2"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="@+id/sequencia2"
+        app:layout_constraintTop_toTopOf="@+id/sequencia2"
+        app:layout_constraintVertical_bias="0.26"
+        app:srcCompat="@drawable/retangulo2" />
+
+    <ImageView
+        android:id="@+id/not_erro"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="488dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar11"
+        app:srcCompat="@drawable/not_erro" />
+
+    <ImageView
+        android:id="@+id/not_acerto"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="488dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar11"
+        app:srcCompat="@drawable/not_acerto" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

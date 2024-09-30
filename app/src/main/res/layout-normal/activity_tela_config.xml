@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".Tela_Config"
+    tools:ignore="MissingDefaultResource">
+
+
+    <androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="0dp"
+    android:layout_height="?attr/actionBarSize"
+    android:background="#FFFFFF"
+    android:elevation="4dp"
+    android:padding="8dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:logo="@drawable/logo_colorida"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ImageView
+        android:id="@+id/btn_ajuda"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="87dp"
+        android:layout_marginEnd="34dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@drawable/btn_ajuda" />
+
+    <ImageView
+        android:id="@+id/btn_sobre"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="34dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ajuda"
+        app:srcCompat="@drawable/btn_sobre" />
+
+    <ImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="421dp"
+        android:layout_height="384dp"
+        android:layout_marginTop="117dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_sobre"
+        app:srcCompat="@drawable/tela_config" />
+
+    <ImageView
+        android:id="@+id/btn_home_config"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="173dp"
+        android:layout_marginEnd="138dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_home" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@drawable/t_config" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

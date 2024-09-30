@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">AUTPAPO_TESTE</string>
+    <string name="carregando">ESTAMOS QUASE LÁ...</string>
+    <string name="enun_emocao">QUAL EMOÇÃO É ESSA?</string>
+    <string name="enun_figura_imagem">ESCOLHA A FIGURA QUE COMBINE COM A PALAVRA</string>
+    <string name="enun_pfv">PALAVRA MÁGICA PARA PEDIR</string>
+    <string name="enun_fase1">QUAL IMAGEM É ESSA?</string>
+    <string name="enum_fase2">QUAL OBJETO COMEÇA ESSA LETRA?</string>
+    <string name="enun_qual_letra">QUAL LETRA É ESSA?</string>
+    <string name="enun_fase2_atv4">SELECIONE A SEQUÊNCIA CORRETA</string>
+    <string name="enun_fase2_atv5">COMPLETE A SEQUÊNCIA</string>
+    <string name="enun_fase2_atv7">ESSA BEBIDA COMEÇA COM QUAL LETRA?</string>
+    <string name="enun_fase2_atv2">ESSE ANIMAL COMEÇA COM QUAL LETRA?</string>
+    <string name="contaElogin">Clique aqui para saber mais sobre a coleta de dados.</string>
+    <string name="titulo_sobre">PARA CONTATO COM A EMPRESA:</string>
+    <string name="email_autpapo">autpapoOficial@gmail.com</string>
+    <string name="btn_cadastrarC">CADASTRAR CRIANÇA</string>
+    <string name="btn_salvar">SALVAR</string>
+    <string name="txtnome">NOME</string>
+    <string name="txtpais">PAIS</string>
+    <string name="txtnivel">NÍVEL</string>
+    <string name="txtano">ANO DE NASCIMENTO</string>
+    <string name="btn_desempenho">DESEMPENHO</string>
+    <string name="tpolitica">POLÍTICA DE PRIVACIDADE</string>
+    <string name="textopolitica">O AutPapo valoriza a sua privacidade e está comprometido em proteger seus dados pessoais. Ao utilizar o aplicativo, você fornece as seguintes informações:e-mail, senha, nome da criança, ano de nascimento, grau do espectro autista e nacionalidade.
+</string>
+    <string name="tcoleta">COLETA E USO DE DADOS</string>
+    <string name="textocoleta">Coletamos e usamos esses dados para proporcionar uma experiência personalizada e segura para você e sua família. O e-mail e a senha são utilizados para autenticação e proteção da conta. O nome da criança, ano de nascimento, grau do espectro autista enacionalidade nos ajudam a identificar cada criança.</string>
+    <string name="tconsentimento">CONSENTIMENTO E REGULAMENTAÇÃO</string>
+    <string name="textoconsentimento">Para garantir a transparência, solicitamos seu consentimento explícito antes de coletar e processar essas informações. O AutPapo está em  conformidade com o Regulamento Geral sobre a Proteção de Dados (GDPR) e outras regulamentações de privacidade aplicáveis. </string>
+    <string-array name="niveis_autismo">
+        <item>1 - Leve</item>
+        <item>2 - Moderado</item>
+        <item>3 - Severo</item>
+    </string-array>
+    <string name="tela_consegui">VOCÊ ARRASOU, CONTINUE ASSIM</string>
+    <string name="tela_passo">VOCÊ CONSEGUE, SÓ É QUESTÃO DE TEMPO</string>
+    <string name="tudubem_passo">TUDO BEM AMIGUINHO</string>
+    <string name="description_exp1">Description for exp1 image</string>
+    <string name="description_ex2">Description for ex2 image</string>
+    <string name="description_ex3">Description for ex3 image</string>
+    <string name="description_animacaoex4">Animated description for ex4 image</string>
+
+
+</resources>

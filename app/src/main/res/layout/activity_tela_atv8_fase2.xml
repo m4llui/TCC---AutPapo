@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Tela_Atv8_fase2">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar4"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:padding="8dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@drawable/logo_colorida"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+    <ImageView
+        android:id="@+id/btnVoltarAtv8Fase2"
+        android:layout_width="40dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar4"
+        app:srcCompat="@drawable/seta_voltar" />
+
+
+    <TextView
+        android:id="@+id/txtEnunAtv8Fase2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="84dp"
+        android:fontFamily="@font/fonttitulopreto"
+        android:text="QUAL OBJETO COMEÇA COM ESSA LETRA?"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar4" />
+
+
+
+    <ImageView
+        android:id="@+id/imageBalaoLetraZ"
+        android:layout_width="207dp"
+        android:layout_height="186dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar4"
+        app:srcCompat="@drawable/balao_letra_z" />
+
+    <ImageView
+        android:id="@+id/imageBoneco_fase1aTV2"
+        android:layout_width="130dp"
+        android:layout_height="174dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageBalaoLetraZ"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEnunAtv8Fase2"
+        app:srcCompat="@drawable/avatar_enun" />
+
+    <ImageView
+        android:id="@+id/btn_Flor"
+        android:layout_width="128dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Nariz1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageBalaoLetraZ"
+        app:srcCompat="@drawable/btn_flor" />
+
+    <ImageView
+        android:id="@+id/btn_Nariz1"
+        android:layout_width="128dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="61dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_Flor"
+        app:layout_constraintTop_toBottomOf="@+id/imageBalaoLetraZ"
+        app:srcCompat="@drawable/btn_nariz" />
+
+    <ImageView
+        android:id="@+id/btn_Zebra"
+        android:layout_width="128dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Planeta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Flor"
+        app:srcCompat="@drawable/btn_zebra" />
+
+    <ImageView
+        android:id="@+id/btn_Planeta"
+        android:layout_width="128dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="61dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_Zebra"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Nariz1"
+        app:srcCompat="@drawable/btn_planeta" />
+
+    <ImageView
+        android:id="@+id/btn_Flor_errado"
+        android:layout_width="128dp"
+        android:layout_height="116dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_Flor"
+        app:layout_constraintEnd_toEndOf="@+id/btn_Flor"
+        app:layout_constraintStart_toStartOf="@+id/btn_Flor"
+        app:layout_constraintTop_toTopOf="@+id/btn_Flor"
+        app:srcCompat="@drawable/btn_flor_errada" />
+
+    <ImageView
+        android:id="@+id/btn_Nariz_errado"
+        android:layout_width="128dp"
+        android:layout_height="116dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_Nariz1"
+        app:layout_constraintEnd_toEndOf="@+id/btn_Nariz1"
+        app:layout_constraintStart_toStartOf="@+id/btn_Nariz1"
+        app:layout_constraintTop_toTopOf="@+id/btn_Nariz1"
+        app:srcCompat="@drawable/btn_nariz_errada" />
+
+    <ImageView
+        android:id="@+id/btn_Zebra_certa"
+        android:layout_width="128dp"
+        android:layout_height="116dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_Zebra"
+        app:layout_constraintEnd_toEndOf="@+id/btn_Zebra"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_Zebra"
+        app:layout_constraintTop_toTopOf="@+id/btn_Zebra"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/btn_zebra_certa" />
+
+    <ImageView
+        android:id="@+id/btn_Planeta_errado"
+        android:layout_width="128dp"
+        android:layout_height="116dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_Planeta"
+        app:layout_constraintEnd_toEndOf="@+id/btn_Planeta"
+        app:layout_constraintStart_toStartOf="@+id/btn_Planeta"
+        app:layout_constraintTop_toTopOf="@+id/btn_Planeta"
+        app:srcCompat="@drawable/btn_planeta_errada" />
+
+    <ImageView
+        android:id="@+id/not_erro"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="568dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar4"
+        app:srcCompat="@drawable/not_erro" />
+
+    <ImageView
+        android:id="@+id/not_acerto"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="560dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar4"
+        app:srcCompat="@drawable/not_acerto" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

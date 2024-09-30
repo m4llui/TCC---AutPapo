@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Tela_Atv4_fase3">
+    <!-- atualizado -->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:padding="8dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@drawable/logo_colorida"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ImageView
+        android:id="@+id/btnVoltarAtv4Fase3"
+        android:layout_width="40dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@drawable/seta_voltar" />
+
+    <ImageView
+        android:id="@+id/balao_sim"
+        android:layout_width="223dp"
+        android:layout_height="199dp"
+        android:layout_marginTop="84dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.813"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@drawable/balao_enun_sim" />
+
+    <ImageView
+        android:id="@+id/btn_sim_joia"
+        android:layout_width="128dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_coracao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balao_sim"
+        app:srcCompat="@drawable/btn_simimg" />
+
+    <ImageView
+        android:id="@+id/btn_coracao"
+        android:layout_width="128dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="61dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_sim_joia"
+        app:layout_constraintTop_toBottomOf="@+id/balao_sim"
+        app:srcCompat="@drawable/btn_coracao" />
+
+    <ImageView
+        android:id="@+id/btn_morango4"
+        android:layout_width="128dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_nao_joia"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_sim_joia"
+        app:srcCompat="@drawable/btn_morango" />
+
+    <ImageView
+        android:id="@+id/btn_nao_joia"
+        android:layout_width="128dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="61dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_morango4"
+        app:layout_constraintTop_toBottomOf="@+id/btn_coracao"
+        app:srcCompat="@drawable/btn_nao_joia" />
+
+    <ImageView
+        android:id="@+id/btn_sim_joia_certo"
+        android:layout_width="148dp"
+        android:layout_height="117dp"
+        app:srcCompat="@drawable/btn_sim_certo"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="361dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_sim_joia"
+        app:layout_constraintStart_toStartOf="@+id/btn_sim_joia"
+        app:layout_constraintTop_toTopOf="@+id/btn_sim_joia"
+        app:layout_constraintEnd_toEndOf="@+id/btn_sim_joia"/>
+
+    <ImageView
+        android:id="@+id/btn_coracao_errada"
+        android:layout_width="128dp"
+        android:layout_height="116dp"
+        app:srcCompat="@drawable/btn_coracao_erro"
+        tools:layout_editor_absoluteX="254dp"
+        tools:layout_editor_absoluteY="361dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_coracao"
+        app:layout_constraintStart_toStartOf="@+id/btn_coracao"
+        app:layout_constraintTop_toTopOf="@+id/btn_coracao"
+        app:layout_constraintEnd_toEndOf="@+id/btn_coracao"/>
+
+    <ImageView
+        android:id="@+id/btn_morango4_errado"
+        android:layout_width="128dp"
+        android:layout_height="116dp"
+        app:srcCompat="@drawable/btn_morango_erro"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="501dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_morango4"
+        app:layout_constraintStart_toStartOf="@+id/btn_morango4"
+        app:layout_constraintTop_toTopOf="@+id/btn_morango4"
+        app:layout_constraintEnd_toEndOf="@+id/btn_morango4"/>
+
+    <ImageView
+        android:id="@+id/btn_nao_joia_errado"
+        android:layout_width="128dp"
+        android:layout_height="116dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_nao_joia"
+        app:layout_constraintEnd_toEndOf="@+id/btn_nao_joia"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_nao_joia"
+        app:layout_constraintTop_toTopOf="@+id/btn_nao_joia"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/btn_nao_joia_erro" />
+
+    <TextView
+        android:id="@+id/txtEnunImg"
+        android:layout_width="345dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="33dp"
+        android:fontFamily="@font/fonttitulopreto"
+        android:text="@string/enun_figura_imagem"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <ImageView
+        android:id="@+id/avatarAtv4fase3"
+        android:layout_width="130dp"
+        android:layout_height="174dp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEnunImg"
+        app:srcCompat="@drawable/avatar_enun" />
+
+    <ImageView
+        android:id="@+id/not_erro"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="568dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@drawable/not_erro" />
+
+    <ImageView
+        android:id="@+id/not_acerto"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="560dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@drawable/not_acerto" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
