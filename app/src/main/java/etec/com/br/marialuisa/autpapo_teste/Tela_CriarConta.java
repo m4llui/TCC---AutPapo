@@ -72,4 +72,8 @@ public class Tela_CriarConta extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public void onBackPressed() {
+
+    }
 }

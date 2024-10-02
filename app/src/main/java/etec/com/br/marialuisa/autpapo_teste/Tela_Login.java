@@ -75,4 +75,9 @@ public class Tela_Login extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }

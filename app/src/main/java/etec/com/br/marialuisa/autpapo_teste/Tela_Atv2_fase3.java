@@ -12,13 +12,12 @@ import android.widget.Toast;
 
 public class Tela_Atv2_fase3 extends AppCompatActivity {
 
-
     MediaPlayer audio;
-    //atualizando
-    boolean selecionouO, selecionouI, erroO, erroI;
+    boolean selecionouO, selecionouI;
     private ImageView btI, btO, btOi, btIErrado, btOErrado, btICerto, btOCerto, btVolta, btBalao,
             notCerto, notErro;
     private Handler handler = new Handler();
+    private boolean isNotErroPlaying = false; // Controle para not_erro
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -38,48 +37,23 @@ public class Tela_Atv2_fase3 extends AppCompatActivity {
         notCerto = findViewById(R.id.not_acerto);
         notErro = findViewById(R.id.not_erro);
 
-        //ENUNCIADO AUTOMÁTICO
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
+        // ENUNCIADO AUTOMÁTICO
+        handler.postDelayed(() -> playAudio(R.raw.monte_palavra), 1000); // Atraso de 1 segundo
 
-                playAudio(R.raw.monte_palavra);
+        btBalao.setOnClickListener(view -> playAudio(R.raw.monte_palavra));
+
+        btOi.setOnClickListener(view -> playAudio(R.raw.oi));
+
+        // BOTÃO VOLTAR
+        btVolta.setOnClickListener(view -> {
+            if (audio != null && audio.isPlaying()) {
+                audio.stop();
+                audio.release();
+                audio = null;
             }
-        }, 1000); // Atraso de 1 segundo
-
-        btBalao.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                playAudio(R.raw.monte_palavra);
-            }
+            startActivity(new Intent(Tela_Atv2_fase3.this, Tela_Home.class));
+            finish();
         });
-
-        btOi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                playAudio(R.raw.oi);
-            }
-        });
-
-        //BOTAO VOLTAR
-        btVolta.setOnClickListener(new View.OnClickListener() {
-            //Função p/ fazer o audio para quando sair da atividade
-            @Override
-            public void onClick(View view) {
-                if (audio != null && audio.isPlaying()) {
-                    audio.stop();
-                    audio.release();
-                    audio = null;
-                }
-                Intent abrirHome =  new Intent(Tela_Atv2_fase3.this, Tela_Home.class);
-                startActivity(abrirHome);
-                finish();
-            }
-        });
-
-
 
         // Inicializa os botões desativados e invisíveis
         botoesInativados();
@@ -89,15 +63,12 @@ public class Tela_Atv2_fase3 extends AppCompatActivity {
     }
 
     private void botoesInativados() {
-        // Inicializa os botões "certo" e "errado" como invisíveis
         btICerto.setVisibility(View.INVISIBLE);
         btIErrado.setVisibility(View.INVISIBLE);
         btOErrado.setVisibility(View.INVISIBLE);
         btOCerto.setVisibility(View.INVISIBLE);
-       notErro.setVisibility(View.INVISIBLE);
-       notCerto.setVisibility(View.INVISIBLE);
-
-        // Inicializa os botões "certo" e "errado" como desativados
+        notErro.setVisibility(View.INVISIBLE);
+        notCerto.setVisibility(View.INVISIBLE);
         btICerto.setEnabled(false);
         btIErrado.setEnabled(false);
         btOErrado.setEnabled(false);
@@ -105,66 +76,58 @@ public class Tela_Atv2_fase3 extends AppCompatActivity {
     }
 
     private void setOnClickListeners() {
-        View.OnClickListener listener = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        View.OnClickListener listener = view -> {
+            int id = view.getId();
 
-                int id = view.getId();
-
-                if (id == R.id.btn_letraO) {
-                    if (!selecionouI) {
-                        selecionouO = true;
-                        btOCerto.setVisibility(View.VISIBLE);
-                        btOCerto.setEnabled(true);
-                        playAudio(R.raw.letra_o);
-                    } else {
-                        btOErrado.setVisibility(View.VISIBLE);
-                        btOErrado.setEnabled(true);
-                        playAudio(R.raw.letra_o);
-                    }
-                } else if (id == R.id.btn_letraI) {
-                    if (selecionouO) {
-                        selecionouI = true;
-                        btICerto.setVisibility(View.VISIBLE);
-                        btICerto.setEnabled(true);
-                        btI.setVisibility(View.INVISIBLE);
-                        btI.setEnabled(false);
-                        playAudio(R.raw.letra_i);
-                    } else {
-                        selecionouI = true;
-                        btIErrado.setVisibility(View.VISIBLE);
-                        btIErrado.setEnabled(true);
-                        playAudio(R.raw.letra_i);
-                    }
+            if (id == R.id.btn_letraO) {
+                if (!selecionouI) {
+                    selecionouO = true;
+                    btOCerto.setVisibility(View.VISIBLE);
+                    btOCerto.setEnabled(true);
+                    playAudio(R.raw.letra_o);
+                } else {
+                    btOErrado.setVisibility(View.VISIBLE);
+                    btOErrado.setEnabled(true);
+                    playAudio(R.raw.letra_o);
                 }
-                if (selecionouO && selecionouI) {
-                    handler.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            notCerto.setVisibility(View.VISIBLE);
-                            playAudio(R.raw.not_acertou);
-                        }
-                    }, 1100);
-                } else if (btIErrado.getVisibility() == View.VISIBLE || btOErrado.getVisibility() == View.VISIBLE) {
-                    handler.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            notErro.setVisibility(View.VISIBLE);
-                            playAudio(R.raw.not_erro);
-                        }
+            } else if (id == R.id.btn_letraI) {
+                if (selecionouO) {
+                    selecionouI = true;
+                    btICerto.setVisibility(View.VISIBLE);
+                    btICerto.setEnabled(true);
+                    btI.setVisibility(View.INVISIBLE);
+                    btI.setEnabled(false);
+                    playAudio(R.raw.letra_i);
+                } else {
+                    selecionouI = true;
+                    btIErrado.setVisibility(View.VISIBLE);
+                    btIErrado.setEnabled(true);
+                    playAudio(R.raw.letra_i);
+                }
+            }
+
+            if (selecionouO && selecionouI) {
+                handler.postDelayed(() -> {
+                    notCerto.setVisibility(View.VISIBLE);
+                    playAudio(R.raw.not_acertou);
+                }, 1100);
+            } else if (btIErrado.getVisibility() == View.VISIBLE || btOErrado.getVisibility() == View.VISIBLE) {
+
+                if (!isNotErroPlaying) { // Verifica se não está tocando
+                    isNotErroPlaying = true;
+                    handler.postDelayed(() -> {
+                        notErro.setVisibility(View.VISIBLE);
+                        playAudio(R.raw.not_erro);
+                        isNotErroPlaying = false;
                     }, 1100);
                 }
+            }
 
-               
-                if ((selecionouO && selecionouI) || (btIErrado.getVisibility() == View.VISIBLE && btOErrado.getVisibility() == View.VISIBLE)) {
-                    handler.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            startActivity(new Intent(Tela_Atv2_fase3.this, Tela_Atv3_fase3.class));
-                            finish();
-                        }
-                    }, 3000);
-                }
+            if ((selecionouO && selecionouI) || (btIErrado.getVisibility() == View.VISIBLE && btOErrado.getVisibility() == View.VISIBLE)) {
+                handler.postDelayed(() -> {
+                    startActivity(new Intent(Tela_Atv2_fase3.this, Tela_Atv3_fase3.class));
+                    finish();
+                }, 3000);
             }
         };
 
@@ -172,18 +135,18 @@ public class Tela_Atv2_fase3 extends AppCompatActivity {
         btO.setOnClickListener(listener);
     }
 
-
     private void playAudio(int audioResId) {
-        // Libere o MediaPlayer anterior, se houver
         if (audio != null) {
             audio.release();
         }
-        // Cria um novo MediaPlayer e toca o áudio
         audio = MediaPlayer.create(this, audioResId);
         audio.start();
+        audio.setOnCompletionListener(mp -> {
+            mp.release();
+            audio = null;
+        });
     }
 
-    //BLOQUEIO DO BOTÃO VOLTAR DO CELULAR
     @Override
     public void onBackPressed() {
         Toast.makeText(this, "Utilize a setinha para voltar para home!", Toast.LENGTH_SHORT).show();

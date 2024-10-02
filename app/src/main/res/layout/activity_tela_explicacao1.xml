@@ -106,6 +106,7 @@
                     android:layout_height="640dp"
                     android:background="@color/white"
                     android:orientation="vertical"
+                    android:padding="8dp"
                     android:gravity="center">
 
                     <ImageView
@@ -113,6 +114,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/logo2"
+                        android:layout_marginBottom="0dp"
+                        android:gravity ="center"
                         android:layout_gravity="center" />
 
                     <Button
@@ -121,7 +124,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginStart="89dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="0dp"
                         android:layout_marginEnd="89dp"
                         android:backgroundTint="@color/azul"
                         android:gravity="center"
@@ -142,28 +145,14 @@
                             android:id="@+id/txtLogin"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Já tem uma conta? Faça login"
+                            android:text="@string/faca_login"
                             android:textColor="@color/azul"
                             android:textSize="18sp" />
                     </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/txtPular"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginStart="142dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="142dp"
-                        android:text="PULAR"
-                        android:gravity="center"
-                        android:textColor="@color/azul"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-
                 </LinearLayout>
-
             </LinearLayout>
+            
         </HorizontalScrollView>
 
     </LinearLayout>

@@ -16,6 +16,7 @@ public class Tela_Sobre extends AppCompatActivity {
     ImageView btHome, btDesemp, btConfig;
     TextView email;
 
+    String emailText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +30,10 @@ public class Tela_Sobre extends AppCompatActivity {
         email.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TENTAR PEGAR O EMAIL DA TEXT VIEW
-                enviarEmail(email);
+                // Obtém o texto do TextView
+                emailText = email.getText().toString();
+                // Chama a função para enviar o email
+                enviarEmail(emailText);
             }
         });
 
@@ -56,22 +59,21 @@ public class Tela_Sobre extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Intent para Desemp
-                //Intent abrirDesemp = new Intent(Tela_Sobre.this,Tela_Home.class);
-                //startActivity(abrirDesemp);
+                Intent abrirDesemp = new Intent(Tela_Sobre.this,Tela_Desempenho.class);
+                startActivity(abrirDesemp);
             }
         });
     }
-
-    public void enviarEmail(View v) {
+    public void enviarEmail(String emailText) {
         //QUEM RECEBE O EMAIL
-        String mailto = "mailto:" + email +
+        String mailto = "mailto:" + emailText +
                 //QUEM RECEBE UMA CÓPIA (OPCIONAL)
                 "?cc=" + "" +
                 //ASSUNTO DO EMAIL
-                "&subject=" + Uri.encode
-                ("Tenho uma observação!") +
+                "&subject=" + Uri.encode("Olá AutPapo") +
                 //CORPO/MENSAGEM
-                "&body=" + Uri.encode("AutPapo");
+                "&body=" + Uri.encode("Tenho uma observação!");
+
         //PREPARANDO A ABERTURA DO EMAIL
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
         //EXECUTANDO A INTENT DE E-MAIL
@@ -81,10 +83,10 @@ public class Tela_Sobre extends AppCompatActivity {
         try {
             startActivity(emailIntent);
         } catch (ActivityNotFoundException e) {
-            //TODO: Handle case where no email app is
-            Toast.makeText(this, "Erro ao enviar o e-mail" + e, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Erro ao enviar o e-mail: " + e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
+
 
     @Override
     public void onBackPressed() {

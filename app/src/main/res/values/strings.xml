@@ -11,9 +11,10 @@
     <string name="enun_fase2_atv5">COMPLETE A SEQUÊNCIA</string>
     <string name="enun_fase2_atv7">ESSA BEBIDA COMEÇA COM QUAL LETRA?</string>
     <string name="enun_fase2_atv2">ESSE ANIMAL COMEÇA COM QUAL LETRA?</string>
-    <string name="contaElogin">Clique aqui para saber mais sobre a coleta de dados.</string>
+    <string name="contaElogin"><u>Clique aqui para saber mais sobre a coleta de dados.</u></string>
     <string name="titulo_sobre">PARA CONTATO COM A EMPRESA:</string>
-    <string name="email_autpapo">autpapoOficial@gmail.com</string>
+    <string name="email_autpapo"><u>autpapooficial@gmail.com</u></string>
+    <string name="faca_login">Já tem uma conta? Faça <u>login</u></string>
     <string name="btn_cadastrarC">CADASTRAR CRIANÇA</string>
     <string name="btn_salvar">SALVAR</string>
     <string name="txtnome">NOME</string>

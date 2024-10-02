@@ -33,7 +33,6 @@ public class Tela_Explicacao extends AppCompatActivity {
 
         btCriarConta = findViewById(R.id.btnCriarConta);
         txLogin = findViewById(R.id.txtLogin);
-        txPular = findViewById(R.id.txtPular);
         scrollView = findViewById(R.id.scrollView);
         view1 = findViewById(R.id.view1);
         view2 = findViewById(R.id.view2);
@@ -55,11 +54,6 @@ public class Tela_Explicacao extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // Clique do botão PULAR - IR PARA HOME
-        txPular.setOnClickListener(view -> {
-            Intent intent = new Intent(Tela_Explicacao.this, Tela_Home.class);
-            startActivity(intent);
-        });
 
         // Mapa para associar as Views aos áudios
         viewAudioMap = new HashMap<>();
