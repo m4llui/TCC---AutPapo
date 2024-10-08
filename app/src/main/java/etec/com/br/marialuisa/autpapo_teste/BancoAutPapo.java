@@ -47,6 +47,7 @@ public class BancoAutPapo extends SQLiteOpenHelper {
                     "FOREIGN KEY(codAtividade) REFERENCES " + TABLE_ATIVIDADE + "(codAtividade));";
 
     public BancoAutPapo (Context context) {
+
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
