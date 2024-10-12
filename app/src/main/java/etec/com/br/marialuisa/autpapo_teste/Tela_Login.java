@@ -17,7 +17,7 @@ public class Tela_Login extends AppCompatActivity {
     CheckBox checkBox;
     EditText edEmail, edSenha;
     Button btLogar;
-    TextView txSaibaMais;
+    TextView txSaibaMais, cadastrar;
     String tela;
 
     @SuppressLint("MissingInflatedId")
@@ -31,6 +31,15 @@ public class Tela_Login extends AppCompatActivity {
         edSenha = findViewById(R.id.edtSenhaL);
         btLogar = findViewById(R.id.btnLogarL);
         txSaibaMais = findViewById(R.id.SaibaMaisColetaDadosL);
+        cadastrar = findViewById(R.id.txtCadastrar);
+
+        cadastrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent abrirCadastro = new Intent(Tela_Login.this,Tela_CriarConta.class);
+                startActivity(abrirCadastro);
+            }
+        });
 
         txSaibaMais.setOnClickListener(new View.OnClickListener() {
             @Override

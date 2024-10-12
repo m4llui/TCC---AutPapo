@@ -40,14 +40,14 @@ public class BancoAutPapo extends SQLiteOpenHelper {
     private static final String CREATE_TABLE_DESMPENHO =
             "CREATE TABLE " + TABLE_DESMPENHO + " (" +
                     "codDesempenho INTEGER PRIMARY KEY AUTOINCREMENT," +
-                    "totalAcertosErros INTEGER NOT NULL," +
+                    "totalAcertos INTEGER NOT NULL," +
+                    "totalErros INTEGER NOT NULL," +
                     "codCriança INTEGER NOT NULL," +
                     "codAtividade INTEGER NOT NULL," +
                     "FOREIGN KEY(codCriança) REFERENCES " + TABLE_CADASTRO_CRIANCA + "(codCriança)," +
                     "FOREIGN KEY(codAtividade) REFERENCES " + TABLE_ATIVIDADE + "(codAtividade));";
 
     public BancoAutPapo (Context context) {
-
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 

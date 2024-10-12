@@ -3,25 +3,38 @@ package etec.com.br.marialuisa.autpapo_teste;
 public class Desempenho {
     //classe Desempenho
     private int codDesempenho;
-    private boolean totalAcertosErros;
+
+    public int getTotalAcertos() {
+        return totalAcertos;
+    }
+
+    public void setTotalAcertos(int totalAcertos) {
+        this.totalAcertos = totalAcertos;
+    }
+
+    public int getTotalErros() {
+        return totalErros;
+    }
+
+    public void setTotalErros(int totalErros) {
+        this.totalErros = totalErros;
+    }
+
+    private int totalAcertos;
+    private int totalErros;
     private int codCriança;
     private int codAtividade;
 
     public int getCodDesempenho() {
+
         return codDesempenho;
     }
 
     public void setCodDesempenho(int codDesempenho) {
+
         this.codDesempenho = codDesempenho;
     }
 
-    public boolean isTotalAcertosErros() {
-        return totalAcertosErros;
-    }
-
-    public void setTotalAcertosErros(boolean totalAcertosErros) {
-        this.totalAcertosErros = totalAcertosErros;
-    }
 
     public int getCodCriança() {
         return codCriança;

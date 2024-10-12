@@ -14,6 +14,7 @@
     <string name="contaElogin"><u>Clique aqui para saber mais sobre a coleta de dados.</u></string>
     <string name="titulo_sobre">PARA CONTATO COM A EMPRESA:</string>
     <string name="email_autpapo"><u>autpapooficial@gmail.com</u></string>
+    <string name="opcao_cadastro"><u>Não tenho uma conta! Cadastrar</u></string>
     <string name="faca_login">Já tem uma conta? Faça <u>login</u></string>
     <string name="btn_cadastrarC">CADASTRAR CRIANÇA</string>
     <string name="btn_salvar">SALVAR</string>

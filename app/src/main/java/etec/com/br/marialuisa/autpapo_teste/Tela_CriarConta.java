@@ -2,7 +2,6 @@ package etec.com.br.marialuisa.autpapo_teste;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,11 +16,9 @@ public class Tela_CriarConta extends AppCompatActivity {
     CheckBox checkBox;
     EditText edEmail, edSenha;
     Button btLogar;
-    TextView txSaibaMais, consultateste;
+    TextView txSaibaMais;
     String tela;
 
-
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +29,6 @@ public class Tela_CriarConta extends AppCompatActivity {
         edSenha = findViewById(R.id.edtSenhaC);
         btLogar = findViewById(R.id.btnLogarC);
         txSaibaMais = findViewById(R.id.SaibaMaisColetaDadosC);
-        consultateste = findViewById(R.id.tvResultadoConsulta);
 
         txSaibaMais.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,7 +39,6 @@ public class Tela_CriarConta extends AppCompatActivity {
                 startActivity(abrirPriv);
             }
         });
-
         btLogar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,21 +64,10 @@ public class Tela_CriarConta extends AppCompatActivity {
                 else if (!checkBox.isChecked()) {
                     Toast.makeText(Tela_CriarConta.this, "Selecione a checkbox do 'Estou ciente' para a coleta de dados!", Toast.LENGTH_SHORT).show();
                 }
-                CadastroUsuario usuario = new CadastroUsuario(Tela_CriarConta.this, email, senha);
-
-                // Verifica se o usuário já está cadastrado
-                boolean usuarioExiste = usuario.consultarUsuarioPorEmail(email);
-
-                if (usuarioExiste) {
-                    // Exibe o resultado na TextView
-                    Toast.makeText(Tela_CriarConta.this, "Usuario já existe!", Toast.LENGTH_SHORT).show();
-                } else {
-                    boolean cadastrado = usuario.cadastrarUsuario();
-                    if (cadastrado) {
-                        Toast.makeText(Tela_CriarConta.this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(Tela_CriarConta.this, "Erro ao cadastrar usuário!", Toast.LENGTH_SHORT).show();
-                    }
+                else {
+                    //BANCO E IR PARA HOME
+                    Toast.makeText(Tela_CriarConta.this, "Login realizado com sucesso!", Toast.LENGTH_SHORT).show();
+                    // Lógica de login aqui, como abrir uma nova Activity
                 }
             }
         });
