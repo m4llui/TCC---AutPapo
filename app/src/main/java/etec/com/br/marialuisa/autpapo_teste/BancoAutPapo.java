@@ -6,11 +6,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class BancoAutPapo extends SQLiteOpenHelper {
     //classe do Banco
     private static final String DATABASE_NAME = "bd_autpapo.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     // Tabelas
     private static final String TABLE_ATIVIDADE = "atividade";
-    private static final String TABLE_CADASTRO_CRIANCA = "cadastrocriança";
+    private static final String TABLE_CADASTRO_CRIANCA = "cadastrocrianca";
     private static final String TABLE_CADASTRO_USUARIO = "cadastrousuario";
     private static final String TABLE_DESMPENHO = "desempenho";
 
@@ -23,12 +23,12 @@ public class BancoAutPapo extends SQLiteOpenHelper {
 
     private static final String CREATE_TABLE_CADASTRO_CRIANCA =
             "CREATE TABLE " + TABLE_CADASTRO_CRIANCA + " (" +
-                    "codCriança INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    "codCrianca INTEGER PRIMARY KEY AUTOINCREMENT," +
                     "nome TEXT NOT NULL," +
                     "grau INTEGER NOT NULL," +
                     "nacionalidade TEXT NOT NULL," +
                     "ano INTEGER NOT NULL," +
-                    "codUsuario INTEGER NOT NULL," +
+                    "codUsuario INTEGER," +
                     "FOREIGN KEY(codUsuario) REFERENCES " + TABLE_CADASTRO_USUARIO + "(codUsuario));";
 
     private static final String CREATE_TABLE_CADASTRO_USUARIO =
@@ -42,12 +42,13 @@ public class BancoAutPapo extends SQLiteOpenHelper {
                     "codDesempenho INTEGER PRIMARY KEY AUTOINCREMENT," +
                     "totalAcertos INTEGER NOT NULL," +
                     "totalErros INTEGER NOT NULL," +
-                    "codCriança INTEGER NOT NULL," +
+                    "codCrianca INTEGER NOT NULL," +
                     "codAtividade INTEGER NOT NULL," +
-                    "FOREIGN KEY(codCriança) REFERENCES " + TABLE_CADASTRO_CRIANCA + "(codCriança)," +
+                    "FOREIGN KEY(codCrianca) REFERENCES " + TABLE_CADASTRO_CRIANCA + "(codCrianca)," +
                     "FOREIGN KEY(codAtividade) REFERENCES " + TABLE_ATIVIDADE + "(codAtividade));";
 
     public BancoAutPapo (Context context) {
+
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 

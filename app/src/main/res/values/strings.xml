@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AUTPAPO_TESTE</string>
+    <string name="app_name">AUTPAPO</string>
     <string name="carregando">ESTAMOS QUASE LÁ...</string>
     <string name="enun_emocao">QUAL EMOÇÃO É ESSA?</string>
     <string name="enun_figura_imagem">ESCOLHA A FIGURA QUE COMBINE COM A PALAVRA</string>

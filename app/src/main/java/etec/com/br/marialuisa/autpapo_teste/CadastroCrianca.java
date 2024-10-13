@@ -78,6 +78,7 @@ public class CadastroCrianca {
     }
 
     public int getCodUsuario() {
+
         return codUsuario;
     }
 
@@ -120,7 +121,7 @@ public class CadastroCrianca {
 
                 String texto = nome + ", " + idade + " anos\n" + "NÍVEL " + grau + " Clique aqui"; // Adicionando espaço antes de "Clique aqui"
 
-                // Criar um SpannableString
+                 // Criar um SpannableString
                 SpannableString spannable = new SpannableString(texto);
 
                 // Definir a cor azul para nome e idade
@@ -133,7 +134,7 @@ public class CadastroCrianca {
                 spannable.setSpan(new ForegroundColorSpan(context.getResources().getColor(R.color.azul)), startNome, endIdade, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 spannable.setSpan(new StyleSpan(android.graphics.Typeface.BOLD), startNome, endIdade, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
-                // Definir a cor amarela para grau
+                 // Definir a cor amarela para grau
                 int startGrau = texto.indexOf("NÍVEL ") + "NÍVEL ".length();
                 int endGrau = startGrau + String.valueOf(grau).length();
                 spannable.setSpan(new StyleSpan(android.graphics.Typeface.BOLD), startGrau, endGrau, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);

@@ -22,9 +22,9 @@ public class Tela_Cadastro_Crianca extends AppCompatActivity {
     EditText edNome,edAno, edNacionalidade;
     Spinner spGrau;
 
-    private Handler handler = new Handler();
+    ImageView btDesemp,btHome, btConfig;
 
-    ImageView btDesemp,btHome, btConfig, btDesempInicio;
+    private Handler handler = new Handler();
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -65,17 +65,16 @@ public class Tela_Cadastro_Crianca extends AppCompatActivity {
                         edNacionalidade.requestFocus();
                     } else {
 
-                        CadastroCrianca usuariologin = new CadastroCrianca(Tela_Cadastro_Crianca.this, nome, grau, nacionalidade, ano);
-                        boolean usuarioLogado = usuariologin.cadastrarCrianca(nome, grau, nacionalidade, ano);
+                        CadastroCrianca crianca = new CadastroCrianca(Tela_Cadastro_Crianca.this, nome, grau, nacionalidade, ano);
+                        boolean criancacadastrada = crianca.cadastrarCrianca(nome, grau, nacionalidade, ano);
 
-                        if (usuarioLogado) {
+                        if (criancacadastrada) {
                             Toast.makeText(Tela_Cadastro_Crianca.this, "Cadastro da Criança Realizado com Sucesso!", Toast.LENGTH_SHORT).show();
                             handler.postDelayed(new Runnable() {
                                 @Override
                                 public void run() {
-
-                                    Intent abrirDesemp = new Intent(Tela_Cadastro_Crianca.this, Tela_Desempenho.class);
-                                    startActivity(abrirDesemp);
+                                    Intent voltarDesempInicio = new Intent(Tela_Cadastro_Crianca.this, Tela_Desempenho.class);
+                                    startActivity(voltarDesempInicio);
                                 }
                             }, 1000);
                         } else {

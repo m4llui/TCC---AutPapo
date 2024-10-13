@@ -57,6 +57,7 @@
         app:srcCompat="@drawable/ic_desempenho" />
 
     <ListView
+        android:id="@+id/listaCriancas"
         android:layout_width="409dp"
         android:layout_height="474dp"
         android:layout_marginStart="24dp"
