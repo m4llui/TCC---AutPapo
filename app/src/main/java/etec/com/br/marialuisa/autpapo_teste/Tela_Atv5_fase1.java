@@ -25,10 +25,18 @@ public class Tela_Atv5_fase1 extends AppCompatActivity {
             btn_Let_D, btn_Let_D_Inc, btVoltar5, btBalao, notCerto, notErro;
     private Handler handler = new Handler();
 
+    private int codCrianca;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_atv5_fase1);
+
+        Intent intent = getIntent();
+        codCrianca = intent.getIntExtra("codCrianca", -1);
+        Toast.makeText(this, "codCriança recebido: "+codCrianca, Toast.LENGTH_SHORT).show();
+
+
 
         btn_Nm_1 = findViewById(R.id.btn_Nm1);
         btn_Nm_1_Inc = findViewById(R.id.btn_1_inc);
@@ -159,7 +167,9 @@ public class Tela_Atv5_fase1 extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        startActivity(new Intent(Tela_Atv5_fase1.this, Tela_Video_fase1.class));
+                        Intent intent = new Intent(Tela_Atv5_fase1.this, Tela_Video_fase1.class);
+                        intent.putExtra("codCrianca", codCrianca);
+                        startActivity(intent);
                         finish();
                     }
                 }, 3000);
@@ -183,7 +193,6 @@ public class Tela_Atv5_fase1 extends AppCompatActivity {
         audio = MediaPlayer.create(this, audioResId);
         audio.start();
     }
-
 
     @Override
     public void onBackPressed() {

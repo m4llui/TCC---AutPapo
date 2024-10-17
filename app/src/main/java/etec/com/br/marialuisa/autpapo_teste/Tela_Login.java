@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -81,15 +82,20 @@ public class Tela_Login extends AppCompatActivity {
                 } else {
                     // Todas as verificações passaram
                     CadastroUsuario usuariologin = new CadastroUsuario(Tela_Login.this, email, senha);
-                    boolean usuarioLogado = usuariologin.loginUsuario(email, senha);
+                    int codUsuario = usuariologin.loginUsuario(email, senha);  // Agora retorna o codUsuario
 
-                    if (usuarioLogado) {
+                    if (codUsuario != -1) {
                         Toast.makeText(Tela_Login.this, "Login realizado com sucesso!", Toast.LENGTH_SHORT).show();
 
                         handler.postDelayed(new Runnable() {
                             @Override
                             public void run() {
+                                // Passando o codUsuario para a próxima tela
                                 Intent abrirHome = new Intent(Tela_Login.this, Tela_Home.class);
+                                SharedPreferences sharedPreferences = getSharedPreferences("MeuApp", MODE_PRIVATE);
+                                SharedPreferences.Editor editor = sharedPreferences.edit();
+                                editor.putInt("codUsuario", codUsuario); // Armazena o codUsuario
+                                editor.apply();
                                 startActivity(abrirHome);
                             }
                         }, 900);
@@ -99,6 +105,7 @@ public class Tela_Login extends AppCompatActivity {
                 }
             }
         });
+
 
     }
 

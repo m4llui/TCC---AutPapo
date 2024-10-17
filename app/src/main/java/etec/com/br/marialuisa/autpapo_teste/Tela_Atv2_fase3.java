@@ -16,6 +16,9 @@ public class Tela_Atv2_fase3 extends AppCompatActivity {
     boolean selecionouO, selecionouI;
     private ImageView btI, btO, btOi, btIErrado, btOErrado, btICerto, btOCerto, btVolta, btBalao,
             notCerto, notErro;
+
+    private int codCrianca;
+
     private Handler handler = new Handler();
     private boolean isNotErroPlaying = false; // Controle para not_erro
 
@@ -36,6 +39,10 @@ public class Tela_Atv2_fase3 extends AppCompatActivity {
         btOi = findViewById(R.id.imgOi);
         notCerto = findViewById(R.id.not_acerto);
         notErro = findViewById(R.id.not_erro);
+
+        Intent intent = getIntent();
+        codCrianca = intent.getIntExtra("codCrianca", -1);
+        Toast.makeText(this, "codCriança recebido: "+codCrianca, Toast.LENGTH_SHORT).show();
 
         // ENUNCIADO AUTOMÁTICO
         handler.postDelayed(() -> playAudio(R.raw.monte_palavra), 1000); // Atraso de 1 segundo
@@ -124,10 +131,16 @@ public class Tela_Atv2_fase3 extends AppCompatActivity {
             }
 
             if ((selecionouO && selecionouI) || (btIErrado.getVisibility() == View.VISIBLE && btOErrado.getVisibility() == View.VISIBLE)) {
-                handler.postDelayed(() -> {
-                    startActivity(new Intent(Tela_Atv2_fase3.this, Tela_Atv3_fase3.class));
-                    finish();
-                }, 3000);
+
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            Intent intent = new Intent(Tela_Atv2_fase3.this, Tela_Atv3_fase3.class);
+                            intent.putExtra("codCrianca", codCrianca);
+                            startActivity(intent);
+                            finish();
+                        }
+                    }, 3000);
             }
         };
 

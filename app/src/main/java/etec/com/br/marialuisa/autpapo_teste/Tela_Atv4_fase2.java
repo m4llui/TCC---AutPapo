@@ -20,6 +20,8 @@ public class Tela_Atv4_fase2 extends AppCompatActivity {
 
     TextView btEnunciado;
     MediaPlayer audio;
+    private int codCrianca;
+
     boolean selecionouO, selecionouI, erroO, erroI;
     private ImageView btn_ABCD, btn_ABCD_errado, btn_EFGH, btn_EFGH_Certo, btn_NBFH, btn_NBFH_errado,
             btn_JKLM, btn_JKLM_errado, btVoltar, btBalao, notCerto, notErro;
@@ -46,6 +48,9 @@ public class Tela_Atv4_fase2 extends AppCompatActivity {
         notCerto = findViewById(R.id.not_acerto);
         notErro = findViewById(R.id.not_erro);
 
+        Intent intent = getIntent();
+        codCrianca = intent.getIntExtra("codCrianca", -1);
+        Toast.makeText(this, "codCriança recebido: "+codCrianca, Toast.LENGTH_SHORT).show();
 
       handler.postDelayed(new Runnable() {
             @Override
@@ -159,7 +164,9 @@ public class Tela_Atv4_fase2 extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        startActivity(new Intent(Tela_Atv4_fase2.this, Tela_Atv5_fase2.class));
+                        Intent intent = new Intent(Tela_Atv4_fase2.this, Tela_Atv5_fase2.class);
+                        intent.putExtra("codCrianca", codCrianca);
+                        startActivity(intent);
                         finish();
                     }
                 }, 3200);

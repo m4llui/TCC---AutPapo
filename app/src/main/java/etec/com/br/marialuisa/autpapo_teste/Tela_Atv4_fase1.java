@@ -24,12 +24,18 @@ public class Tela_Atv4_fase1 extends AppCompatActivity {
     private ImageView btn_Let_P, btn_Let_P_Inc, btn_Let_E, btn_Let_E_Inc, btn_Let_O, btn_Let_O_Certo,
             btn_Let_G, btn_Let_G_Inc, btVoltar4, btBalao, notCerto, notErro;
     private Handler handler = new Handler();
-
+    private int codCrianca;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_atv4_fase1);
+
+
+        Intent intent = getIntent();
+        codCrianca = intent.getIntExtra("codCrianca", -1);
+        Toast.makeText(this, "codCriança recebido: "+codCrianca, Toast.LENGTH_SHORT).show();
+
 
         btn_Let_P = findViewById(R.id.btn_P2);
         btn_Let_P_Inc = findViewById(R.id.btn_P_Inc);
@@ -162,7 +168,9 @@ public class Tela_Atv4_fase1 extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        startActivity(new Intent(Tela_Atv4_fase1.this, Tela_Atv5_fase1.class));
+                        Intent intent = new Intent(Tela_Atv4_fase1.this, Tela_Atv5_fase1.class);
+                        intent.putExtra("codCrianca", codCrianca);
+                        startActivity(intent);
                         finish();
                     }
                 }, 3000);

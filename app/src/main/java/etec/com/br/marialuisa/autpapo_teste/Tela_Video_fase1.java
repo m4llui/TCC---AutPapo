@@ -26,7 +26,7 @@ public class Tela_Video_fase1 extends AppCompatActivity {
         btProximo = findViewById(R.id.btn_Proximo_V1);
 
         // Obtém o URI do vídeo na pasta raw
-        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.testevideo);
+        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video_fase1);
 
         videoView.setVideoURI(videoUri);
 

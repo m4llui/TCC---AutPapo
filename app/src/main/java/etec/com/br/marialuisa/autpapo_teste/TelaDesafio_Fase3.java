@@ -24,6 +24,7 @@ public class TelaDesafio_Fase3 extends AppCompatActivity {
 
         btConsegui3 = findViewById(R.id.imgConseguiFase3);
         btPasso3 = findViewById(R.id.imgPassoFase3);
+        txEnun = findViewById(R.id.txtEnunDesafio3);
 
         handler.postDelayed(new Runnable() {
             @Override

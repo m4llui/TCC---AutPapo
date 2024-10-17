@@ -22,7 +22,7 @@ public class Tela_Atv1_fase2 extends AppCompatActivity {
     private ImageView btn_Bola, btn_Let_Bola_Certo, btn_Arvore, btn_Arvore_errado, btn_limao, btn_limao_errado,
             btn_mao, btn_mao_errado, btVoltar, btBalao, notErro, notCerto;
     private Handler handler = new Handler();
-
+     private int codCrianca;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +41,11 @@ public class Tela_Atv1_fase2 extends AppCompatActivity {
         btBalao = findViewById(R.id.imageBalaoB);
         notErro = findViewById(R.id.not_erro);
         notCerto = findViewById(R.id.not_acerto);
+
+        // Recuperar o código da criança
+        Intent intent = getIntent();
+        codCrianca = intent.getIntExtra("codCrianca", -1);
+        Toast.makeText(this, "codCriança recebido: "+codCrianca, Toast.LENGTH_SHORT).show();
 
         handler.postDelayed(new Runnable() {
             @Override
@@ -154,8 +159,10 @@ public class Tela_Atv1_fase2 extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        startActivity(new Intent(Tela_Atv1_fase2.this, Tela_Atv2_fase2.class));
-                        finish(); // Navega para a próxima tela
+                        Intent intent = new Intent(Tela_Atv1_fase2.this, Tela_Atv2_fase2.class);
+                        intent.putExtra("codCrianca", codCrianca);
+                        startActivity(intent);
+                        finish();
                     }
                 }, 3000);
             }

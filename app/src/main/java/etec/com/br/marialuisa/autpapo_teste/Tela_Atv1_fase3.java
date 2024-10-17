@@ -15,12 +15,16 @@ import android.widget.Toast;
 public class Tela_Atv1_fase3 extends AppCompatActivity {
 
     TextView btEnunciado;
-    //atualizando
     private boolean buttonSelected = false;
     MediaPlayer audio;
     private ImageView btPfv, btPfvCerto, btCarro, btCarroErrado, btMorango, btMorangoErrado,
             btCasa, btCasaErrado, btVolta, btBalao, notCerto, notErro;
     private Handler handler = new Handler();
+
+    private int codCrianca;
+
+
+    int erro, acerto;
 
     @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
@@ -43,7 +47,11 @@ public class Tela_Atv1_fase3 extends AppCompatActivity {
         notCerto = findViewById(R.id.not_acerto);
         notErro = findViewById(R.id.not_erro);
 
-        // Toca o áudio assim que a Activity é carregada com atraso (O HANDLER É PARA "ATRASO")
+        Intent intent = getIntent();
+        codCrianca = intent.getIntExtra("codCrianca", -1);
+        Toast.makeText(this, "codCriança recebido: "+codCrianca, Toast.LENGTH_SHORT).show();
+
+
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -133,28 +141,33 @@ public class Tela_Atv1_fase3 extends AppCompatActivity {
                     btPfvCerto.setVisibility(View.VISIBLE);
                     btPfvCerto.setEnabled(true);
                     playAudio(R.raw.audio_pfv);
-                    //isCorrect = true;  // Marca como correto
+
                 } else if (id == R.id.btn_carro) {
                     btCarroErrado.setVisibility(View.VISIBLE);
                     btCarroErrado.setEnabled(true);
                     playAudio(R.raw.carro);
-                    //isCorrect = false;  // Marca como incorreto
+
                 } else if (id == R.id.btn_morango) {
                     btMorangoErrado.setVisibility(View.VISIBLE);
                     btMorangoErrado.setEnabled(true);
                     playAudio(R.raw.morango);
-                    //isCorrect = false;  // Marca como incorreto
+
                 } else if (id == R.id.btn_casa) {
                     btCasaErrado.setVisibility(View.VISIBLE);
                     btCasaErrado.setEnabled(true);
                     playAudio(R.raw.casa);
-                    //isCorrect = false;  // Marca como incorreto
+
+
                 } if(id==R.id.btn_pfv){
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
                             notCerto.setVisibility(View.VISIBLE);
                             playAudio(R.raw.not_acertou);
+                            acerto = acerto + 1;
+                            erro = erro + 0;
+
+                            //metodo para armazenar no banco
                         }
                     }, 1100);
                 }else {
@@ -163,18 +176,24 @@ public class Tela_Atv1_fase3 extends AppCompatActivity {
                         public void run() {
                             notErro.setVisibility(View.VISIBLE);
                             playAudio(R.raw.not_erro);
+                            erro = erro + 1;
+                            acerto = acerto + 0;
+
+                            //metodo para armazenar no banco
                         }
                     }, 1100);
                 }
 
-                //HANDLER É QUEM FAZ O ATRASO ANTES DE IR PARA APROXÍMA TELA
+
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        startActivity(new Intent(Tela_Atv1_fase3.this, Tela_Atv2_fase3.class));
-                        finish(); // Fecha a tela atual
+                        Intent intent = new Intent(Tela_Atv1_fase3.this, Tela_Atv2_fase3.class);
+                        intent.putExtra("codCrianca", codCrianca);
+                        startActivity(intent);
+                        finish();
                     }
-                }, 3000); // Atraso de 2 segundo em// milissegundos)
+                }, 3000);
             }
         };
 

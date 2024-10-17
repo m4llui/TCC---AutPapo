@@ -123,7 +123,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="82dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="83dp"
         android:fontFamily="@font/fonttitulopreto"
         android:text="Estou ciente da Coleta de Dados."

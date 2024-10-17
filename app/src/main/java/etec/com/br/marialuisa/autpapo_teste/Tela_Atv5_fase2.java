@@ -10,6 +10,7 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Tela_Atv5_fase2 extends AppCompatActivity {
 
@@ -17,10 +18,13 @@ public class Tela_Atv5_fase2 extends AppCompatActivity {
     //atualizando
     private boolean buttonSelected = false;
     TextView enunciado;
+
+
     private ImageView btJP, btNA, btJPCerto, btNAerrado,
             btVoltarAtv5Fase2, btbalaoSeq, triangulo, losangulo,jVerde, jVermelho,pVerde, pVermelho,
     notCerto, notErro;
     private Handler handler = new Handler();
+    private int codCrianca;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -44,6 +48,10 @@ public class Tela_Atv5_fase2 extends AppCompatActivity {
         pVermelho = findViewById(R.id.p_vermelho);
         notErro = findViewById(R.id.not_erro);
         notCerto = findViewById(R.id.not_acerto);
+
+        Intent intent = getIntent();
+        codCrianca = intent.getIntExtra("codCrianca", -1);
+        Toast.makeText(this, "codCriança recebido: "+codCrianca, Toast.LENGTH_SHORT).show();
 
         handler.postDelayed(new Runnable() {
             @Override
@@ -130,16 +138,18 @@ public class Tela_Atv5_fase2 extends AppCompatActivity {
                         playAudio(R.raw.not_acertou);
 
                     }
-                }, 1100);
+                }, 1200);
 
 
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        startActivity(new Intent(Tela_Atv5_fase2.this, Tela_Atv6_fase2.class));
+                        Intent intent = new Intent(Tela_Atv5_fase2.this, Tela_Atv6_fase2.class);
+                        intent.putExtra("codCrianca", codCrianca);
+                        startActivity(intent);
                         finish();
                     }
-                }, 2000);
+                }, 3000);
             }
         });
 
@@ -168,15 +178,18 @@ public class Tela_Atv5_fase2 extends AppCompatActivity {
                         notErro.setVisibility(View.VISIBLE);
                         playAudio(R.raw.not_erro);
                     }
-                }, 1000);
-
+                }, 1200);
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        startActivity(new Intent(Tela_Atv5_fase2.this, Tela_Atv6_fase2.class));
+                        Intent intent = new Intent(Tela_Atv5_fase2.this, Tela_Atv6_fase2.class);
+                        intent.putExtra("codCrianca", codCrianca);
+                        startActivity(intent);
                         finish();
                     }
-                }, 3000);
+                }, 3200);
+
+
             }
         });
     }

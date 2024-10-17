@@ -13,7 +13,7 @@ public class CadastroUsuario {
 
     // inicializar o banco e atribuir valores de email e senha
     public CadastroUsuario(Tela_CriarConta tela_criarConta, String email, String senha) {
-        this.banco = new BancoAutPapo(tela_criarConta);  // Inicializa a instância do banco com o contexto
+        this.banco = new BancoAutPapo(tela_criarConta);
         this.email = email;
         this.senha = senha;
     }
@@ -23,6 +23,7 @@ public class CadastroUsuario {
         this.email = email;
         this.senha = senha;
     }
+
 
     public int getCodUsuario() {
 
@@ -54,20 +55,22 @@ public class CadastroUsuario {
         this.senha = senha;
     }
     //Cadastro do usuario
-    public boolean cadastrarUsuario() {
+    public int cadastrarUsuario() {
         SQLiteDatabase db = banco.getWritableDatabase();  // Abre o banco para escrita
         ContentValues values = new ContentValues();
         values.put("email", this.email);
         values.put("senha", this.senha);
 
-        //incluindo os dados sem o codUsuario por ser auto increment
+        // Incluindo os dados sem o codUsuario por ser auto-increment
         long result = db.insert("cadastrousuario", null, values);
         db.close();
 
-        return result != -1;  // Retorna inserção for bem-sucedida
+        // Retorna o código do usuário se a inserção for bem-sucedida, caso contrário, retorna -1
+        return result != -1 ? (int) result : -1;
     }
 
-        //Consultar se o usuário já está cadastrado com base no email
+
+        //Consultando o usuario pelo email
         public boolean consultarUsuarioPorEmail(String email) {
             SQLiteDatabase db = banco.getReadableDatabase();  // Abre o banco para leitura
             Cursor cursor = db.query("cadastrousuario",  // Nome da tabela
@@ -85,18 +88,22 @@ public class CadastroUsuario {
 
             return usuarioExiste;
         }
-        //Login usuario
-    public boolean loginUsuario(String email, String senha){
-        SQLiteDatabase db = banco.getReadableDatabase();
-        Cursor cursor = db.rawQuery("select * from cadastrousuario where email = ? and senha = ?", new String[]{email, senha});
-        if (cursor.getCount() > 0){
-            return true;
-        }else {
-            return false;
+        //Login usuario, agora retorna o codUsuario
+        public int loginUsuario(String email, String senha) {
+            SQLiteDatabase db = banco.getReadableDatabase();
+            Cursor cursor = db.rawQuery("select codUsuario from cadastrousuario where email = ? and senha = ?", new String[]{email, senha});
+
+            int codUsuario = -1;
+            if (cursor.moveToFirst()) {
+                codUsuario = cursor.getInt(cursor.getColumnIndexOrThrow("codUsuario"));  // Retorna o codUsuario se o login for bem-sucedido
+            }
+            cursor.close();
+            db.close();
+
+            return codUsuario;
         }
 
-    }
-    }
+}
 
 
 

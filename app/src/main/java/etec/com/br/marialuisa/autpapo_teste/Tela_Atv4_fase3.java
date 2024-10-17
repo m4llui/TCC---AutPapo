@@ -21,6 +21,8 @@ public class Tela_Atv4_fase3 extends AppCompatActivity {
             btNao, btNaoErrado, btVolta, btBalao,notCerto, notErro;
     private Handler handler = new Handler();
 
+    private int codCrianca;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +42,11 @@ public class Tela_Atv4_fase3 extends AppCompatActivity {
         btVolta = findViewById(R.id.btnVoltarAtv4Fase3);
         notCerto = findViewById(R.id.not_acerto);
         notErro = findViewById(R.id.not_erro);
+
+
+        Intent intent = getIntent();
+        codCrianca = intent.getIntExtra("codCrianca", -1);
+        Toast.makeText(this, "codCriança recebido: "+codCrianca, Toast.LENGTH_SHORT).show();
 
         // Toca o áudio uma vez quando a Activity é carregada ESTÁ DUPLICANDO ESTE AUDIO
         handler.postDelayed(new Runnable() {
@@ -161,10 +168,12 @@ public class Tela_Atv4_fase3 extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        startActivity(new Intent(Tela_Atv4_fase3.this, Tela_Atv5_fase3.class));
-                        finish(); // Fecha a tela atual
+                        Intent intent = new Intent(Tela_Atv4_fase3.this, Tela_Atv5_fase3.class);
+                        intent.putExtra("codCrianca", codCrianca);
+                        startActivity(intent);
+                        finish();
                     }
-                }, 3000); // Atraso de 3 segundos em milissegundos
+                }, 3000);
             }
         };
 

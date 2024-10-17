@@ -18,13 +18,16 @@ public class Tela_Atv8_fase2 extends AppCompatActivity {
     //atualizando
     TextView btEnunciado;
     MediaPlayer audio;
+
+
+
     boolean selecionouO, selecionouI, erroO, erroI;
     private ImageView btn_Flor, btn_Flor_errado, btn_Nariz, btn_Nariz_errado, btn_Zebra, btn_Zebra_certa,
             btn_Planeta, btn_Planeta_errado, btVoltar, btBalao, notCerto, notErro;
     private Handler handler = new Handler();
 
 
-
+    private int codCrianca;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +46,11 @@ public class Tela_Atv8_fase2 extends AppCompatActivity {
         btBalao = findViewById(R.id.imageBalaoLetraZ);
         notCerto = findViewById(R.id.not_acerto);
         notErro = findViewById(R.id.not_erro);
+
+        Intent intent = getIntent();
+        codCrianca = intent.getIntExtra("codCrianca", -1);
+        Toast.makeText(this, "codCriança recebido: "+codCrianca, Toast.LENGTH_SHORT).show();
+
 
         handler.postDelayed(new Runnable() {
             @Override
@@ -133,7 +141,7 @@ public class Tela_Atv8_fase2 extends AppCompatActivity {
                     btn_Planeta_errado.setEnabled(true);
                     playAudio(R.raw.planeta);
                 }
-                if(id==R.id.btn_Zebra){
+                if (id == R.id.btn_Zebra) {
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
@@ -141,7 +149,7 @@ public class Tela_Atv8_fase2 extends AppCompatActivity {
                             playAudio(R.raw.not_acertou);
                         }
                     }, 1100);
-                }else {
+                } else {
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
@@ -154,11 +162,15 @@ public class Tela_Atv8_fase2 extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        startActivity(new Intent(Tela_Atv8_fase2.this, Tela_Video_fase2.class));
+                        Intent intent = new Intent(Tela_Atv8_fase2.this, Tela_Video_fase2.class);
+                        intent.putExtra("codCrianca", codCrianca);
+                        startActivity(intent);
                         finish();
                     }
-                }, 3000);
+                }, 3200);
             }
+
+
         };
 
         btn_Flor.setOnClickListener(listener);

@@ -14,14 +14,16 @@ import android.widget.Toast;
 public class Tela_Atv3_fase1 extends AppCompatActivity {
 
     private boolean buttonSelected = false;
-    //atualizando
     TextView btEnunciado;
     MediaPlayer audio;
+
     boolean selecionouO, selecionouI, erroO, erroI;
 
     private ImageView btn_Let_K, btn_Let_K_Inc, btn_Let_I, btn_Let_I_Certo, btn_Let_O, btn_Let_O_Inc,
             btn_Let_G, btn_Let_G_Inc, btVoltar4, btBalao, notErro, notCerto;
     private Handler handler = new Handler();
+
+   private int codCrianca;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,10 +44,15 @@ public class Tela_Atv3_fase1 extends AppCompatActivity {
         notCerto = findViewById(R.id.not_acerto);
         notErro = findViewById(R.id.not_erro);
 
+        // Recuperar o código da criança
+        Intent intent = getIntent();
+        codCrianca = intent.getIntExtra("codCrianca", -1);
+        Toast.makeText(this, "codCriança recebido: "+codCrianca, Toast.LENGTH_SHORT).show();
+
+
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-
                 playAudio(R.raw.qual_letraessa);
             }
         }, 1000);
@@ -53,7 +60,6 @@ public class Tela_Atv3_fase1 extends AppCompatActivity {
         btEnunciado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 playAudio(R.raw.qual_letraessa);
             }
         });
@@ -61,14 +67,11 @@ public class Tela_Atv3_fase1 extends AppCompatActivity {
         btBalao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 playAudio(R.raw.letra_i);
             }
         });
 
-        //Botão para voltar para a home
         btVoltar4.setOnClickListener(new View.OnClickListener() {
-            //Função p/ fazer o audio para quando sair da atividade
             @Override
             public void onClick(View view) {
                 if (audio != null && audio.isPlaying()) {
@@ -82,11 +85,9 @@ public class Tela_Atv3_fase1 extends AppCompatActivity {
             }
         });
 
-
         botoesInativados();
         setOnClickListeners();
     }
-
 
     private void botoesInativados() {
         btn_Let_K_Inc.setVisibility(View.INVISIBLE);
@@ -107,38 +108,33 @@ public class Tela_Atv3_fase1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (buttonSelected) {
-                    //PARA SELECIONAR SÓ UM BOTÃO
                     return;
                 }
-                int id = view.getId();
                 buttonSelected = true;
 
-
+                int id = view.getId();
                 if (id == R.id.btn_K) {
                     btn_Let_K_Inc.setVisibility(View.VISIBLE);
                     btn_Let_K_Inc.setEnabled(true);
-
                     playAudio(R.raw.letra_k);
 
                 } else if (id == R.id.btn_I) {
                     btn_Let_I_Certo.setVisibility(View.VISIBLE);
                     btn_Let_I_Certo.setEnabled(true);
-
                     playAudio(R.raw.letra_i);
 
                 } else if (id == R.id.btn_O) {
                     btn_Let_O_Inc.setVisibility(View.VISIBLE);
                     btn_Let_O_Inc.setEnabled(true);
-
                     playAudio(R.raw.letra_o);
 
                 } else if (id == R.id.btn_G) {
                     btn_Let_G_Inc.setVisibility(View.VISIBLE);
                     btn_Let_G_Inc.setEnabled(true);
-
                     playAudio(R.raw.letra_g);
                 }
-                if(id==R.id.btn_I){
+
+                if (id == R.id.btn_I) {
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
@@ -146,7 +142,7 @@ public class Tela_Atv3_fase1 extends AppCompatActivity {
                             playAudio(R.raw.not_acertou);
                         }
                     }, 1100);
-                }else {
+                } else {
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
@@ -156,11 +152,12 @@ public class Tela_Atv3_fase1 extends AppCompatActivity {
                     }, 1100);
                 }
 
-
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        startActivity(new Intent(Tela_Atv3_fase1.this, Tela_Atv4_fase1.class));
+                        Intent intent = new Intent(Tela_Atv3_fase1.this, Tela_Atv4_fase1.class);
+                        intent.putExtra("codCrianca", codCrianca);
+                        startActivity(intent);
                         finish();
                     }
                 }, 3000);
@@ -173,22 +170,16 @@ public class Tela_Atv3_fase1 extends AppCompatActivity {
         btn_Let_G.setOnClickListener(listener);
     }
 
-
     private void playAudio(int audioResId) {
-
         if (audio != null) {
             audio.release();
         }
-
         audio = MediaPlayer.create(this, audioResId);
         audio.start();
     }
-
 
     @Override
     public void onBackPressed() {
         Toast.makeText(this, "Utilize a setinha para voltar para home!", Toast.LENGTH_SHORT).show();
     }
 }
-
-

@@ -58,8 +58,8 @@
 
     <ListView
         android:id="@+id/listaCriancas"
-        android:layout_width="409dp"
-        android:layout_height="474dp"
+        android:layout_width="406dp"
+        android:layout_height="433dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="24dp"
@@ -72,13 +72,12 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="17dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="7dp"
         app:layout_constraintBottom_toTopOf="@+id/imgDesempenhoD"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/_dynamic"
+        app:layout_constraintTop_toBottomOf="@+id/listaCriancas"
         app:srcCompat="@drawable/btn_cadastrar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

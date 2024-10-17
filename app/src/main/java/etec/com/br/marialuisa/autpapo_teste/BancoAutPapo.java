@@ -4,7 +4,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class BancoAutPapo extends SQLiteOpenHelper {
+
     //classe do Banco
+    public static final String TABLE_DESMPENHO = "desempenho";//TORNADO PUBLICA
     private static final String DATABASE_NAME = "bd_autpapo.db";
     private static final int DATABASE_VERSION = 2;
 
@@ -12,7 +14,7 @@ public class BancoAutPapo extends SQLiteOpenHelper {
     private static final String TABLE_ATIVIDADE = "atividade";
     private static final String TABLE_CADASTRO_CRIANCA = "cadastrocrianca";
     private static final String TABLE_CADASTRO_USUARIO = "cadastrousuario";
-    private static final String TABLE_DESMPENHO = "desempenho";
+
 
     // Criação das tabelas
     private static final String CREATE_TABLE_ATIVIDADE =

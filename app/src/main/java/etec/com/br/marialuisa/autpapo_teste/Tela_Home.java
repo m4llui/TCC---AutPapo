@@ -6,8 +6,12 @@ import androidx.appcompat.widget.Toolbar;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.SpannableString;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class Tela_Home extends AppCompatActivity {
 
@@ -18,6 +22,15 @@ public class Tela_Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_home);
+
+        // Recuperar o codUsuario passado pelo login
+        int codUsuario = getIntent().getIntExtra("codUsuario", -1);
+
+        // Recuperar o código da criança
+        Intent intent = getIntent();
+        int codCrianca = intent.getIntExtra("codCrianca", -1);
+
+
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -37,6 +50,7 @@ public class Tela_Home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Tela_Home.this, Tela_Fase1.class);
+                intent.putExtra("codCrianca",codCrianca);
                 startActivity(intent);
             }
         });
@@ -45,6 +59,7 @@ public class Tela_Home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Tela_Home.this, Tela_fase2.class);
+                intent.putExtra("codCrianca",codCrianca);
                 startActivity(intent);
             }
         });
@@ -53,6 +68,7 @@ public class Tela_Home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Tela_Home.this, Tela_fase3.class);
+                intent.putExtra("codCrianca",codCrianca);
                 startActivity(intent);
             }
         });

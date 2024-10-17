@@ -25,6 +25,7 @@ public class Tela_Atv2_fase2 extends AppCompatActivity {
             notCerto, notErro;
     private Handler handler = new Handler();
 
+    private int codCrianca;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,11 @@ public class Tela_Atv2_fase2 extends AppCompatActivity {
         btBalao = findViewById(R.id.ImageBalao_Atv2_fase1);
         notCerto = findViewById(R.id.not_acerto);
         notErro = findViewById(R.id.not_erro);
+
+
+        Intent intent = getIntent();
+        codCrianca = intent.getIntExtra("codCrianca", -1);
+        Toast.makeText(this, "codCriança recebido: "+codCrianca, Toast.LENGTH_SHORT).show();
 
         handler.postDelayed(new Runnable() {
             @Override
@@ -157,14 +163,15 @@ public class Tela_Atv2_fase2 extends AppCompatActivity {
                     }, 1100);
                 }
 
-                // Delay antes de mudar de tela
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        startActivity(new Intent(Tela_Atv2_fase2.this, Tela_Atv3_fase2.class));
+                        Intent intent = new Intent(Tela_Atv2_fase2.this, Tela_Atv3_fase2.class);
+                        intent.putExtra("codCrianca", codCrianca);
+                        startActivity(intent);
                         finish();
                     }
-                }, 3000); // 3 segundos de atraso
+                }, 3000);
             }
         };
 

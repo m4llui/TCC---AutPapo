@@ -22,6 +22,9 @@ public class Tela_Atv6_fase3 extends AppCompatActivity {
             btRaiva, btRaivaErrado, btVolta, btBalao, notCerto, notErro;
     private Handler handler = new Handler();
 
+    private int codCrianca;
+
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,10 @@ public class Tela_Atv6_fase3 extends AppCompatActivity {
         btVolta = findViewById(R.id.btnVoltarAtv6Fase3);
         notCerto = findViewById(R.id.not_acerto);
         notErro = findViewById(R.id.not_erro);
+
+        Intent intent = getIntent();
+        codCrianca = intent.getIntExtra("codCrianca", -1);
+        Toast.makeText(this, "codCriança recebido: "+codCrianca, Toast.LENGTH_SHORT).show();
 
         handler.postDelayed(new Runnable() {
             @Override
@@ -160,10 +167,12 @@ public class Tela_Atv6_fase3 extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        startActivity(new Intent(Tela_Atv6_fase3.this, Tela_Atv7_fase3.class));
-                        finish(); // Fecha a tela atual
+                        Intent intent = new Intent(Tela_Atv6_fase3.this, Tela_Atv7_fase3.class);
+                        intent.putExtra("codCrianca", codCrianca);
+                        startActivity(intent);
+                        finish();
                     }
-                }, 3000); // Atraso de 2 segundos em milissegundos
+                }, 3000);
             }
         };
 

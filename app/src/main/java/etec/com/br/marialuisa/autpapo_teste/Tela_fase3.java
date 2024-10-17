@@ -30,9 +30,16 @@ public class Tela_fase3 extends AppCompatActivity {
         audio = MediaPlayer.create(this, R.raw.intro_fase3);
         audio.start();
 
+
+        Intent intent = getIntent();
+        int codCrianca = intent.getIntExtra("codCrianca", -1);
+        Toast.makeText(this, "codCriança recebido: "+codCrianca+"!", Toast.LENGTH_SHORT).show();
+
         handler = new Handler();
         startAtv1Runnable = () -> {
-            startActivity(new Intent(Tela_fase3.this, Tela_Atv1_fase3.class));
+            Intent intentAtv1 = new Intent(Tela_fase3.this, Tela_Atv1_fase3.class);
+            intentAtv1.putExtra("codCrianca", codCrianca);
+            startActivity(intentAtv1);
             finish();
         };
 

@@ -20,6 +20,7 @@ public class Tela_Atv7_fase2 extends AppCompatActivity {
     TextView btEnunciado;
     MediaPlayer audio;
 
+    private int codCrianca;
     private ImageView btn_Let_Y, btn_Let_Y_Certo, btn_Let_A, btn_Let_A_Inc, btn_Let_K, btn_Let_K_Inc,
             btn_Let_Q, btn_Let_Q_Inc, btVoltar, btBalao, notErro, notCerto;
     private Handler handler = new Handler();
@@ -44,6 +45,11 @@ public class Tela_Atv7_fase2 extends AppCompatActivity {
         btBalao = findViewById(R.id.imageBalaoLetraYakult);
         notErro = findViewById(R.id.not_erro);
         notCerto = findViewById(R.id.not_acerto);
+
+        Intent intent = getIntent();
+        codCrianca = intent.getIntExtra("codCrianca", -1);
+        Toast.makeText(this, "codCriança recebido: "+codCrianca, Toast.LENGTH_SHORT).show();
+
 
         handler.postDelayed(new Runnable() {
             @Override
@@ -158,10 +164,12 @@ public class Tela_Atv7_fase2 extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        startActivity(new Intent(Tela_Atv7_fase2.this, Tela_Atv8_fase2.class));
-                        finish();//
+                        Intent intent = new Intent(Tela_Atv7_fase2.this, Tela_Atv8_fase2.class);
+                        intent.putExtra("codCrianca", codCrianca);
+                        startActivity(intent);
+                        finish();
                     }
-                }, 3100);
+                }, 3200);
             }
         };
 
